@@ -7,6 +7,16 @@ Detalle de productos:
 2 - Miniaturas y accesorios.
 3 - Juegos de cartas.
 
+Nombre del negocio: "La Guarida del Dragón".
+
+Elegimos este nombre ya que tiene el significado de marca que queremos para nuestra empresa. Según la fantasía, los dragones son criaturas míticas que gustan de acumular oro y tesoros en sus cuevas. Al elegir el nombre "La Guarida del Dragón", además de estar relacionado directamente con la temática de nuestro rubro, usamos la metáfora de que nuestros productos son tan preciados y codiciados que son dignos de estar en la guarida del dragón, tesoros por los que un aventurero daría su vida por poseer.
+
+Tipografía del logo: Kelly Slab.
+Enlace a Google Fonts: <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+Color del logo: rgb(236, 28, 36)
+Color de la tipografía: rgb(142, 0, 0)
+
 Integrantes del proyecto:
 Braconi, Bruno: 25 años, de Mendoza. Apasionado por los e-sports, la música y el desarrollo web.
 D'Angelo, Lucio: 26 años, de Buenos Aires. Geek y gamer.
