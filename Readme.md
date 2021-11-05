@@ -38,3 +38,5 @@ https://www.boardgamebliss.com/
 
 Nos gusta la idea de que incluye un blog de noticias promocionando tanto los productos como notas de opinión. Al tener una sección de compra mayorista, da la opción no sólo de operar como usuario regular, sino también con otros permisos y ofertas.
 https://invictvs.com.ar/tienda/
+
+Link a Tablero de Trabajo en Trello : https://trello.com/invite/b/xWNdSZ7C/fbed2cbeebfb1de5ef17639c726909c6/proyecto-integrador-grupo-5 ó https://trello.com/b/xWNdSZ7C/proyecto-integrador-grupo-5
