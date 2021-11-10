@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet"/>
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <!--Formulario registro-->
+
+<form action="/registroUsuario" method="POST" class="create-form" for="guardar">
+
+    <div class="control-formulario">
+        <input type="text" name="name" class="control" placeholder="Nombre" required>
+    </div>
+
+    <div class="control-formulario">
+        <input type="text" name="lastName" class="control" placeholder="Apellido" required>
+    </div>
+
+    <div class="control-formulario">
+        <input type="text" name="user" class="control" placeholder="Nombre de usuario" required>
+    </div>
+
+    <div class="control-formulario">
+        <input type="text" name="adress" class="control" placeholder="Domicilio" required>
+    </div>
+
+    <div class="control-formulario">
+        <label>Fecha de nacimiento:</label>
+        <input type="date" name="date" class="control" required>
+    </div>
+
+    <div class="control-formulario">
+        <input type="email" name="email" class="control" placeholder="email" required>
+    </div>
+
+    <div class="control-formulario">
+        <label>Imagen de perfil</label>
+        <input type="file" name="avatar" accept="jpg, jpeg" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <input type="password" name="password" placeholder="Contraseña" class="control" required>
+    </div>
+
+    <div class="control-formulario">
+        <input type="password" name="password" placeholder="Confirmar contraseña" class="control" required>
+    </div>
+
+    <button type="submit" class="button-form" name="register">¡Bienvenido!</button>
+</form>
+
+</body>
+</html>
