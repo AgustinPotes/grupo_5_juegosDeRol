@@ -33,6 +33,6 @@ app.post("/loginUser", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
-app.get("/productDetails", (req, res) => {
+app.get("/product", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/product.html"));
 });
