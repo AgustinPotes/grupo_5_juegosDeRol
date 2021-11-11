@@ -36,3 +36,11 @@ app.post("/loginUser", (req, res) => {
 app.get("/product", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/product.html"));
 });
+
+app.get("/cart", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/carrito.html"));
+});
+
+app.post("/carrito", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/index.html"));
+});
