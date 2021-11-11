@@ -13,7 +13,7 @@
 <body>
      
     <nav class="main-navbar">
-        <a href="/"><img src="/imgg/logoSinNombre.png" class="logo"></a>
+        <a href="/"><img src="/img/logoSinNombre.png" class="logo"></a>
 
         <div class="burger-menu">
             <i class="fas fa-bars"></i>
@@ -24,9 +24,11 @@
             <li class="category"><a href="#">Juegos de cartas</a></li>
             <li class="category"><a href="#">Miniaturas y accesorios</a></li>
         </ul>
-
-        <input type="text" placeholder=" Buscar nuevas aventuras..." class="search-bar" >
-        <i class="fas fa-search"></i>
+        
+        <div class="center-navbar">
+            <input type="text" placeholder=" Buscar nuevas aventuras..." class="search-bar" >
+            <i class="fas fa-search"></i>
+        </div>
 
         <ul class="right-navbar">
             <li class="category"><a href="#"></a><i class="fas fa-user-circle"></i></li>
@@ -36,54 +38,65 @@
         </nav>
 
     <header>
-
+        <h3>Alien RPG Starter Set</h3>
     </header>
-    
-    <section class="novelties">
-        <h3>Novedades</h3>
+
+    <section class="main-product">
     <div class="main-container">
-    <article class="display-product">
-        <h4>Alien: El juego oficial <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoAlien.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$5.550</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </div>
-    </article>
+        <article class="display-product">
+                <img src="/img/juegoAlien.jpg" alt="">
 
-    <article class="display-product">
-        <h4>The Walking Dead <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoTheWalkingDead.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$7.500</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
+                <div class="main-article">
+                <hr>    
+                <h4 class="product-name"> Alien RPG Starter Set </h4>
+                <p class="product-price">$6.770</p>
+                <hr>
 
-    <article class="display-product">
-        <h4>Monopoly: Game of Thrones <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoMonoGOT.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$8.999</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
+                <div class="quantity-and-cart-block">
+                <div class="product-quantity-class">
+                <label for="product-quantity">Elige la cantidad:</label>
+                <input list="product-quantity1" placeholder="0" id="product-quantity">
+                <datalist id="product-quantity1">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                </datalist>
+                <input class="add-to-cart-buttom" type="submit" value="Agregar al Carrito">
+                </div>
+                </div>
+                
 
-    <article class="display-product">
-        <h4>Game of Thrones <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoGOT.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$12.000</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
 
+                </div>
+
+               
+        </article>
+        </div>
     </section>
-
+    <section class="">
+                <div class="description">
+                 <h1>Descripcion</h1>
+                 <br></br>
+                 <h2>Este es un set de iniciación para el juego de rol oficial de la mesa Alien, un universo de terror corporal y brinkmanship corporativo, donde las personas sintéticas juegan a Dios mientras los camiones y los marinos espaciales juegan anfitrión de criaturas fantasmas recién nacidas. Se trata de un universo duro e implacable y no eres nada si no es gastable.Mantente vivo si puedes.</h2>
+                 <br></br>
+                 <ol>
+                    <p>Nombre: Alien RPG Starter Set</p>
+                    <p>Fabricante: Free League Publishing</p>
+                    <p>Edad: +14</p>
+                    <p>Jugadores: 3-4</p>
+                    <p>Tiempo de Juego: 60'</p>
+                    <p>Dimensiones: 8.5 x 11 x 0.5'</p>
+                    <p>Material: Sintético</p>
+                    </ol>
+                 </div>
+    </section>
+   
 
     <section class="offers">
-        <h3>Ofertas de la semana</h3>
+        <h3>Productos Relacionados</h3>
     <div class="main-container">
     <article class="display-product">
         <h4>Alien: El juego oficial</i></h4>

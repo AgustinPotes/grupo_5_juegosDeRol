@@ -5,13 +5,17 @@
 }
 
 body {
-    background-color: rgb(248, 237, 220);
+    background-color: #F9F6E5;
     font-family: sans-serif;
+}
+header{
+    width: 100vw;
+    padding-top: 90px;
 }
 
 .main-navbar {
     display: flex;
-    background-color: rgb(167, 37, 37);
+    background-color: #eBBC4E;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -42,19 +46,29 @@ body {
     background-color: thistle;
     border-radius: 5px;
     display: none;
+    border: blue 1px solid;
 }
 
 .right-navbar {
     color: rgb(167, 37, 37);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;     
     display: none;
+    border: blue 1px solid;
+}
+
+.center-navbar{
+    display: flex;
+    justify-content: space-between; 
+    border: blue 1px solid;
 }
 
 .category {
     border-right: 10px;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px;
+    border: blue 1px solid;
+    display: flex;
 }
 
 .category a {
@@ -73,11 +87,11 @@ body {
     color: rgb(167, 37, 37);
     width: 6vw;
     height: 6vw;
-    padding: 5px;
     border: none;
     border-radius: 25px;
     display: none;
     font-size: 30px;
+    justify-content: center;
 }
 
 .fa-shopping-cart {
@@ -85,22 +99,24 @@ body {
     color: rgb(167, 37, 37);
     width: 6vw;
     height: 6vw;
-    padding: 5px;
     border: none;
     border-radius: 25px;
     display: none;
     font-size: 25px;
+    justify-content: center;
 }
 
 .search-bar {
     width: 30vw;
-    height: 3vw;
+    height: 4vw;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     margin: 10px;
     display: none;
     align-items: center;
+    justify-content: center;
+    Align-items: center;      
 }
 
 .fa-search {
@@ -114,6 +130,8 @@ body {
     text-align: center;
     display: none;
     font-size: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
 .burger-menu {
@@ -146,13 +164,18 @@ h3 {
     text-align: center;
     font-weight: bold;
     padding: 20px;
-    background-color: rgba(161, 161, 161, 0.5);
+    background-color: #39373B;
+    color:#f9f6e5;
 }
 
 .main-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; 
+}
+.main-article{
+    background-color: white;
+    padding-top: 10px;
 }
 
 .novelties article {
@@ -273,12 +296,12 @@ p {
 /* FOOTER */
 
 footer {
-    background-color: rgb(167, 37, 37);
+    background-color: #eBBC4E;
     display: flex;
     flex-wrap: wrap;
     font-size: 15px;
     justify-content: space-around;
-    color: white;
+    color: #d24c2b;
     padding: 20px;
     list-style: none;
     margin-top: 15px;
@@ -436,4 +459,96 @@ h6 {
     .novelties {
         margin-top: 140px;
     }
+}
+
+
+
+
+/* CSS LUCIO*/
+ 
+ .main-product {
+    padding-top: 10px;
+    display: flex;
+    text-align: center;
+    width: 90%;
+    margin: 10px auto;
+}
+
+ .add-to-cart-buttom {
+     background-color: lightgreen;
+     width: 62%;
+     height: 30px;
+     font-size: 18px; 
+     text-align: center;
+     margin-top: 10px;
+}
+
+.product-quantity {
+    background-color: #fff;
+}
+
+.product-quenatity-class{
+    display: flex;
+    Align-items: center; 
+    justify-content:space-around;        
+    width: 100vw;
+}
+.product-quantity-class label{
+    font-size: 16px;
+}
+#product-quantity{
+    width: 60px;
+    text-align: center;
+}
+.quantity-and-cart-block{
+    display: flex;
+    width: 90vw; 
+    Align-items: center; 
+    justify-content:center;  
+    padding: 10px;  
+    background-color: white;         
+}
+
+.product-price{
+    color: green;
+    font-weight: bolder;
+    padding-bottom:10px;
+}
+
+.product-name{
+    color: #d24c2b;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.name-and-price-block{
+    display: flex;
+    flex-direction: column;
+    width: 90vw; 
+    Align-items: center; 
+    justify-content:center;  
+    padding: 10px;  
+    background-color: white;         
+}
+
+.description {             
+   margin: 10px auto;
+   display: flex;
+   flex-direction: column;  
+   width: 90%;
+   text-align: left;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   color: #d24c2b;
+}
+.description h1{
+    font-size: 16px;
+    opacity: 0.5;
+}
+.description ol p{
+    font-size: 14px;
+}
+.description h2{
+    font-size: 14px;
+    font-weight: normal;
 }
