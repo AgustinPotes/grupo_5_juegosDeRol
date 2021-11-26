@@ -1,0 +1,24 @@
+{
+  "name": "grupo_5_juegosderol",
+  "version": "1.0.0",
+  "description": "Negocio: Venta de juegos de rol.",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucioDangelo/grupo_5_juegosDeRol.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucioDangelo/grupo_5_juegosDeRol/issues"
+  },
+  "homepage": "https://github.com/LucioDangelo/grupo_5_juegosDeRol#readme"
+}

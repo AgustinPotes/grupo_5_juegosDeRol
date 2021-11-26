@@ -8,7 +8,8 @@ app.use(express.static('public'));
 
 const mainRouter = require('./routes/index');
 app.use('/', mainRouter);
-
+const loginRouter = require('./routes/login')
+app.use('/login', loginRouter)
 
 app.listen(3000, () => { console.log('Servidor corriendo en el puerto 3000');
 });
