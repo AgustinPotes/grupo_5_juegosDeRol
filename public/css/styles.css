@@ -55,6 +55,7 @@ body {
     border-right: 10px;
     justify-content: space-between;
     padding: 10px;
+    display: flex;
 }
 
 .category a {
@@ -73,11 +74,11 @@ body {
     color: rgb(167, 37, 37);
     width: 6vw;
     height: 6vw;
-    padding: 5px;
     border: none;
     border-radius: 25px;
     display: none;
     font-size: 30px;
+    justify-content: center;
 }
 
 .fa-shopping-cart {
@@ -85,11 +86,11 @@ body {
     color: rgb(167, 37, 37);
     width: 6vw;
     height: 6vw;
-    padding: 5px;
     border: none;
     border-radius: 25px;
     display: none;
     font-size: 25px;
+    justify-content: center;
 }
 
 .search-bar {
@@ -114,6 +115,8 @@ body {
     text-align: center;
     display: none;
     font-size: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
 .burger-menu {
@@ -176,6 +179,9 @@ h4 {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content:center;    
+    Align-items: center;                  
 }
 
 .display-product {
@@ -257,11 +263,18 @@ p {
 .fa-hotjar {
     color: red;
     background-color: rgb(255, 230, 89);
-    padding: 10px;
     border-radius: 25px;
+    padding: 5px;
     height: 30px;
     width: 30px;
     animation: aumentar 1s linear infinite alternate;
+    border-left: 20px;
+    margin-left: 10px;
+}
+
+.display-titulo-product{
+    display: flex;
+    border: solid, 1px, black;
 }
 
 @keyframes aumentar {
