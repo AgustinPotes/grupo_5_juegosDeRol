@@ -8,28 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-  <nav class="main-navbar">
-    <a href="/"><img src="/img/logoSinNombre.png" class="logo"></a>
-
-    <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-    </div>
-    
-    <ul class="left-navbar">
-        <li class="category"><a href="#">Juegos de rol</a></li>
-        <li class="category"><a href="#">Juegos de cartas</a></li>
-        <li class="category"><a href="#">Miniaturas y accesorios</a></li>
-    </ul>
-
-    <input type="text" placeholder=" Buscar nuevas aventuras..." class="search-bar" >
-    <i class="fas fa-search"></i>
-
-    <ul class="right-navbar">
-        <li class="category"><a href="#"></a><i class="fas fa-user-circle"></i></li>
-        <li class="category"><a href="#"></a><i class="fas fa-shopping-cart"></i></li>
-    </ul>
-    
-    </nav>
+      <!-- Navbar -->
+      <%- include('./partials/headerNavbar') %>
   <form action="/login" method="get">
       <h2>Formulario de Login</h2>
       <input type="text" placeholder="&#128100; Usuario" name="user" required>
@@ -39,27 +19,9 @@
       <p>No tienes una cuenta?, <a class= "link" href="register"> Registrate</a></p>
       <p>Olvidaste la contraseña?, <a class="link" href="recoverpassword.html"> Olvide mi contraseña</a></p>
   </form>
-  <footer>
-    <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1380.7600525298817!2d-58.41159173584137!3d-34.60367202417548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c854bd13f%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses-419!2sar!4v1636505829710!5m2!1ses-419!2sar" width="340" height="340" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  
-    <div class="footer-left">
-        <h6>Contacto</h6>
-        <ul class="ft-contact"></ul>
-        <li><a class="facebook"><i class="fab fa-facebook"></i></a><p class="footer-text">+54012345678</p></li>
-        <li><a class="twitter"><i class="fab fa-twitter-square"></i></a><p class="footer-text">@LaGuaridaDelDragon</p></li>
-        <li><a class="instagram"><i class="fab fa-instagram-square"></i></a><p class="footer-text">@LaGuaridaDelDragon</p></li>
-    </ul>
-    </div>
-  
-    <div class="footer-right">
-        <p>Copyright 2021. Todos los derechos reservados.</p>
-        <p>Powered by Grupo5 DH</p>
-        <a href="/"><img src="/img/logoConNombre.png" class="logo2"></a>
-    </div>
-  
-  </footer>
+    <!-- Footer -->
+    <%- include('./partials/footer') %>
+
  </body>
   
 </html>
