@@ -46,7 +46,7 @@ header{
     background-color: thistle;
     border-radius: 5px;
     display: none;
-    border: blue 1px solid;
+
 }
 
 .right-navbar {
@@ -54,20 +54,17 @@ header{
     display: flex;
     justify-content: space-between;     
     display: none;
-    border: blue 1px solid;
 }
 
 .center-navbar{
     display: flex;
     justify-content: space-between; 
-    border: blue 1px solid;
 }
 
 .category {
     border-right: 10px;
     justify-content: space-around;
     padding: 10px;
-    border: blue 1px solid;
     display: flex;
 }
 
