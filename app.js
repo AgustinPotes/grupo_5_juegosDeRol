@@ -20,5 +20,7 @@ const addproductRouter = require('./routes/addproduct')
 app.use ('/addproduct', addproductRouter);
 const editproductRouter = require('./routes/editproduct')
 app.use ('/editproduct', editproductRouter);
+const detailRouter = require('./routes/detail')
+app.use ('/detail', detailRouter);
 app.listen(3000, () => { console.log('Servidor corriendo en el puerto 3000');
 });

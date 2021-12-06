@@ -10,6 +10,10 @@ const productController = {
 	index: (req, res) => {
 		res.render('product',{product});
 	},
+    // Detail - Detail from one product
+	detail: (req, res) => {
+		res.render('detail',);
+	}
 }
 
 
