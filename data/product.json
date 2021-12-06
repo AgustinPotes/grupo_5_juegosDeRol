@@ -5,7 +5,13 @@
         "descripcionCorta": "Juego de mesa de Alien",
         "descripcionDetallada": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!",
         "precio": 5.550,
-        "img": "juegoAlien.jpg"
+        "img": "juegoAlien.jpg",
+        "fabricante": "Free League Publishing",
+        "edad":"+14",
+        "jugadores": "3-4",
+        "tiempoDeJuego": "60'",
+        "dimensiones": "8.5 x 11 x 0.5",
+        "material": "Sintético"
     },
     {
         "id":2,
@@ -13,7 +19,13 @@
         "descripcionCorta": "Juego de mesa de The Walking Dead",
         "descripcionDetallada": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!",
         "precio": 7.500,
-        "img": "juegoTheWalkingDead.jpg"
+        "img": "juegoTheWalkingDead.jpg",
+        "fabricante": "Free League Publishing",
+        "edad":"+14",
+        "jugadores": "3-4",
+        "tiempoDeJuego": "60'",
+        "dimensiones": "8.5 x 11 x 0.5",
+        "material": "Sintético"
     },
     {
         "id":3,
@@ -21,7 +33,13 @@
         "descripcionCorta": "Juego de mesa de Monopoly Game of Thrones",
         "descripcionDetallada": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!",
         "precio": 8.999,
-        "img": "juegoMonoGOT.jpg"
+        "img": "juegoMonoGOT.jpg",
+        "fabricante": "Free League Publishing",
+        "edad":"+14",
+        "jugadores": "3-4",
+        "tiempoDeJuego": "60'",
+        "dimensiones": "8.5 x 11 x 0.5",
+        "material": "Sintético"
     },
     {
         "id":4,
@@ -29,5 +47,11 @@
         "descripcionCorta": "Juego de mesa de Game of Thrones",
         "descripcionDetallada": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!",
         "precio": 8.999,
-        "img": "juegoGOT.jpg"
+        "img": "juegoGOT.jpg",
+        "fabricante": "Free League Publishing",
+        "edad":"+14",
+        "jugadores": "3-4",
+        "tiempoDeJuego": "60'",
+        "dimensiones": "8.5 x 11 x 0.5",
+        "material": "Sintético"
     }]
