@@ -21,13 +21,14 @@
 
     <section class="main-product">
     <div class="main-container">
+        <% for (let i = 0; i < product.length; i++){%>
         <article class="display-product">
-                <img src="/img/juegoAlien.jpg" alt="">
+                <img src="/img/juegoAlien.jpg<%=product[i].img%>" alt="">
 
                 <div class="main-article">
                 <hr>    
-                <h4 class="product-name"> Alien RPG Starter Set </h4>
-                <p class="product-price">$6.770</p>
+                <h4 class="product-name"><%=product[i].name%></h4>
+                <p class="product-price">$<%=product[i].precio%></p>
                 <hr>
 
                 <div class="quantity-and-cart-block">
@@ -52,6 +53,7 @@
 
                
         </article>
+        <%}%>
         </div>
     </section>
     <section class="">
