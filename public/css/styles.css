@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/*.test {
+    background:gray;
+    width: 128px;
+    height: 128px;
+    cursor: url(iconoCursor.png), auto;
+}*/
+
 body {
     background-color: rgb(248, 237, 220);
     font-family: sans-serif;
@@ -136,12 +143,34 @@ body {
     font-size: 30px;
 }
 
+/* HEADER */
+
+.mainHeader {
+    display: flex;
+    margin-top: 100px;
+}
+
+.banner {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+.carrusell {
+    width: 85vw;
+    display: none;
+    z-index: 80;
+    margin: auto;
+    position: relative;
+    top: 8vw;
+    left: 1vw;
+}
 
 /* SECTION */
 
 
 .novelties {
-    margin-top: 92px;
+    margin-top: 58%;
 }
 
 h3 {
@@ -297,21 +326,12 @@ footer {
     margin-top: 15px;
 }
 
-.ft-contact {
-    color: white;
-    font-size: 18px;
+.googeMap {
+    display: flex;
 }
 
-.fa-facebook {
-    font-size: 25px;
-}
-
-.fa-twitter-square {
-    font-size: 25px;
-}
-
-.fa-instagram-square {
-    font-size: 25px;
+.map {
+    border-radius: 15px;
 }
 
 h6 {
@@ -319,16 +339,50 @@ h6 {
     font-weight: normal;
 }
 
+.ft-contact {
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    display: flex;
+}
+
+.fa-facebook {
+    font-size: 25px;
+    padding: 8px;
+}
+
+.fa-twitter-square {
+    font-size: 25px;
+    padding: 8px;
+}
+
+.fa-instagram-square {
+    font-size: 25px;
+    padding: 8px;
+}
+
+.footer-text {
+    padding: 8px;
+}
+
+.footer-text-right {
+    padding: 8px;
+    text-align: left;
+    align-self: flex-end;
+}
+
 .footer-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-self: flex-start;
 }
 
 .footer-right {
     display: flex;
     margin-top: 20px;
     padding: 5px;
+    flex-wrap: nowrap;
 }
 
 .logo2 {
@@ -393,14 +447,16 @@ h6 {
         padding: 5px;
     }
     .novelties {
-        margin-top: 110px;
+        margin-top: 15.5%;
+    }
+    .carrusell {
+        width: 80%;
+        display: block;
     }
 }
 
 
-
-
-@media(min-width: 1200px) {
+@media(min-width: 1024px) {
     .main-navbar {
         height: 10vw;
     }
@@ -447,6 +503,22 @@ h6 {
         border-radius: 10px;
     }
     .novelties {
-        margin-top: 140px;
+        margin-top: 16%;
+    }
+    .carrusell {
+        width: 80vw;
+        top: 7vw;
+        left: 10vw;
+    }
+}
+
+@media(min-width: 1440px) {
+    .banner {
+        top: 0;
+    }
+    .carrusell {
+        width: 60vw;
+        top: 10.5vw;
+        left: 18vw;
     }
 }

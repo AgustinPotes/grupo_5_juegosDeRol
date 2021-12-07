@@ -14,97 +14,49 @@
      <!-- Navbar -->
     <%- include('./partials/headerNavbar') %>
 
+    <!-- Header -->
     <header>
+
+    <%- include('./partials/headerMain') %>
 
     </header>
     
     <section class="novelties">
         <h3>Novedades</h3>
+        
     <div class="main-container">
+        <% for (let i = 0; i < products.length; i++){%>
     <article class="display-product">
-        <h4>Alien: El juego oficial<i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoAlien.jpg">
+        <h4><%=products[i].title%><i class="fab fa-hotjar"></i></h4>
+        <img src="/img/<%=products[i].img%>" alt="imagen de producto">
         <div class="display-description">
         <i class="fas fa-hand-point-right"></i>
-        <p class="price">$5.550</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
+        <p class="price">$<%=products[i].price%></p>
+        <p class="description"><%=products[i].shortDescription%></p>
+        
     </div>
     </article>
-
-    <article class="display-product">
-        <h4>The Walking Dead <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoTheWalkingDead.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$7.500</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
-
-    <article class="display-product">
-        <h4>Monopoly: Game of Thrones <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoMonoGOT.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$8.999</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
-
-    <article class="display-product">
-        <h4>Game of Thrones <i class="fab fa-hotjar"></i></h4>
-        <img src="/img/juegoGOT.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$12.000</p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
-
+    <%}%>
+    </div>
     </section>
-
 
     <section class="offers">
         <h3>Ofertas de la semana</h3>
+
     <div class="main-container">
+        <% for (let i = 0; i < products.length; i++){%>
     <article class="display-product">
-        <h4>Alien: El juego oficial</i></h4>
-        <img src="/img/juegoAlien.jpg">
+        <h4><%=products[i].title%></i></h4>
+        <img src="/img/<%=products[i].img%>" alt="imagen de producto">
         <div class="display-description">
         <i class="fas fa-hand-point-right"></i>
-        <p class="price">$5.550</p>
-        <p class="discount">-20% <i class="fas fa-tag"></i></p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
+        <p class="price">$<%=Math.round(products[i].price - (products[i].price * products[i].discountPercentage / 100))%></p>
+        <p class="discount">-<%=products[i].discountPercentage%>%<i class="fas fa-tag"></i></p>
+        <p class="description"><%=products[i].shortDescription%><p>
     </div>
     </article>
-
-    <article class="display-product">
-        <h4>The Walking Dead</h4>
-        <img src="/img/juegoTheWalkingDead.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$7.500</p>
-        <p class="discount">-10% <i class="fas fa-tag"></i></p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
-
-    <article class="display-product">
-        <h4>Monopoly: Game of Thrones</i></h4>
-        <img src="/img/juegoMonoGOT.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$8.999</p>
-        <p class="discount">-5% <i class="fas fa-tag"></i></p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
-
-    <article class="display-product">
-        <h4>Game of Thrones</i></h4>
-        <img src="/img/juegoGOT.jpg">
-        <div class="display-description">
-        <i class="fas fa-hand-point-right"></i>
-        <p class="price">$12.000</p>
-        <p class="discount">-5% <i class="fas fa-tag"></i></p>
-        <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
-    </article> 
-
+    <%}%>
+    </div>
     </section>
 
     <!-- Footer -->
