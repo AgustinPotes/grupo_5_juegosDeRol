@@ -21,14 +21,13 @@
 
     <section class="main-product">
     <div class="main-container">
-        <% for (let i = 0; i < product.length; i++){%>
         <article class="display-product">
-                <img src="/img/<%=product[i].img%>" alt="">
+                <img src="/img/<%=productDetail.img%>" alt="">
 
                 <div class="main-article">
                 <hr>    
-                <h4 class="product-name"><%=product[i].title%></h4>
-                <p class="product-price">$<%=product[i].price%></p>
+                <h4 class="product-name"><%=productDetail.title%></h4>
+                <p class="product-price">$<%=productDetail.price%></p>
                 <hr>
 
                 <div class="quantity-and-cart-block">
@@ -53,28 +52,10 @@
 
                
         </article>
-        <%}%>
+        
         </div>
     </section>
-    <section class="">
-        <% for (let i = 0; i < product.length; i++){%>
-                <div class="description">
-                 <h1>Descripcion</h1>
-                 <br></br>
-                 <h2><%=product[i].descripcionDetallada%></h2>
-                 <br></br>
-                 <ol>
-                    <p>Nombre: <%=product[i].titulo%></p>
-                    <p>Fabricante: <%=product[i].fabricante%></p>
-                    <p>Edad:<%=product[i].edad%></p>
-                    <p>Jugadores: <%=product[i].jugadores%></p>
-                    <p>Tiempo de Juego: <%=product[i].tiempoDeJuego%></p>
-                    <p>Dimensiones:<%=product[i].dimensiones%></p>
-                    <p>Material: <%=product[i].material%></p>
-                    </ol>
-                 </div>
-    </section>
-    <%}%>
+
 
     <section class="offers">
         <h3>Productos Relacionados</h3>

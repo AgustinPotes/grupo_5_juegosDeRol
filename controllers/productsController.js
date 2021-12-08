@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -12,10 +12,13 @@ const productController = {
 	},
 	
 	detail: (req, res) => {
-        let productDetail = req.params.id;
-		let product = products.find(product => product.id == productDetail)
-        res.render('detail', {product,toThousand});
-    },
+		let id = req.params.id
+		let productDetail = products.find(product => product.id == id)
+		res.render('detail', {
+			productDetail,
+			toThousand
+		})
+	},
 
 	cart: (req, res) => {
 		res.render('cart');
@@ -24,9 +27,38 @@ const productController = {
 		res.render('addProduct');
 	},
 	editProduct: (req, res) => {
-		res.render('editProduct');
-	}
-}
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('editProduct', {productToEdit})
+	},
+	update: (req, res) => {
+		let id = req.params.id;
+		let productToEdit = products.find(product => product.id == id)
+		let image
+
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = productToEdit.image
+		}
+
+		productToEdit = {
+			'id': productToEdit.id,
+			...req.body,
+			image: image,
+		};
+		
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	},
+};
 
 module.exports = productController;
 
