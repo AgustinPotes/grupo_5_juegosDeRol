@@ -55,7 +55,7 @@ const productController = {
 			return product;
 		})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, '../data/productsDataBase.json'));
 		res.redirect('/');
 	},
 };
