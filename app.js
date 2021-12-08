@@ -24,24 +24,8 @@ app.listen(3000, () => { console.log('Servidor corriendo en el puerto 3000');
 const mainRouter = require('./routes/mainRouter');
 app.use('/', mainRouter);
 
-const loginRouter = require('./routes/loginRouter')
-app.use('/login', loginRouter);
+const productsRouter = require('./routes/productsRouter')
+app.use ('/products', productsRouter);
 
-const cartRouter = require('./routes/cart')
-app.use('/cart', cartRouter);
-
-const productRouter = require('./routes/product')
-app.use ('/product', productRouter);
-
-const registerRouter = require('./routes/register')
-app.use ('/register', registerRouter);
-
-const addproductRouter = require('./routes/addproduct')
-app.use ('/addproduct', addproductRouter);
-
-const editproductRouter = require('./routes/editproduct')
-app.use ('/editproduct', editproductRouter);
-
-const detailRouter = require('./routes/detail')
-app.use ('/detail', detailRouter);
-
+const usersRouter = require('./routes/usersRouter')
+app.use ('/users', usersRouter);

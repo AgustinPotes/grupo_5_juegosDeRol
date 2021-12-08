@@ -7,8 +7,6 @@ const mainController = require('../controllers/mainController')
 
 
 router.get('/', mainController.index);
-router.get('/:id', mainController.index);
-//router.get('/:id', mainController.juegosDeMesa);
 
 
 module.exports = router;
