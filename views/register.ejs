@@ -11,7 +11,7 @@
        <!-- Navbar -->
        <%- include('./partials/headerNavbar') %>
 
-    <form action="/register" method="get">
+    <form action="/register" method="POST" enctype="multipart/form-data">
         <h2>Formulario de registro</h2>
         <input type="text" placeholder="&#128100; Usuario" name="user" required>
         <input type="email" placeholder="&#9993; E-mail" name="email" required>

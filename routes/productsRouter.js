@@ -20,7 +20,7 @@ router.get('/', productController.index);
 router.get('/cart', productController.cart);
 router.get('/addProduct', productController.addProduct);
 router.get('/editProduct/:id', productController.editProduct); 
-router.patch('/editProduct/:id', upload.any(),productController.update); 
+router.put('/editProduct/:id', upload.any(),productController.update); 
 router.get('/detail/:id', productController.detail);
 
 

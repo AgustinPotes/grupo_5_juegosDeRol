@@ -5,6 +5,8 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 
 // ************ express() ************
 const app = express();
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json()); 
 
 
 // ************ Middlewares - (don't touch) ************
@@ -15,8 +17,8 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 
-
-app.listen(3000, () => { console.log('Servidor corriendo en el puerto 3000');
+const port = 3000;
+app.listen(port, () => { console.log('Servidor corriendo en el puerto ' + port);
 });
 
 

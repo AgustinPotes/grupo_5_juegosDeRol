@@ -24,12 +24,12 @@ const productController = {
 		res.render('cart');
 	},
 	addProduct: (req, res) => {
-		res.render('addProduct');
+		res.render('addproduct');
 	},
 	editProduct: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('editProduct', {productToEdit})
+		res.render('editproduct', {productToEdit})
 	},
 	update: (req, res) => {
 		let id = req.params.id;
@@ -43,7 +43,7 @@ const productController = {
 		}
 
 		productToEdit = {
-			'id': productToEdit.id,
+			id: productToEdit.id,
 			...req.body,
 			image: image,
 		};
