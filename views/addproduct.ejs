@@ -7,18 +7,47 @@
     <title>agregar productos</title>
     <script src="https://kit.fontawesome.com/ce21b579cc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=MedievalSharp&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styleaddproduct.css" rel="stylesheet">
 </head>
 
 <body>
      <!-- Navbar -->
     <%- include('./partials/headerNavbar') %>
+<section>
+    <form action="/addproduct" method="get">
+        <div><h2>Formulario carga de producto</h2></div>
+        <div class="form1">
+            <div class="part1">
+                <input type="" placeholder="Nombre del producto">
+                <input type="text" placeholder="Marca">
+                <input type="text" placeholder="Descripción" class="description">
+                <select name="Categorías" id="" placeholder="Categoria" class="selectCategorias">
+                    <option disabled selected>Categoria</option>
+                    <option value="">Juegos de rol de mesa</option>
+                    <option value="">Miniaturas y accesorios</option>
+                    <option value="">Juegos de cartas</option>
+                    
+                </select>
+                <input type="text" placeholder="Precio">
 
-    <header>
-
-    </header>
-   
-
+            </div>
+            <div class="part2">
+                <input type="text">
+                <input type="">
+                <input type="">
+                <div class="divAddImages">
+                    <p class="textAddImages">Cargar imagenes</p>
+                    <input type="file" multiple class="addImages" accept= ".jpg, .png">
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div><input type="reset" value="cancelar"></div>
+            <div><input type="submit" value="agregar"></div>
+        </div>
+        
+    </form>
+</section>
     <!-- Footer -->
     <%- include('./partials/footer') %>
 
