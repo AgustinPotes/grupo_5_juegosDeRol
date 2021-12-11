@@ -14,23 +14,25 @@
      <!-- Navbar -->
     <%- include('./partials/headerNavbar') %>
 <section>
-    <form action="/addproduct" method="get">
+    <form action="/products/addproduct" method="POST" enctype="multipart/form-data">
         <div><h2>Formulario carga de producto</h2></div>
         <div class="form1">
+            
             <div class="part1">
-                <input type="" placeholder="Nombre del producto">
-                <input type="text" placeholder="Marca">
-                <input type="text" placeholder="Descripción" class="description">
-                <select name="Categorías" id="" placeholder="Categoria" class="selectCategorias">
+                <input id="title" name="title" type="text" placeholder="Nombre del producto">
+                <input name="publisher" type="text" placeholder="Marca">
+                <input name="shortDescription" type="text" placeholder="Descripción" class="description">
+                <select id="" placeholder="Categoria" class="selectCategorias">
                     <option disabled selected>Categoria</option>
-                    <option value="">Juegos de rol de mesa</option>
-                    <option value="">Miniaturas y accesorios</option>
-                    <option value="">Juegos de cartas</option>
+                    <option name="category" value="">Juegos de rol de mesa</option>
+                    <option name="category" value="">Miniaturas y accesorios</option>
+                    <option name="category" value="">Juegos de cartas</option>
                     
                 </select>
-                <input type="text" placeholder="Precio">
+                <input name="price" type="number" placeholder="Precio">
 
             </div>
+            
             <div class="part2">
                 <input type="text">
                 <input type="">

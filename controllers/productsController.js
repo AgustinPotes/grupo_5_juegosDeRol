@@ -26,6 +26,21 @@ const productController = {
 	addProduct: (req, res) => {
 		res.render('addproduct');
 	},
+	newProduct: (req, res) => {
+			let newProduct = {
+				id: products.length + 1,
+				title: req.body.title,
+				publisher: req.body.publisher,
+				shortDescription: req.body.shortDescription,
+				category: req.body.category,
+				price: req.body.price
+				//img: req.body.img
+			};
+
+			products.push(newProduct);
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+			res.redirect('/');
+	},
 	editProduct: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
@@ -43,19 +58,24 @@ const productController = {
 		}
 
 		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
+			id: products.length + 1,
+			title: req.body.title,
+			publisher: req.body.publisher,
+			shortDescription: req.body.shortDescription,
+			category: req.body.category,
+			price: req.body.price,
+			//img: req.body.img
+			image: image
 		};
 		
 		let newProducts = products.map(product => {
 			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
+				return product = {productToEdit};
 			}
 			return product;
 		})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, '../data/productsDataBase.json'));
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
 		res.redirect('/');
 	},
 };
