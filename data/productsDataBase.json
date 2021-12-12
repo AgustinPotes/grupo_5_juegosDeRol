@@ -66,5 +66,19 @@
   "playtime": "60'",
   "dimentions": "8.5 x 11 x 0.5",
   "construction": "Sintético"
+ },
+ {
+  "id": 5,
+  "title": "Juego",
+  "publisher": "marca",
+  "shortDescription": "descripcion",
+  "price": "2000"
+ },
+ {
+  "id": 6,
+  "title": "Juego",
+  "publisher": "marca",
+  "shortDescription": "descripcion",
+  "price": "2000"
  }
 ]

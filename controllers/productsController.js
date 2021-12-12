@@ -8,7 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productController = {
 	index: (req, res) => {
-		res.send('product', {products});
+		res.render('product', {products});
 	},
 	
 	detail: (req, res) => {
@@ -78,7 +78,13 @@ const productController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
 		res.redirect('/');
 	},
-};
+	delete: (req, res) => {
+		let id = req.params.id;
+		let productToDelete = products.filter(product => {
+			product.id !== id
+		})
+	}
+	}
 
 module.exports = productController;
 

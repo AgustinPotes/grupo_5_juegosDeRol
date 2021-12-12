@@ -498,8 +498,7 @@ h6 {
     text-align: center;
 }
 .quantity-and-cart-block{
-    display: flex;
-    width: 90vw; 
+    display: flex; 
     Align-items: center; 
     justify-content:center;  
     padding: 10px;  

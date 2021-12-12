@@ -16,19 +16,19 @@
        <%- include('./partials/headerNavbar') %>
 
     <header>
-        <h3>Alien RPG Starter Set</h3>
+        <h3>Listado de Productos</h3>
     </header>
-
+    <section class="products">
     <section class="main-product">
     <div class="main-container">
-        <% for (let i = 0; i < product.length; i++){%>
+        <% for (let i = 0; i < products.length; i++){%>  
         <article class="display-product">
-                <img src="/img/<%=product[i].img%>" alt="">
+                <img src="/img/<%=products[i].img%>" alt="">
 
                 <div class="main-article">
                 <hr>    
-                <h4 class="product-name"><%=product[i].titulo%></h4>
-                <p class="product-price">$<%=product[i].precio%></p>
+                <h4 class="product-name"><%=products[i].title%></h4>
+                <p class="product-price">$<%=products[i].price%></p>
                 <hr>
 
                 <div class="quantity-and-cart-block">
@@ -44,6 +44,9 @@
                         <option value="5">
                 </datalist>
                 <input class="add-to-cart-buttom" type="submit" value="Agregar al Carrito">
+                <form method= "POST" action="/products/delete/<%=products[i].id%>?_method=DELETE">
+                    <button>Eliminar</button>
+                </form>
                 </div>
                 </div>
                 
@@ -57,26 +60,26 @@
         </div>
     </section>
     <section class="">
-        <% for (let i = 0; i < product.length; i++){%>
+        <% for (let i = 0; i < products.length; i++){%>
                 <div class="description">
                  <h1>Descripcion</h1>
                  <br></br>
-                 <h2><%=product[i].descripcionDetallada%></h2>
+                 <h2><%=products[i].shortDescription%></h2>
                  <br></br>
                  <ol>
-                    <p>Nombre: <%=product[i].titulo%></p>
-                    <p>Fabricante: <%=product[i].fabricante%></p>
-                    <p>Edad:<%=product[i].edad%></p>
-                    <p>Jugadores: <%=product[i].jugadores%></p>
-                    <p>Tiempo de Juego: <%=product[i].tiempoDeJuego%></p>
-                    <p>Dimensiones:<%=product[i].dimensiones%></p>
-                    <p>Material: <%=product[i].material%></p>
+                    <p>Nombre: <%=products[i].title%></p>
+                    <p>Fabricante: <%=products[i].publisher%></p>
+                    <p>Edad:<%=products[i].age%></p>
+                    <p>Jugadores: <%=products[i].players%></p>
+                    <p>Tiempo de Juego: <%=products[i].playtime%></p>
+                    <p>Dimensiones:<%=products[i].dimentions%></p>
+                    <p>Material: <%=products[i].construction%></p>
                     </ol>
                  </div>
     </section>
     <%}%>
 
-    <section class="offers">
+    <!--<section class="offers">
         <h3>Productos Relacionados</h3>
     <div class="main-container">
     <article class="display-product">
@@ -119,7 +122,7 @@
         <p class="discount">-5% <i class="fas fa-tag"></i></p>
         <p class="description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat rem possimus aut natus, vitae at quia quaerat nam quo error, atque aliquid, velit molestias. Officia harum voluptates quam quis doloremque!</p>
     </article> 
-
+    -->
     </section>
 
     <!-- Footer -->
