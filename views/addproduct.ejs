@@ -22,32 +22,32 @@
                 <input id="title" name="title" type="text" placeholder="Nombre del producto">
                 <input name="publisher" type="text" placeholder="Marca">
                 <input name="shortDescription" type="text" placeholder="Descripción" class="description">
-                <select id="" placeholder="Categoria" class="selectCategorias">
+                <select id="category" name="category" placeholder="Categoria" class="selectCategorias">
                     <option disabled selected>Categoria</option>
-                    <option name="category" value="">Juegos de rol de mesa</option>
-                    <option name="category" value="">Miniaturas y accesorios</option>
-                    <option name="category" value="">Juegos de cartas</option>
+                    <option value="rolBoardGame">Juegos de rol de mesa</option>
+                    <option value="accesories">Miniaturas y accesorios</option>
+                    <option value="cardGame">Juegos de cartas</option>
                     
                 </select>
                 <input name="price" type="number" placeholder="Precio">
 
             </div>
-            
+        
+        
             <div class="part2">
                 <input type="text">
                 <input type="">
                 <input type="">
                 <div class="divAddImages">
-                    <p class="textAddImages">Cargar imagenes</p>
-                    <input type="file" multiple class="addImages" accept= ".jpg, .png">
+                    <p class="textAddImages">Cargar imágenes</p>
+                    <input name="img" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg">
                 </div>
             </div>
         </div>
         <div class="buttons">
-            <div><input type="reset" value="cancelar"></div>
-            <div><input type="submit" value="agregar"></div>
+            <div><input type="reset" value="Borrar"></div>
+            <div><input type="submit" name="submit" value="Agregar"></div>
         </div>
-        
     </form>
 </section>
     <!-- Footer -->

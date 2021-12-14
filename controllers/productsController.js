@@ -33,8 +33,8 @@ const productController = {
 				publisher: req.body.publisher,
 				shortDescription: req.body.shortDescription,
 				category: req.body.category,
-				price: req.body.price
-				//img: req.body.img
+				price: req.body.price,
+				img: req.body.img
 			};
 
 			products.push(newProduct);

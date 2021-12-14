@@ -1,26 +1,38 @@
 [
     {
    "id":1,
-   "user": "Rosa Merinda",
+   "name": "Rosa",
+   "lastName": "Merinda",
+   "user": "Rosita",
    "eMail": "rosamerinda@gmail.com",
-   "password": "Rosa123"
+   "password": "Rosa123",
+   "type": "regular"
 },
 {
     "id":2,
-    "user": "Carlos Bottardo",
+    "name": "Carlos",
+    "lastName": "Bottardo",
+    "user": "Carlitos_Bot",
     "eMail": "carlosbottardo@yahoo.com",
-    "password": "carlosElCapo33"
+    "password": "carlosElCapo33",
+    "type": "regular"
  },
  {
     "id":3,
-    "user": "Verónica Mechino",
+    "name": "Verónica",
+    "lastName": "Mechino",
+    "user": "VeroMechi",
     "eMail": "veromechino@hotmail.com",
-    "password": "VeroAllStar44"
+    "password": "VeroAllStar44",
+    "type": "regular"
  },
  {
     "id":4,
-    "user": "Roberto Aguacate",
+    "name": "Roberto",
+    "lastName": "Aguacate",
+    "user": "Robertito123",
     "eMail": "roberagua@gmail.com",
-    "password": "rober2009"
+    "password": "rober2009",
+    "type": "admin"
  }
 ]

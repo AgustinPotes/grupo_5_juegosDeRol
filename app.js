@@ -26,8 +26,8 @@ app.listen(port, () => { console.log('Servidor corriendo en el puerto ' + port);
 const mainRouter = require('./routes/mainRouter');
 app.use('/', mainRouter);
 
-const productsRouter = require('./routes/productsRouter')
+const productsRouter = require('./routes/productsRouter');
 app.use ('/products', productsRouter);
 
-const usersRouter = require('./routes/usersRouter')
+const usersRouter = require('./routes/usersRouter');
 app.use ('/users', usersRouter);
