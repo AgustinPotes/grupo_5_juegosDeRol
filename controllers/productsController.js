@@ -28,13 +28,13 @@ const productController = {
 	},
 	newProduct: (req, res) => {
 			let newProduct = {
-				id: products.length + 1,
-				title: req.body.title,
-				publisher: req.body.publisher,
-				shortDescription: req.body.shortDescription,
-				category: req.body.category,
-				price: req.body.price,
-				img: req.body.img
+				"id": products.length + 1,
+				"title": req.body.title,
+				"publisher": req.body.publisher,
+				"shortDescription": req.body.shortDescription,
+				"category": req.body.category,
+				"price": parseFloat(req.body.price),
+				"img": req.files[0].filename
 			};
 
 			products.push(newProduct);
@@ -44,46 +44,41 @@ const productController = {
 	editProduct: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('editproduct', {productToEdit})
+		res.render('editproduct', {productToEdit, toThousand})
 	},
 	update: (req, res) => {
-		let id = req.params.id;
-		let productToEdit = products.find(product => product.id == id)
-		let image
-
-		if(req.files[0] != undefined){
-			image = req.files[0].filename
-		} else {
-			image = productToEdit.image
-		}
+		products.find(product => product.id == req.params.id)
 
 		productToEdit = {
-			id: products.length + 1,
-			title: req.body.title,
-			publisher: req.body.publisher,
-			shortDescription: req.body.shortDescription,
-			category: req.body.category,
-			price: req.body.price,
-			//img: req.body.img
-			image: image
+			"id": parseFloat(req.params.id),
+			"title": req.body.title,
+			"price": parseFloat(req.body.price),
+			"discountPercentage": parseFloat(req.body.discountPercentage),
+			"category": req.body.category,
+			"shortDescription": req.body.shortDescription,
+			//"img": req.files[0].filename,
+			"avaible": req.body.avaible
 		};
-		
-		let newProducts = products.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {productToEdit};
-			}
-			return product;
-		})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		let editedProduct = products.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = productToEdit
+			}
+			return product
+		});
+
+		let newProductList = JSON.stringify(editedProduct, null, ' ');
+		fs.writeFileSync(productsFilePath, newProductList, 'utf-8');
 		res.redirect('/');
 	},
 	delete: (req, res) => {
-		let id = req.params.id;
-		let productToDelete = products.filter(product => {
-			product.id !== id
+		let id = req.params.id
+		let productDetail = products.find(product => product.id == id)
+		res.render('detail', {
+			productDetail,
+			toThousand
 		})
-	}
+	},
 	}
 
 module.exports = productController;

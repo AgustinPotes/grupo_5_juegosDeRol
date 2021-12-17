@@ -16,7 +16,7 @@
        <%- include('./partials/headerNavbar') %>
 
     <header>
-        <h3>Alien RPG Starter Set</h3>
+        <h3><%=productDetail.title%></h3>
     </header>
 
     <section class="main-product">
@@ -43,6 +43,11 @@
                         <option value="5">
                 </datalist>
                 <input class="add-to-cart-buttom" type="submit" value="Agregar al Carrito">
+
+                <div class="col-12">
+
+                <a href="/products/editproduct/<%productDetail.id%>"><button type="button" class="buy-now-button">Editar producto</button></a>
+                </div>
                 </div>
                 </div>
                 
