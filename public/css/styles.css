@@ -390,7 +390,10 @@ h6 {
     height: 45vw;
     padding: 5px;
 }
-
+.main-navbar #myLinks {
+    display: none;
+  }
+ 
 
 /* MEDIA QUERIES */
 

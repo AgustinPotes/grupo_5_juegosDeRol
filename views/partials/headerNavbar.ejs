@@ -1,22 +1,29 @@
 <nav class="main-navbar">
     <a href="/"><img src="/img/logoSinNombre.png" class="logo"></a>
-
     <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-    </div>
-    
-    <ul class="left-navbar">
+    <ul class="left-navbar" id="myLinks">
         <li class="category"><a href="#">Juegos de rol</a></li>
         <li class="category"><a href="#">Juegos de cartas</a></li>
         <li class="category"><a href="#">Miniaturas y accesorios</a></li>
-    </ul>
-
+    </ul> 
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     <input type="search" placeholder=" Buscar nuevas aventuras..." class="search-bar" >
     <i class="fas fa-search"></i>
-
-    <ul class="right-navbar">
+    <ul class="right-navbar" id="myLinks">
         <li class="category"><a href="/users/login"><button type="button"><i class="fas fa-user-circle"></i></button></a></li>
         <li class="category"><a href="/products/cart"><button><i class="fas fa-shopping-cart"></i></button></a></li>
     </ul>
-    
+</div>
+    <script>
+        function myFunction() {
+          let x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
     </nav>
