@@ -1,38 +1,38 @@
 [
-    {
-   "id":1,
-   "name": "Rosa",
-   "lastName": "Merinda",
-   "user": "Rosita",
-   "eMail": "rosamerinda@gmail.com",
-   "password": "Rosa123",
-   "type": "regular"
-},
-{
-    "id":2,
-    "name": "Carlos",
-    "lastName": "Bottardo",
-    "user": "Carlitos_Bot",
-    "eMail": "carlosbottardo@yahoo.com",
-    "password": "carlosElCapo33",
-    "type": "regular"
+ {
+  "id": 1,
+  "name": "Rosa",
+  "lastName": "Merinda",
+  "userAlias": "Rosita",
+  "eMail": "rosamerinda@gmail.com",
+  "password": "Rosa123",
+  "type": "regular"
  },
  {
-    "id":3,
-    "name": "Verónica",
-    "lastName": "Mechino",
-    "user": "VeroMechi",
-    "eMail": "veromechino@hotmail.com",
-    "password": "VeroAllStar44",
-    "type": "regular"
+  "id": 2,
+  "name": "Carlos",
+  "lastName": "Bottardo",
+  "userAlias": "Carlitos_Bot",
+  "eMail": "carlosbottardo@yahoo.com",
+  "password": "carlosElCapo33",
+  "type": "regular"
  },
  {
-    "id":4,
-    "name": "Roberto",
-    "lastName": "Aguacate",
-    "user": "Robertito123",
-    "eMail": "roberagua@gmail.com",
-    "password": "rober2009",
-    "type": "admin"
+  "id": 3,
+  "name": "Verónica",
+  "lastName": "Mechino",
+  "userAlias": "VeroMechi",
+  "eMail": "veromechino@hotmail.com",
+  "password": "VeroAllStar44",
+  "type": "regular"
+ },
+ {
+  "id": 4,
+  "name": "Roberto",
+  "lastName": "Aguacate",
+  "userAlias": "Robertito123",
+  "eMail": "roberagua@gmail.com",
+  "password": "rober2009",
+  "type": "admin"
  }
 ]

@@ -11,14 +11,39 @@
        <!-- Navbar -->
        <%- include('./partials/headerNavbar') %>
 
-    <form action="/register" method="POST" enctype="multipart/form-data">
+    <form action="/users/register" method="POST" enctype="multipart/form-data">
         <h2>Formulario de registro</h2>
-        <input type="text" placeholder="&#128100; Usuario" name="user" required>
-        <input type="email" placeholder="&#9993; E-mail" name="email" required>
-        <input type="password" placeholder="&#128273; Contraseña" name='password' required>
-        <input type="password" placeholder="&#128273; Contraseña" name='password' required>
-        <input type="submit" value="Registrate">
-        <p>Ya tienes cuenta?, <a class= "link" href="login"> Ingresa</a></p>
+        <input type="text" placeholder="&#128100; Nombre" name="name" required>
+        <input type="text" placeholder="&#128100; Apellido" name="lastName" required>
+        <input type="text" placeholder="&#128100; Usuario" name="userAlias" required>
+        <input type="email" placeholder="&#9993; E-mail" name="eMail" required>
+        <input type="password" placeholder="&#128273; Contraseña" id="password" name='password' onkeyup="check()" required>
+        <input type="password" placeholder="&#128273; Confirmar contraseña" id="passwordCheck" onkeyup="check()" required>
+        <span id="message"></span>
+        <script>
+        let check = function() {
+            if (document.getElementById('password').value ==
+              document.getElementById('passwordCheck').value) {
+                document.getElementById('message').innerHTML = '';
+                document.getElementById('submit').disabled = false;
+            } else {
+              document.getElementById('message').style.color = 'red';
+              document.getElementById('message').innerHTML = 'Las contraseñas no son iguales';
+              document.getElementById('submit').disabled = true;
+            }
+          }
+        </script>
+        
+        <div class="divAddImages">
+            <label>Foto de perfil:</label>
+            <input name="img" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg">
+        </div>
+
+        <div>
+        <input id="submit" type="submit" value="Registrate">
+        </div>
+
+        <p>¿Ya tenés una cuenta? <a class= "link" href="login"> Ingresá</a></p>
         
     </form> 
    <!-- Footer -->

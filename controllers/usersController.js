@@ -1,16 +1,32 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     login: (req, res) => {
-        res.render('login')
+        res.render('login');
     },
     register: (req, res) => {
-        res.render('register', {users})
-    }
-};
+        res.render('register', {users});
+    },
+    newUser: (req, res) => {
+        let newUser = {
+            "id": users.length + 1,
+            "name": req.body.name,
+            "lastName": req.body.lastName,
+            "userAlias": req.body.userAlias,
+            "eMail": req.body.eMail,
+            "password": req.body.password,
+            "type": "regular",
+            "img": req.files[0].filename
+        };
+
+        users.push(newUser);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+        res.redirect('/');
+},
+}
 
 module.exports = usersController;
