@@ -55,4 +55,50 @@
   "type": "regular",
   "img": "img-1640147950700.png"
  },
+ {
+  "id": 7,
+  "name": "",
+  "lastName": "",
+  "userAlias": "",
+  "eMail": "",
+  "password": "",
+  "type": "regular",
+  "img": "img-1640152272675.png"
+ },
+ {
+  "id": 8,
+  "name": "",
+  "lastName": "",
+  "userAlias": "",
+  "eMail": "",
+  "password": "",
+  "type": "regular"
+ },
+ {
+  "id": 9,
+  "name": "",
+  "lastName": "D'Angelo",
+  "userAlias": "",
+  "eMail": "ldangelo@itba.edu.ar",
+  "password": "11",
+  "type": "regular"
+ },
+ {
+  "id": 10,
+  "name": "",
+  "lastName": "",
+  "userAlias": "",
+  "eMail": "",
+  "password": "",
+  "type": "regular"
+ },
+ {
+  "id": 11,
+  "name": "ABC",
+  "lastName": "D'Angelo",
+  "userAlias": "Ld",
+  "eMail": "ldangelo@itba.edu.ar",
+  "password": "11",
+  "type": "regular"
+ }
 ]

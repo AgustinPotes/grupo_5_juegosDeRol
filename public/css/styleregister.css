@@ -293,3 +293,8 @@ h6 {
         margin-top: 110px;
     }
 }
+
+.errores {
+  text-align: center;
+  color: red;
+} 

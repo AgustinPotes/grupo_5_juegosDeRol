@@ -15,10 +15,10 @@ const upload = multer({storage: storage})
 // ************ Express-Validator ************ 
 const { body } = require('express-validator');
 const validaciones = [
-    body('name').notEmpty().withMessage('Campo obligatorio'),
-    body('lastName').notEmpty().withMessage('Campo obligatorio'),
-    body('eMail').notEmpty().withMessage('Campo obligatorio'),
-    body('password').notEmpty().withMessage('Campo obligatorio'),
+    body('name').notEmpty().withMessage('Nombre es un Campo obligatorio'),
+    body('lastName').notEmpty().withMessage('Apellido es un Campo obligatorio'),
+    body('eMail').notEmpty().withMessage('Email es un Campo obligatorio'),
+    body('password').notEmpty().withMessage('Contrasena es un Campo obligatorio'),
 ];
 
 const router = express.Router();
@@ -26,7 +26,7 @@ const usersController = require('../controllers/usersController')
 
 
 router.get('/login', usersController.login);
-router.get('/register', validaciones, usersController.register);
-router.post('/register', upload.any(), usersController.newUser);
+router.get('/register', usersController.register);
+router.post('/register', upload.any(), validaciones, usersController.newUser);
 
 module.exports = router;

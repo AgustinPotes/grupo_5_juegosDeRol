@@ -14,7 +14,7 @@ const usersController = {
         res.render('register', {users});
     },
     newUser: (req, res) => {
-        let errors = validationResult(req);
+        const errors = validationResult(req);
 
         if (errors.isEmpty()) {
 
@@ -26,14 +26,14 @@ const usersController = {
              "eMail": req.body.eMail,
              "password": req.body.password,
              "type": "regular",
-             "img": req.files[0].filename
+             //"img": req.files[0].filename
          };
 
          users.push(newUser);
          fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
          res.redirect('/');
         } else {
-        res.redirect('register');
+        return res.render('register', { errors: errors.mapped()} );
     }
     },
 }
