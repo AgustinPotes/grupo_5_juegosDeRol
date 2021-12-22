@@ -44,5 +44,15 @@
   "password": "ABC",
   "type": "regular",
   "img": "img-1640145022081.png"
- }
+ },
+ {
+  "id": 6,
+  "name": "Lucio",
+  "lastName": "D'Angelo",
+  "userAlias": "Ld",
+  "eMail": "ldangelo@itba.edu.ar",
+  "password": "ABC",
+  "type": "regular",
+  "img": "img-1640147950700.png"
+ },
 ]

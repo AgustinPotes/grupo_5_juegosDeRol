@@ -15,10 +15,10 @@ const upload = multer({storage: storage})
 // ************ Express-Validator ************ 
 const { body } = require('express-validator');
 const validaciones = [
-    body('name').notEmpty(),
-    body('lastName').notEmpty(),
-    body('eMail').notEmpty(),
-    body('password').notEmpty(),
+    body('name').notEmpty().withMessage('Campo obligatorio'),
+    body('lastName').notEmpty().withMessage('Campo obligatorio'),
+    body('eMail').notEmpty().withMessage('Campo obligatorio'),
+    body('password').notEmpty().withMessage('Campo obligatorio'),
 ];
 
 const router = express.Router();
