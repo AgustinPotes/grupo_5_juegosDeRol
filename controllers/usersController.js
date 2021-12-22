@@ -33,7 +33,7 @@ const usersController = {
          fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
          res.redirect('/');
         } else {
-        return res.render('register', { errors: errors.mapped()} );
+        return res.render('register', { errors: errors.mapped(), oldData: req.body } );
     }
     },
 }

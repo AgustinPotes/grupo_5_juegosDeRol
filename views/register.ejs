@@ -15,16 +15,28 @@
 
     <form action="/users/register" method="POST" enctype="multipart/form-data">
         <h2>Formulario de registro</h2>
-        <% if (locals.errors) { %>
+        <!-- <% if (locals.errors) { %>
           <% for ( let oneError in errors ) { %>
             <p class="errores"><%= errors[oneError].msg %> </p>
           <% } %>
+        <%} %> -->
+        <input type="text" placeholder="&#128100; Nombre" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
+        <% if (locals.errors && errors.name) { %>
+          <%= errors.name.msg %>
         <%} %>
-        <input type="text" placeholder="&#128100; Nombre" name="name" >
-        <input type="text" placeholder="&#128100; Apellido" name="lastName" >
+        <input type="text" placeholder="&#128100; Apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" >
+        <% if (locals.errors && errors.lastName) { %>
+          <%= errors.lastName.msg %>
+        <%} %>
         <input type="text" placeholder="&#128100; Usuario" name="userAlias" >
-        <input type="email" placeholder="&#9993; E-mail" name="eMail" >
-        <input type="password" placeholder="&#128273; Contraseña" id="password" name='password' onkeyup="check()" >
+        <input type="email" placeholder="&#9993; E-mail" name="eMail" value="<%= locals.oldData ? oldData.eMail : null %>">
+        <% if (locals.errors && errors.eMail) { %>
+          <%= errors.eMail.msg %>
+        <%} %>
+        <input type="password" placeholder="&#128273; Contraseña" id="password" name='password' onkeyup="check()" value="<%= locals.oldData ? oldData.password : null %>">
+        <% if (locals.errors && errors.password) { %>
+          <%= errors.password.msg %>
+        <%} %>
         <input type="password" placeholder="&#128273; Confirmar contraseña" id="passwordCheck" onkeyup="check()" >
         <span id="message"></span>
         <script>
