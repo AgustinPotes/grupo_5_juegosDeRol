@@ -100,5 +100,14 @@
   "eMail": "ldangelo@itba.edu.ar",
   "password": "11",
   "type": "regular"
+ },
+ {
+  "id": 12,
+  "name": "Lucio",
+  "lastName": "D'Angelo",
+  "userAlias": "Ld",
+  "eMail": "ldangelo@itba.edu.ar",
+  "password": "$2a$10$alTq.gHfKrHB8Qm.iKqEXeDjVHBf4roIg9S5H6Hmax0OYX3S1mFKG",
+  "type": "regular"
  }
 ]
