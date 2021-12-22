@@ -25,8 +25,10 @@ const validaciones = [
 const router = express.Router();
 const usersController = require('../controllers/usersController')
 
-
+//************ Login ************ 
 router.get('/login', usersController.login);
+router.post('/login', validaciones, usersController.processLogin);
+//************ Register ************ 
 router.get('/register', usersController.register);
 router.post('/register', upload.any(), validaciones, usersController.newUser);
 
