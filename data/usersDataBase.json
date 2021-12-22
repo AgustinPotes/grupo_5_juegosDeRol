@@ -34,5 +34,15 @@
   "eMail": "roberagua@gmail.com",
   "password": "rober2009",
   "type": "admin"
+ },
+ {
+  "id": 5,
+  "name": "Lucio",
+  "lastName": "d'angelo",
+  "userAlias": "Ld",
+  "eMail": "lucio_dangelo1@hotmail.com",
+  "password": "ABC",
+  "type": "regular",
+  "img": "img-1640145022081.png"
  }
 ]
