@@ -47,23 +47,36 @@ const usersController = {
     register: (req, res) => {
         res.render('register', {users});
     },
+    //funciones reutilizables
+    fileName: './data/usersDataBase.json',
+    getData: function () {
+        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+    },
+    findAll: function () {
+        return this.getData();
+    },
+    findByField: function (field,text) {
+        let allUsers = this.findAll();
+        let userFound = allUsers.find(oneUser => oneUser[field] === text);
+        return userFound;
+    },
     newUser: (req, res) => {
         const errors = validationResult(req);
 
         // Codigo para no repetir datos ya registrados, no funciona por el findbyfield 
 
-        //   let userInDB = users.findByField("eMail", req.body.eMail);
+           let userInDB = usersController.findByField("eMail", req.body.eMail);
 
-        //   if (userInDB){ 
-        //       return res.render('register', {
-        //           errors: {
-        //               eMail: {
-        //                   msg: 'El Email ya esta registrado'
-        //               }
-        //           },
-        //           oldData: req.body
-        //       });
-        //   }
+           if (userInDB){ 
+               return res.render('register', {
+                   errors: {
+                       eMail: {
+                           msg: 'El Email ya esta registrado'
+                       }
+                   },
+                   oldData: req.body
+               });
+           }
 
         if (errors.isEmpty()) {
 

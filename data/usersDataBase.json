@@ -127,5 +127,23 @@
   "eMail": "rosamerinda@gmail.com",
   "password": "$2a$10$wE9ND3AQ5RB.ippWSf31DOOqvXCUrKE4hr/2wUDatf5Zh1Tfsb91K",
   "type": "regular"
+ },
+ {
+  "id": 15,
+  "name": "Lucio",
+  "lastName": "D'Angelo",
+  "userAlias": "11",
+  "eMail": "ldangelo@itba.edu.ar",
+  "password": "$2a$10$TIjoQOSH8NeCqUOVQ4Zl5.B8k57XBvbLYsORNn7bYCNAgKwt7br9e",
+  "type": "regular"
+ },
+ {
+  "id": 16,
+  "name": "Lucio",
+  "lastName": "D'Angelo",
+  "userAlias": "1223",
+  "eMail": "ldangelo123@itba.edu.ar",
+  "password": "$2a$10$bk.DeE8BWSFGxjXqfhC2ROtv004JDzPH19LUdbaongTYa9Vh4fKGG",
+  "type": "regular"
  }
 ]
