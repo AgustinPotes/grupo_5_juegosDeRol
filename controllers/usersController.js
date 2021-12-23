@@ -13,36 +13,33 @@ const usersController = {
         res.render('login');
     },
     processLogin: (req, res) => {
-        let userToLogin = users.findByField('email', req.body.eMail);
-        return res.send(userToLogin);
+        //let userToLogin = usersController.findByField('email', req.body.eMail);
+        //return res.send(userToLogin);
+        // const errors = validationResult(req);
+        // if (errors.isEmpty()) {
+        //      let usersDataBase = fs.readFileSync('usersDataBase.json', { errors });
+        //      let users;
+        //      if (usersDataBase == "") {
+        //          users = [];
+        //      } else {
+        //          users = JSON.parse(usersDataBase);
+        //      }
 
-
-
-    //     const errors = validationResult(req);
-    //     if (errors.isEmpty()) {
-    //         let usersDataBase = fs.readFileSync('usersDataBase.json', { errors });
-    //         let users;
-    //         if (usersDataBase == "") {
-    //             users = [];
-    //         } else {
-    //             users = JSON.parse(usersDataBase);
-    //         }
-
-    //         for (let i = 0; i < users.length; i++) {
-    //             if (users[i].email == req.body.email) {
-    //                 if (bcrypt.compareSync(req.body.password, users[i].password)){
-    //                 let usuarioLogin = users[i];
-    //                 break;
-    //                 }
-    //             }
-    //         }
-    //         if (usuarioLogin == undefined) {
-    //             return res.render('login', {errors: [ {nsg:"Inicio de sesion invalido"} ]});
-    //         }
-    //         req.session.usuarioLogeado = usuarioLogin;
-    //        } else {
-    //        return res.render('register', { errors: errors.errors } );
-    //    }
+        //      for (let i = 0; i < users.length; i++) {
+        //          if (users[i].email == req.body.email) {
+        //              if (bcrypt.compareSync(req.body.password, users[i].password)){
+        //              let usuarioLogin = users[i];
+        //              break;
+        //              }
+        //          }
+        //      }
+        //      if (usuarioLogin == undefined) {
+        //          return res.render('login', {errors: [ {msg:"Inicio de sesion invalido"} ]});
+        //      }
+        //      req.session.usuarioLogeado = usuarioLogin;
+        //     } else {
+        //     return res.render('register', { errors: errors.errors } );
+        // }
     },
     register: (req, res) => {
         res.render('register', {users});
@@ -63,20 +60,32 @@ const usersController = {
     newUser: (req, res) => {
         const errors = validationResult(req);
 
-        // Codigo para no repetir datos ya registrados, no funciona por el findbyfield 
+            let userInDBEmail = usersController.findByField("eMail", req.body.eMail);
 
-           let userInDB = usersController.findByField("eMail", req.body.eMail);
+            if (userInDBEmail){ 
+                return res.render('register', {
+                    errors: {
+                        eMail: {
+                            msg: 'El Email ya esta registrado'
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
 
-           if (userInDB){ 
+           let userInDBUser = usersController.findByField("userAlias", req.body.userAlias);
+
+           if (userInDBUser){ 
                return res.render('register', {
                    errors: {
-                       eMail: {
-                           msg: 'El Email ya esta registrado'
+                    userAlias: {
+                           msg: 'El User Name ya esta registrado'
                        }
                    },
                    oldData: req.body
                });
            }
+
 
         if (errors.isEmpty()) {
 

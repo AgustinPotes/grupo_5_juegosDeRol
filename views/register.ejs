@@ -29,6 +29,9 @@
           <%= errors.lastName.msg %>
         <%} %>
         <input type="text" placeholder="&#128100; Usuario" name="userAlias" >
+        <% if (locals.errors && errors.userAlias) { %>
+          <%= errors.userAlias.msg %>
+        <%} %>
         <input type="email" placeholder="&#9993; E-mail" name="eMail" value="<%= locals.oldData ? oldData.eMail : null %>">
         <% if (locals.errors && errors.eMail) { %>
           <%= errors.eMail.msg %>
