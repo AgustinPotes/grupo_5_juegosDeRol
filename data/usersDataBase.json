@@ -34,14 +34,5 @@
   "eMail": "roberagua@gmail.com",
   "password": "rober2009",
   "type": "admin"
- },
- {
-  "id": 5,
-  "name": "Lucio",
-  "lastName": "D'Angelo",
-  "userAlias": "LucioD",
-  "eMail": "ldangelo@itba.edu.ar",
-  "password": "$2a$10$h31T.EdPhizfCU4g74wx4uWtEvI0x/0bvDk/cXrxDeg5DeysW4.5i",
-  "type": "regular"
  }
 ]
