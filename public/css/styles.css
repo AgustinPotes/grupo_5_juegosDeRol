@@ -33,7 +33,6 @@ body {
 
 .right-navbar i {
     align-items:  center;
-    margin: auto;
 }
 
 .left-navbar {
@@ -55,7 +54,7 @@ body {
 .category {
     border-right: 10px;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     display: flex;
 }
 
@@ -64,10 +63,17 @@ body {
     color: rgb(167, 37, 37);
 }
 
+
 .logo {
     width: 23vw;
     height: 28vw;
     padding: 5px;
+}
+
+.login-cart-button {
+    background-color:rgb(167, 37, 37);
+    border: none;
+    margin: 5px;
 }
 
 .fa-user-circle {
@@ -95,14 +101,13 @@ body {
 }
 
 .search-bar {
-    width: 30vw;
-    height: 3vw;
+    height: 40%;
     font-size: 15px;
     border-radius: 5px;
     border: none;
-    margin: 10px;
     display: none;
     align-items: center;
+    margin: 0px 0px 0px 5px;
 }
 
 .fa-search {
@@ -423,8 +428,12 @@ h6 {
         margin-top: 0%;
         text-align: center;
         align-items: stretch;
+        display: block;
     }
 
+    .burger {
+        display: none;
+    }
 
     .main-navbar #myLinks {
         display: inline-flex;
@@ -435,6 +444,7 @@ h6 {
     }
     .burger-menu {
         display: flex;
+        font-size: 132%;
     }
 
     .icon-burger{
@@ -455,9 +465,7 @@ h6 {
     .fa-search {
         display: flex;
         border-radius: 50px;
-        position: relative;
-        top: 20%;
-        left: 1%;
+        margin: 5px;
     }
     .description {
         display: flex;
@@ -501,7 +509,8 @@ h6 {
 
     .search-bar {
         border-radius: 10px;
-        font-size: 20px;
+        font-size: 18px;
+        display: block;
     }
 
     .fa-user-circle {
@@ -523,11 +532,13 @@ h6 {
         width: 5.5vw;
         height: 5.5vw;
         border-radius: 50px;
+        left: 0%;
     }
 
     .left-navbar {
-        height: 80px;
         border-radius: 10px;
+        margin: 2.5% 0%;
+        font-size: 97%;
     }
     .novelties {
         margin-top: 16%;
@@ -547,5 +558,8 @@ h6 {
         width: 60vw;
         top: 10.5vw;
         left: 18vw;
+    }
+    .left-navbar {
+        font-size: 130%;
     }
 }
