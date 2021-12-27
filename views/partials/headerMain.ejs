@@ -5,3 +5,11 @@
 </div>
 
 <!-- acá hay que hacer un for que recorra los productos de a uno y muestre su correspondiente banner, linkeado a la página de ese producto en sí -->
+<div class="main-container">
+    <% for (let i = 0; i < products.length; i++){%>  
+    <article class="display-product">
+            <img src="/img/<%=products[i].img%>" alt="">
+            <h4 class="product-name"><%=products[i].title%></h4>
+            <p class="product-price">$<%=products[i].price%></p>
+    </article>
+    <%}%>
