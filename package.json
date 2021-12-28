@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/LucioDangelo/grupo_5_juegosDeRol/issues"
   },
-  "homepage": "https://github.com/LucioDangelo/grupo_5_juegosDeRol#readme"
+  "homepage": "https://github.com/LucioDangelo/grupo_5_juegosDeRol#readme",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2"
+  }
 }
