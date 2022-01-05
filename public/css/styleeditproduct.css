@@ -382,3 +382,8 @@ form{
         margin-top: 110px;
     }
 }
+
+
+.prueba_delete_button {
+    margin-top: none;
+}

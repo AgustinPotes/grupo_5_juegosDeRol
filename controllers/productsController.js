@@ -72,12 +72,10 @@ const productController = {
 		res.redirect('/');
 	},
 	delete: (req, res) => {
-		let id = req.params.id
-		let productDetail = products.find(product => product.id == id)
-		res.render('detail', {
-			productDetail,
-			toThousand
-		})
+		let deletedProduct = products.filter(product => product.id != req.params.id );
+		let newProductList = JSON.stringify(deletedProduct, null, ' ');
+		fs.writeFileSync(productsFilePath, newProductList, 'utf-8');
+		res.redirect('/');
 	},
 	}
 
