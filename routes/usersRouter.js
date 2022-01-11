@@ -11,7 +11,16 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
+const storageAvatar = multer.diskStorage({
+    destination: function(req, file, cb){
+        cb(null, 'public/img/avatars')
+    },
+    filename: function(req, file, cb){
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
 const upload = multer({storage: storage})
+const uploadAvatar = multer({storage: storageAvatar})
 
 // ************ Express-Validator ************ 
 const { body } = require('express-validator');
@@ -29,9 +38,9 @@ const usersController = require('../controllers/usersController')
 
 //************ Login ************ 
 router.get('/login', usersController.login);
-router.post('/login', validaciones, usersController.login);
+router.post('/login', usersController.loginProcess);
 //************ Register ************ 
 router.get('/register', usersController.register);
-router.post('/register', upload.any(), validaciones, usersController.processRegister);
+router.post('/register', uploadAvatar.any('avatar'), validaciones, usersController.processRegister);
 
 module.exports = router;

@@ -20,19 +20,40 @@ const usersController = {
                 oldData: req.body
             });
         }
+        let userInDB = User.findByField('eMail', req.body.eMail);
+
+       if (userInDB) {
+        return res.render ('register', {
+            errors: {
+                eMail: {
+                    msg: 'Este email está en uso'
+                }
+            },
+            oldData: req.body
+        });
+       }
        let userToCreate = {
            ...req.body,
            password: bcryptjs.hashSync(req.body.password, 10),
-           img: req.file.filename
+           //avatar: req.file.filename
        }
-       User.create(userToCreate);
+       let userCreated = User.create(userToCreate);
+
+       return res.redirect('/users/login')
+
+
     },
     login: (req, res) => {
         return res.render('login')
     },
+    loginProcess: (req, res) => {
+        return res.send(req.body)
+    },
+
     profile: (req, res) => {
         return res.render('userProfile')
-    }
+    },
+    
 }
 
 module.exports = usersController;
