@@ -29,9 +29,9 @@ const usersController = require('../controllers/usersController')
 
 //************ Login ************ 
 router.get('/login', usersController.login);
-router.post('/login', validaciones, usersController.processLogin);
+router.post('/login', validaciones, usersController.login);
 //************ Register ************ 
 router.get('/register', usersController.register);
-router.post('/register', upload.any(), validaciones, usersController.newUser);
+router.post('/register', upload.any(), validaciones, usersController.processRegister);
 
 module.exports = router;
