@@ -12,7 +12,7 @@ const usersController = {
     login: (req, res) => {
         res.render('login');
     },
-    processLogin: (req, res) => {
+    //processLogin: (req, res) => {
         //let userToLogin = usersController.findByField('email', req.body.eMail);
         //return res.send(userToLogin);
         // const errors = validationResult(req);
@@ -40,7 +40,7 @@ const usersController = {
         //     } else {
         //     return res.render('register', { errors: errors.errors } );
         // }
-    },
+    //},
     register: (req, res) => {
         res.render('register', {users});
     },
@@ -105,11 +105,18 @@ const usersController = {
          res.redirect('/');
         } else {
         return res.render('register', { errors: errors.mapped(), oldData: req.body } );
-    }
-
-   
-
+        }
     },
+    delete: function (id) {
+        let allUsers = this.findAll();
+        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+        fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+         res.redirect('/');
+    },
+
+   // processLogin: (req, res) => {
+   //     
+   // }
 }
 
 module.exports = usersController;
