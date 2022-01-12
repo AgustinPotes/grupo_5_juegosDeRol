@@ -57,7 +57,7 @@ const usersController = {
                          msg: 'Password invaldia'
                     }
                 }
-            })
+            });
        }
         return res.render('login', {
             errors: {
