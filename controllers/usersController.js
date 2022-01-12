@@ -3,7 +3,6 @@ const path = require('path');
 const User = require('../models/User');
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 const { validationResult } = require('express-validator'); 
 const bcryptjs = require('bcryptjs');
 const bcrypt = require('bcryptjs/dist/bcrypt');
@@ -35,7 +34,8 @@ const usersController = {
        let userToCreate = {
            ...req.body,
            password: bcryptjs.hashSync(req.body.password, 10),
-           //avatar: req.file.filename
+           avatar: req.files[0].filename
+           
        }
        let userCreated = User.create(userToCreate);
 

@@ -43,5 +43,14 @@
   "eMail": "elperro@gmail.com",
   "password": "$2a$10$X5otJ7dIY3EYUZkehHsMCOeOcrNIvyiaRJFI727nzwENLF/VIAtiG",
   "type": "regular"
+ },
+ {
+  "id": 6,
+  "name": "Agustin",
+  "lastName": "Potter",
+  "userAlias": "aguspotter12",
+  "eMail": "aguspotter@gmail.com",
+  "password": "$2a$10$G72Za8XrcbQyKSkbl4UAiOioJQPPrUirXdy/q79EyjVbdPHD3aHHC",
+  "avatar": "avatar-1641989458660.png"
  }
 ]
