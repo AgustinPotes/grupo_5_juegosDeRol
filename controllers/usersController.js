@@ -32,7 +32,7 @@ const usersController = {
        let userToCreate = {
            ...req.body,
            password: bcryptjs.hashSync(req.body.password, 10),
-           avatar: req.files[0].filename
+           avatar: req.files.filename
            
        }
        let userCreated = User.create(userToCreate);
@@ -49,6 +49,8 @@ const usersController = {
        if(userToLogin) {
            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
            if (isOkThePassword){
+               delete userToLogin.password
+               req.session.userLogged = userToLogin
                return res.redirect('/users/profile')
             }
             return res.render('login', {
@@ -69,8 +71,15 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        return res.render('userProfile')
+        return res.render('userProfile', {
+            user: req.session.userLogged
+        })
     },
+
+    logout: (req, res) => {
+        req.session.destroy()
+        return res.redirect('/')
+    }
     
 }
 
