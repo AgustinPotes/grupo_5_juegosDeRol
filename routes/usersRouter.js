@@ -39,6 +39,7 @@ const usersController = require('../controllers/usersController')
 //************ Login ************ 
 router.get('/login', usersController.login);
 router.post('/login', usersController.loginProcess);
+router.get('/profile')
 //************ Register ************ 
 router.get('/register', usersController.register);
 router.post('/register', uploadAvatar.any('avatar'), validaciones, usersController.processRegister);

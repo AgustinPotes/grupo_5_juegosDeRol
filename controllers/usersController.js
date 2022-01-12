@@ -46,14 +46,26 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         let userToLogin = User.findByField('eMail', req.body.eMail);
-       console.log(req.body);
+       if(userToLogin) {
+           let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+           if (isOkThePassword){
+               return res.send('tas logeado kpo')
+            }
+            return res.render('login', {
+                errors: {
+                    password: { 
+                         msg: 'Password invaldia'
+                    }
+                }
+            })
+       }
         return res.render('login', {
             errors: {
                 eMail: { 
                      msg: 'No estas registrado'
                 }
             }
-        })
+        });
     },
 
     profile: (req, res) => {
