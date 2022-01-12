@@ -49,7 +49,7 @@ const usersController = {
        if(userToLogin) {
            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
            if (isOkThePassword){
-               return res.send('tas logeado kpo')
+               return res.redirect('/users/profile')
             }
             return res.render('login', {
                 errors: {
