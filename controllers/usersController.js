@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const User = require('../models/User');
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator'); 
 const bcryptjs = require('bcryptjs');
 const bcrypt = require('bcryptjs/dist/bcrypt');
@@ -21,15 +19,15 @@ const usersController = {
         }
         let userInDB = User.findByField('eMail', req.body.eMail);
 
-       if (userInDB) {
-        return res.render ('register', {
-            errors: {
-                eMail: {
-                    msg: 'Este email está en uso'
-                }
-            },
-            oldData: req.body
-        });
+        if (userInDB) {
+            return res.render ('register', {
+                errors: {
+                    eMail: {
+                        msg: 'Este email está en uso'
+                    }
+                },
+                oldData: req.body
+            });
        }
        let userToCreate = {
            ...req.body,
@@ -47,7 +45,15 @@ const usersController = {
         return res.render('login')
     },
     loginProcess: (req, res) => {
-        return res.send(req.body)
+        let userToLogin = User.findByField('eMail', req.body.eMail);
+       console.log(req.body);
+        return res.render('login', {
+            errors: {
+                eMail: { 
+                     msg: 'No estas registrado'
+                }
+            }
+        })
     },
 
     profile: (req, res) => {

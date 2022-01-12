@@ -52,5 +52,23 @@
   "eMail": "aguspotter@gmail.com",
   "password": "$2a$10$G72Za8XrcbQyKSkbl4UAiOioJQPPrUirXdy/q79EyjVbdPHD3aHHC",
   "avatar": "avatar-1641989458660.png"
+ },
+ {
+  "id": 7,
+  "name": "qweqeq",
+  "lastName": "qweqweq",
+  "userAlias": "1234q",
+  "eMail": "qqqq@gmail.com",
+  "password": "$2a$10$2EpakJ0xVjcbQE2g70Paeeq8YsFxNe5ghiRlJlj971BF2qCg/yaVm",
+  "avatar": "avatar-1641993372996.png"
+ },
+ {
+  "id": 8,
+  "name": "br1231",
+  "lastName": "12313qw",
+  "userAlias": "nicocry2",
+  "eMail": "qweqeq@hot.com",
+  "password": "$2a$10$.w2V4lYILbbzfL9JG5RV.e9kjsGgXEUi82bDr21O6mhLu7M1zO6l6",
+  "avatar": "avatar-1641996659016.png"
  }
 ]

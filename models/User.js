@@ -25,7 +25,9 @@ const User = {
         let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound;
+        
     },
+   
     create: function (userData) {
         let allUsers = this.findAll();
         let newUser = {
