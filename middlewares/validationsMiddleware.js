@@ -16,7 +16,7 @@ module.exports = [
             throw new Error('Tienes que subir una imagen')
         } else {
             let fileExtensions = path.extname(file.originalname)
-            if (!acceptedExtensions.includes(fileExtension)) { 
+            if (!acceptExtensions.includes(fileExtensions)) { 
                 throw new Error('Extensiones de archivo permitidas son ${acceptedExtensions.join{', ')}')
             }
         }
