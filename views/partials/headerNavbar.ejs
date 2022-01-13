@@ -45,8 +45,8 @@
       <%  if (locals.isLogged) { %>
         <li>
           <a href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/images/avatars/"> 
-            Hi User
+            <img src="/img/avatars/<%= locals.userLogged.avatar %>"> 
+            Bienvenido <%= locals.userLogged.userAlias %>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a href="dropdown-divider"></a>

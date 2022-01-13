@@ -10,13 +10,14 @@
 <body>
      <!-- Navbar -->
      
-     
-<form action="/users/profileToEdit" method="get">
-        <h2>Bienvenido </h2>
-        
-        <button class="logout" href="/users/profileToEdit">"Editar información"</button>    
-    </form>
+<img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style= 'border-radius: 180%' alt="avatar">    
+<h2>Bienvenido <%= locals.userLogged.userAlias %></h2>
 
+<form action="/users/profileToEdit" method="get">
+   
+        
+    <button class="logout" href="/users/profileToEdit">Editar información</button>    
+</form>
 
 <form action="/users/logout" method="get">
 
