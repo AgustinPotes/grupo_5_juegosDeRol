@@ -120,5 +120,13 @@
   "userAlias": "",
   "eMail": "eyerery@gmail.com",
   "password": "$2a$10$pD1KsweDOkY9Z/J4ORttEuF4xZ/lzxV/bdDZN2Ba1CfoWUmw5UfFW"
+ },
+ {
+  "id": 15,
+  "name": "asd",
+  "lastName": "asd",
+  "userAlias": "asd",
+  "eMail": "asd@hola.com",
+  "password": "$2a$10$J1PqIZiXNFmau1pstweXIOKNq7jM1.AdogdwDSnW72JE23r6H4/FC"
  }
 ]

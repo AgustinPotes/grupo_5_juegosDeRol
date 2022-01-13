@@ -14,6 +14,7 @@ const validaciones = require('../middlewares/validationsMiddleware')
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 router.get('/profile', authMiddleware, usersController.profile)
+router.get('/profileToEdit/:id', authMiddleware, usersController.profileToEdit)
 router.get('/logout',  usersController.logout)
 //************ Register ************ 
 router.get('/register', guestMiddleware, usersController.register);
