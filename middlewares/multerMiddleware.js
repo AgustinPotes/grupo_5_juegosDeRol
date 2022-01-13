@@ -22,3 +22,4 @@ const upload = multer({storage: storage})
 const uploadAvatar = multer({storage: storageAvatar})
 
 module.exports = uploadAvatar;
+module.exports = upload;
