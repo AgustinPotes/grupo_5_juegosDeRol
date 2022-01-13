@@ -1,0 +1,16 @@
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+    const UserType = sequelize.define('UserType', {
+        user_type_id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        user_type: DataTypes.STRING(50),
+    }, {
+        tableName: 'User Types',
+        timestamps: false
+    });
+    return UserType;
+};
