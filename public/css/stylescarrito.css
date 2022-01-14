@@ -45,7 +45,7 @@ body {
 }
 
 
-.añadidos {
+.additions {
     /*border: solid 1px  black;*/
     border-radius: 10px;
     width: 100vw;
@@ -65,11 +65,11 @@ body {
     display: flex;
 }
 
-/*.caja-imagen {
+/*.box-image {
     display: flex;
 }*/
 
-/*.imagen {
+/*.image {
     position: relative;
     margin-left: auto;
     margin-right: auto;;
@@ -79,20 +79,20 @@ body {
     display: flex;
 } */
 
-.itemproducto {
+.itemproduct {
     width: 100vw;
     display: flex;
 }
 
-.imagen {
+.image {
     width: 15vw;
 }
 
-.producto {
+.product {
     width: 25%;
 }
 
-.nombreproducto {
+.nameproduct {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -100,29 +100,31 @@ body {
     height: 100vh;
 }
 
-.valores{
+.values{
     width: 16%;;
 }
 
-.itemcantidad{
-    width: 20%;
-}
-
-.precio {
+.price {
     color: orangered;
 }
 
-.precioanterior {
+.last-price {
     text-decoration: line-through;
 }
-.selectorcantidad {
+
+.itemquantity{
+    width: 20%;
+}
+
+
+.selectorquantity {
     margin-left: 5px;
     border: 1px solid black;
     padding: 3.8px;
     margin-right: 10px;
     background-color: white;
 }
-.boton {
+.button {
     text-align: center;
     padding: 3px 10px;
     border: none;
@@ -130,33 +132,14 @@ body {
     color:rgb(131, 131, 131);
 }
 
-.continuar-compra {
-    margin-top: 1vw;
-}
-
-.continuar-compra-boton {
-    margin: 1vw;
-    padding: 1vw;
-    border: 1px black solid;
-    border-radius: 2vw;
-    background-color: rgb(226, 226, 226);
-}
-
-.continuar-compra-letra {
-    text-decoration: none;
-    color: black;
-    background-color: rgb(226, 226, 226);
-    text-align: center;
-}
-
 .article-box {
     display: flex;
 }
 
-.caja {
+.box {
     margin: 10px;
 }
-.caja-sumario {
+.box-summary {
     border-radius: 5px;
     border: 1px solid black;
     background-color: burlywood;
@@ -164,15 +147,15 @@ body {
     width: 100vw;
 }
 
-.caja-totales {
+.box-totals {
     margin: 5vw;
 }
 
-.caja-body {
+.box-body {
     margin-bottom: 3vw;
 }
 
-.valor {
+.value {
     margin-left: 40vw;
 }
 
@@ -194,14 +177,14 @@ body {
     padding: 1vw;
 }
 
-.barra-descuento {
+.inp-discount {
     border-radius: 2vw;
     width: 60vw;
     height: 6vw;
     border: 1px black solid;
 }
 
-.añadir {
+.add {
     background-color: burlywood;
     color: rgb(253, 25, 71);
     border: none;
@@ -214,14 +197,14 @@ body {
     margin: 3vw;
 }
 
-/*.caja-checkout {
+/*.box-checkout {
     margin-top: 2vw;
     background-color: rgb(253, 25, 71);
     border-radius: 5vw;
     border: 1px black solid;
 }*/
 
-.finaliza-boton {
+.finish-button {
     /*padding: 3vw 25vw;*/
     margin: 1vw;
     border: 1px black solid;
@@ -230,9 +213,28 @@ body {
     width: 80vw;
     height: 10vw;
 }
-.finaliza-boton a {
+.finish-button a {
     text-decoration: none;
     color: rgb(255, 255, 255); 
+}
+
+.continue-shopping {
+    margin-top: 1vw;
+}
+
+.continue-shopping-button {
+    margin: 1vw;
+    padding: 1vw;
+    border: 1px black solid;
+    border-radius: 2vw;
+    background-color: rgb(226, 226, 226);
+}
+
+.continue-shopping-words {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(226, 226, 226);
+    text-align: center;
 }
 
 /* FOOTER */
@@ -366,14 +368,14 @@ h6 {
         margin-left: 10%;
     }
 
-    .producto {
+    .product {
         width: 30%;
     }
 
-    .valores{
+    .values{
         width: 20%;;
     }
-    .itemcantidad{
+    .itemquantity{
         width: 15%;
     }
     
@@ -455,14 +457,14 @@ h6 {
         margin-left: 6%;
     }
 
-    .producto {
+    .product {
         width: 25%;
     }
 
-    .valores{
+    .values{
         width: 16%;;
     }
-    .itemcantidad{
+    .itemquantity{
         width: 20%;
     }
 }
