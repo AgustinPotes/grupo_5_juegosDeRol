@@ -5,7 +5,19 @@ const db = require('../database/models')
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const multer = require('multer')
+const path = require('path')
 
+const storage = multer.diskStorage({
+    destination: function(req, file, cb){
+        cb(null, 'public/img')
+    },
+    filename: function(req, file, cb){
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    }
+})
+
+const upload = multer({storage: storage})
 
 const productController = {
 	index: (req, res) => {
