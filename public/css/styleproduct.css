@@ -218,51 +218,8 @@ h6 {
 }
 
 @media(min-width: 768px) {
-    .main-navbar {
-        height: 15vw;
-    }
-    .logo {
-        width: 13vw;
-        height: 16vw;
-        padding: 5px;
-    }
-    .left-navbar {
-        display: flex;
-    }
-    .right-navbar {
-        display: flex;
-    }
-    .burger-menu {
-        display: none;
-    }
-    .fa-user-circle {
-        display: flex;
-        border-radius: 50px;
-    }
-    .fa-shopping-cart {
-        display: flex;
-        border-radius: 50px;
-    }
-    .search-bar {
-        display: flex;
-    }
-    .fa-search {
-        display: flex;
-        border-radius: 50px;
-    }
     .description {
         display: flex;
-    }
-    .footer-right {
-        display: flex;
-        margin-top: 20px;
-        padding: 5px;
-        flex-direction: column;
-    }
-    .logo2 {
-        max-width: 20vw;
-        max-height: 30vw;
-        padding: 5px;
     }
     .novelties {
         margin-top: 110px;
@@ -273,51 +230,6 @@ h6 {
 
 
 @media(min-width: 1200px) {
-    .main-navbar {
-        height: 10vw;
-    }
-
-    .logo {
-       width: 10vw;
-       height: 12vw;
-       padding: 5px;
-        /*display: none;*/
-    }
-
-    /*.logo2 {
-        display: block;
-    }*/
-
-    .search-bar {
-        border-radius: 10px;
-        font-size: 20px;
-    }
-
-    .fa-user-circle {
-        font-size: 40px;
-        width: 5.5vw;
-        height: 5.5vw;
-        border-radius: 50px;
-    }
-
-    .fa-shopping-cart {
-        font-size: 35px;
-        width: 5.5vw;
-        height: 5.5vw;
-        border-radius: 50px;
-    }
-
-    .fa-search {
-        font-size: 40px;
-        width: 5.5vw;
-        height: 5.5vw;
-        border-radius: 50px;
-    }
-
-    .left-navbar {
-        height: 80px;
-        border-radius: 10px;
-    }
     .novelties {
         margin-top: 140px;
     }

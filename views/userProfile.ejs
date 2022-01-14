@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil de Usuario</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
      <!-- Navbar -->
+     <%-include('./partials/headerNavbar')%>
      
 <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style= 'border-radius: 180%' alt="avatar">    
 <h2>Bienvenido <%= locals.userLogged.userAlias %></h2>
@@ -38,6 +39,6 @@
     
 
     <!-- Footer -->
-    
+    <%- include('./partials/footer') %>
 </body>
 </html>

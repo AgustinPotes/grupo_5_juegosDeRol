@@ -237,112 +237,14 @@ body {
     text-align: center;
 }
 
-/* FOOTER */
-
-footer {
-    background-color: rgb(167, 37, 37);
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 15px;
-    justify-content: space-around;
-    color: white;
-    padding: 20px;
-    list-style: none;
-    margin-top: 15px;
-}
-
-.ft-contact {
-    color: white;
-    font-size: 18px;
-}
-
-.fa-facebook {
-    font-size: 25px;
-}
-
-.fa-twitter-square {
-    font-size: 25px;
-}
-
-.fa-instagram-square {
-    font-size: 25px;
-}
-
-h6 {
-    font-size: 20px;
-    font-weight: normal;
-}
-
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.footer-right {
-    display: flex;
-    margin-top: 20px;
-    padding: 5px;
-}
-
-.logo2 {
-    width: 30vw;
-    height: 45vw;
-    padding: 5px;
-}
-
 /* MEDIA QUERIES */
 
 @media (min-width: 480px) {
 }
 
 @media(min-width: 768px) {
-    /* nav */
-    .main-navbar {
-        height: 15vw;
-    }
-    .logo {
-        width: 13vw;
-        height: 16vw;
-        padding: 5px;
-    }
-    .left-navbar {
-        display: flex;
-    }
-    .right-navbar {
-        display: flex;
-    }
-    .burger-menu {
-        display: none;
-    }
-    .fa-user-circle {
-        display: flex;
-        border-radius: 50px;
-    }
-    .fa-shopping-cart {
-        display: flex;
-        border-radius: 50px;
-    }
-    .search-bar {
-        display: flex;
-    }
-    .fa-search {
-        display: flex;
-        border-radius: 50px;
-    }
     .description {
         display: flex;
-    }
-    .footer-right {
-        display: flex;
-        margin-top: 20px;
-        padding: 5px;
-        flex-direction: column;
-    }
-    .logo2 {
-        max-width: 20vw;
-        max-height: 30vw;
-        padding: 5px;
     }
     .novelties {
         margin-top: 110px;
@@ -388,52 +290,6 @@ h6 {
 
 
 @media(min-width: 1200px) {
-    /* nav */
-    .main-navbar {
-        height: 10vw;
-    }
-
-    .logo {
-       width: 10vw;
-       height: 12vw;
-       padding: 5px;
-        /*display: none;*/
-    }
-
-    /*.logo2 {
-        display: block;
-    }*/
-
-    .search-bar {
-        border-radius: 10px;
-        font-size: 20px;
-    }
-
-    .fa-user-circle {
-        font-size: 40px;
-        width: 5.5vw;
-        height: 5.5vw;
-        border-radius: 50px;
-    }
-
-    .fa-shopping-cart {
-        font-size: 35px;
-        width: 5.5vw;
-        height: 5.5vw;
-        border-radius: 50px;
-    }
-
-    .fa-search {
-        font-size: 40px;
-        width: 5.5vw;
-        height: 5.5vw;
-        border-radius: 50px;
-    }
-
-    .left-navbar {
-        height: 80px;
-        border-radius: 10px;
-    }
     .novelties {
         margin-top: 140px;
     }
