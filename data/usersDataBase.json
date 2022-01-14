@@ -128,5 +128,13 @@
   "userAlias": "asd",
   "eMail": "asd@hola.com",
   "password": "$2a$10$J1PqIZiXNFmau1pstweXIOKNq7jM1.AdogdwDSnW72JE23r6H4/FC"
+ },
+ {
+  "id": 16,
+  "name": "guillermo",
+  "lastName": "win",
+  "userAlias": "guille_el_capo@gmail.com",
+  "eMail": "guille_el_capo@gmail.com",
+  "password": "$2a$10$U90TMvT2QWqpireIy8VbROThnAZ0cELvJvGXvuMJKVUPmko3YstVm"
  }
 ]
