@@ -22,27 +22,27 @@
             <p class="errores"><%= errors[oneError].msg %> </p>
           <% } %>
         <%} %> -->
-        <input type="text" placeholder="&#128100; Nombre" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
+        <input class="inp" type="text" placeholder="&#128100; Nombre" name="name" value="<%= locals.oldData ? oldData.name : null %>" >
         <% if (locals.errors && errors.name) { %>
           <%= errors.name.msg %>
         <%} %>
-        <input type="text" placeholder="&#128100; Apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" >
+        <input class="inp" type="text" placeholder="&#128100; Apellido" name="lastName" value="<%= locals.oldData ? oldData.lastName : null %>" >
         <% if (locals.errors && errors.lastName) { %>
           <%= errors.lastName.msg %>
         <%} %>
-        <input type="text" placeholder="&#128100; Usuario" name="userAlias" >
+        <input class="inp" type="text" placeholder="&#128100; Usuario" name="userAlias" >
         <% if (locals.errors && errors.userAlias) { %>
           <%= errors.userAlias.msg %>
         <%} %>
-        <input type="email" placeholder="&#9993; E-mail" name="eMail" value="<%= locals.oldData ? oldData.eMail : null %>">
+        <input class="inp" type="email" placeholder="&#9993; E-mail" name="eMail" value="<%= locals.oldData ? oldData.eMail : null %>">
         <% if (locals.errors && errors.eMail) { %>
           <%= errors.eMail.msg %>
         <%} %>
-        <input type="password" placeholder="&#128273; Contraseña" id="password" name='password' onkeyup="check()" value="<%= locals.oldData ? oldData.password : null %>">
+        <input class="inp" type="password" placeholder="&#128273; Contraseña" id="password" name='password' onkeyup="check()" value="<%= locals.oldData ? oldData.password : null %>">
         <% if (locals.errors && errors.password) { %>
           <%= errors.password.msg %>
         <%} %>
-        <input type="password" placeholder="&#128273; Confirmar contraseña" id="passwordCheck" onkeyup="check()" >
+        <input class="inp" type="password" placeholder="&#128273; Confirmar contraseña" id="passwordCheck" onkeyup="check()" >
         <span id="message"></span>
         <script>
         let check = function() {
@@ -60,11 +60,11 @@
         
         <div class="divAddImages">
             <label>Foto de perfil:</label>
-            <input name="avatar" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg">
+            <input name="avatar" type="file" multiple="multiple" class="inp" accept= ".jpg, .jpeg">
         </div>
 
         <div>
-        <input id="submit" type="submit" value="Registrate">
+        <input class="inp" id="submit" type="submit" value="Registrate">
         </div>
 
         <p>¿Ya tenés una cuenta? <a class= "link" href="login"> Ingresá</a></p>

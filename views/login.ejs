@@ -14,16 +14,16 @@
       <%- include('./partials/headerNavbar') %>
   <form action="/users/login" method="POST">
       <h2>Formulario de Login</h2>
-      <input type="email" placeholder="&#9993; E-mail" name="eMail" >
+      <input class="inp" type="email" placeholder="&#9993; E-mail" name="eMail" >
       <% if (locals.errors && errors.eMail) { %>
         <%= errors.eMail.msg %>
       <%} %>
-      <input type="password" placeholder="&#128273; Contraseña" name='password' >
+      <input class="inp" type="password" placeholder="&#128273; Contraseña" name='password' >
       <% if (locals.errors && errors.password) { %>
         <%= errors.password.msg %>
       <%} %>
-      <input type="submit" id="submit" value="Ingresar">
-      <label for="remember"id="remember-label"><input type="checkbox" name="remember_user"> Recordar usuario y contraseña</label> 
+      <input class="inp" type="submit" id="submit" value="Ingresar">
+      <label for="remember"id="remember-label"><input class="inp" type="checkbox" name="remember_user"> Recordar usuario y contraseña</label> 
       <p>No tienes una cuenta?, <a class= "link" href="register"> Registrate</a></p>
       <p>Olvidaste la contraseña?, <a class="link" href="recoverpassword.html"> Olvide mi contraseña</a></p>
   </form>
