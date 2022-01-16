@@ -61,7 +61,7 @@ const usersController = {
             return res.render('login', {
                 errors: {
                     password: { 
-                         msg: 'Password invaldia'
+                         msg: 'Password invalida'
                     }
                 }
             });
