@@ -10,20 +10,7 @@ body {
     font-family: sans-serif;
 }
 
-h2 {
-    text-align: center;
-    padding: 10%;
-    color: rgb(43, 2, 2);
-}
-
-.user-text {
-    background-color: rgb(185, 60, 60);
-    color: white;
-    padding: 3.5px;
-    border-radius: 5px;
-}
-
-.user-profile {
+.container {
     background-color: whitesmoke;
     margin-top: 30%;
     max-width: 75vw;
@@ -31,31 +18,39 @@ h2 {
     margin-right: auto;
     border: 5px solid rgba (0,0,0,0.2);
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-between;
     padding: 10%;
-    align-items: center;
+    align-items: left;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.avatar-profile {
-    width: 50vw;
-    height: 35vw;
-    /*font-size: 50%;
-    width="40" style= 'border-radius: 180%'*/
+h2 {
+    padding-bottom: 20px;
+    background-color: rgb(185, 60, 60);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 21px;
+}
+
+label {
+    font-weight: bolder;
+    background-color: rgb(216, 100, 100);
+    color: white;
     padding: 5px;
+    border-radius: 5px;
+    text-align: left;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.button-form {
-    padding: 2%;
-    font-size: 10px;
+.input {
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 18px;
+    border-radius: 5px;
 }
 
 .button {
@@ -63,16 +58,17 @@ h2 {
     font-weight: bold;
     background-color: rgb(214, 100, 100);
     color: white;
-    padding: 8px 10px;
+    padding: 10px 12px;
     border-radius: 5px;
     border: lightgrey;
     width: 50vw;
+    margin: auto;
 }
 
 .button:hover {
     background-color: red;
     color: white;
-    padding: 8px 10px;
+    padding: 10px 12px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
@@ -91,9 +87,12 @@ h2 {
 }
 
 @media(min-width: 768px) {
-    .user-profile {
-        margin-top: 18%;
+    .container {
+        margin-top: 12%;
     }  
+    .button {
+        width: 25vw;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -101,29 +100,29 @@ h2 {
         margin-top: 12%;
         padding: 5%;
     }
-    .avatar-profile {
-        width: 50vw;
-        height: 35vw;
-    }
-    .button-form {
-        padding: 1%;
-        font-size: 10px;
-    }
     h2 {
+        font-size: 26px;
         padding: 5%;
+    }
+    .label {
+        padding: 20px;
+    }
+    .button {
+        width: 20vw;
     }
 }
 
 @media(min-width: 1440px) {
-    .user-profile {
-        margin-top: 12%;
-        padding: 5%;
+    .container {
+        align-items: center;
     }
-    .avatar-profile {
-        width: 40vw;
-        height: 28vw;
+    h2 {
+        width: 80%;
     }
-    .button {
-        width: 40vw;
+    label {
+        width: 80%;
+    }
+    .input {
+        width: 80%;
     }
 }
