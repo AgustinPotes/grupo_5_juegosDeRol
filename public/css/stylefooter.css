@@ -2,8 +2,8 @@
 
 footer {
     background-color: rgb(167, 37, 37);
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
     font-size: 15px;
     justify-content: space-around;
     color: white;
@@ -23,12 +23,17 @@ footer {
 h6 {
     font-size: 20px;
     font-weight: normal;
+    text-align: center;
 }
 
 .ft-contact {
     color: white;
     font-size: 18px;
     padding: 8px;
+    display: flex;
+}
+
+.social-networks {
     display: flex;
 }
 
@@ -52,9 +57,10 @@ h6 {
 }
 
 .footer-text-right {
-    padding: 8px;
+    /*padding: 8px;*/
     text-align: left;
     align-self: flex-end;
+    margin: auto;
 }
 
 .footer-left {
@@ -71,6 +77,11 @@ h6 {
     flex-wrap: nowrap;
 }
 
+.logox {
+    display: flex;
+    justify-content: center;
+}
+
 .logo2 {
     width: 30vw;
     height: 45vw;
@@ -79,7 +90,20 @@ h6 {
 
 /* MEDIA QUERIES */
 
+@media(min-width: 375px) {
+   
+}
+
 @media(min-width: 768px) {
+    .map {
+        height: 100%;
+    }
+
+    footer {
+        flex-wrap: nowrap; 
+        /*height: 320px; */
+     }
+
     .footer-right {
         display: flex;
         margin-top: 20px;
@@ -87,18 +111,26 @@ h6 {
         flex-direction: column;
     }
     .logo2 {
-        max-width: 20vw;
-        max-height: 30vw;
+        max-width: 17vw;
+        max-height: 27vw;
         padding: 5px;
     }
 }
 
 
 @media(min-width: 1024px) {
- 
+    .logo2 {
+        max-width: 13vw;
+        max-height: 20vw;
+        padding: 5px;
+    }
 }
 
 @media(min-width: 1440px) {
- 
+    .logo2 {
+        max-width: 10vw;
+        max-height: 15vw;
+        padding: 5px;
+    }
 }
 
