@@ -2,16 +2,16 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    const ProductPublisher = sequelize.define('ProductPublisher', {
-        publisher_id: {
+    const ProductStatus = sequelize.define('ProductStatus', {
+        product_status_id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        publisher_name: DataTypes.STRING(50),
+        status_name: DataTypes.STRING(50),
     }, {
-        tableName: 'Product Publishers',
+        tableName: 'Product Status',
         timestamps: false
     });
-    return ProductPublisher;
+    return ProductStatus;
 };

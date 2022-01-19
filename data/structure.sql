@@ -67,14 +67,13 @@ FOREIGN KEY (shopping_cart_id) REFERENCES shopping_cart_ORDERS(shopping_cart_id)
 FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 */
-
+/*
 DROP TABLE users;
 DROP TABLE user_types;
 DROP TABLE product_categories;
 DROP TABLE product_publishers;
 DROP TABLE products;
 DROP TABLE product_status;
-/*
 DROP TABLE shopping_cart_ORDERS;
 DROP TABLE shopping_cart_products;
 */
