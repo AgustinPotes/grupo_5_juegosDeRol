@@ -9,6 +9,7 @@ last_name VARCHAR(50) NOT NULL,
 user_alias VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
 passwordL VARCHAR(50) NOT NULL,
+avatar VARCHAR(50) NOT NULL,
 user_type_id INT UNSIGNED NOT NULL,
 PRIMARY KEY (user_id),
 FOREIGN KEY (user_type_id) REFERENCES user_types (user_type_id)
@@ -26,9 +27,9 @@ category_name VARCHAR(50) NOT NULL,
 PRIMARY KEY (category_id)
 );
 
-CREATE TABLE IF NOT EXISTS product_publishers ( 
-publisher_id INT UNSIGNED AUTO_INCREMENT,
-publisher_name VARCHAR(50) NOT NULL,
+CREATE TABLE IF NOT EXISTS product_status ( 
+product_status_id INT UNSIGNED AUTO_INCREMENT,
+status_name VARCHAR(50) NOT NULL,
 PRIMARY KEY (publisher_id)
 );
 
@@ -36,19 +37,18 @@ CREATE TABLE IF NOT EXISTS products (
 product_id INT UNSIGNED AUTO_INCREMENT,
 title VARCHAR(50) NOT NULL,
 price BIGINT NOT NULL,
-image VARBINARY(1) NOT NULL,
-age_restriction VARCHAR(50) NOT NULL,
-number_of_player VARCHAR(50) NOT NULL,
-playtime VARCHAR(50) NOT NULL,
-dimension VARCHAR(50) NOT NULL,
-material VARCHAR(50) NOT NULL,
+imagen VARBINARY(1) NOT NULL,
+descripcion VARCHAR(50) NOT NULL,
 category_id INT UNSIGNED NOT NULL,
-publisher_id INT UNSIGNED NOT NULL,
+product_status_id INT UNSIGNED NOT NULL,
 PRIMARY KEY (product_id),
 FOREIGN KEY (category_id) REFERENCES product_categories(category_id),
-FOREIGN KEY (publisher_id) REFERENCES product_publishers(publisher_id)
+FOREIGN KEY (product_status_id) REFERENCES product_status(product_status_id)
 );
 
+
+
+/*
 CREATE TABLE IF NOT EXISTS shopping_cart_ORDERS ( 
 shopping_cart_id INT UNSIGNED AUTO_INCREMENT,
 order_date DATETIME NOT NULL,
@@ -66,14 +66,16 @@ product_id INT UNSIGNED NOT NULL,
 FOREIGN KEY (shopping_cart_id) REFERENCES shopping_cart_ORDERS(shopping_cart_id),
 FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
-
+*/
 
 DROP TABLE users;
 DROP TABLE user_types;
 DROP TABLE product_categories;
 DROP TABLE product_publishers;
 DROP TABLE products;
+DROP TABLE product_status;
+/*
 DROP TABLE shopping_cart_ORDERS;
 DROP TABLE shopping_cart_products;
-
+*/
   
