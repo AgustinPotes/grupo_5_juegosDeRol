@@ -266,10 +266,37 @@
         display: none;
     }
 
+    .menuu {
+        position: relative;
+       /* display: inline-block;*/
+    }
+
+    .menuu li a:hover{
+        color: violet;
+    }
+
     .fa-user-circle {
         display: flex;
         border-radius: 50px;
     }
+
+    .submenu {
+        position: absolute;
+        background-color: thistle;
+        display: none;
+    }
+
+    .submenu li a {
+        display: block;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .menuu:hover .submenu{
+        display: block;
+    }
+
     .fa-shopping-cart {
         display: flex;
         border-radius: 50px;
