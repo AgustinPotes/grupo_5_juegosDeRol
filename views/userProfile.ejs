@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Perfil de <%= locals.userLogged.userAlias %></title>
+    <link rel="stylesheet" href="/css/styleuserprofile.css">
 </head>
 <body>
+
      <!-- Navbar -->
- 
+     <%- include('./partials/headerNavbar') %>
      
-<img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style= 'border-radius: 180%' alt="avatar">    
-<h2>Bienvenido <%= locals.userLogged.userAlias %></h2>
+<section class="user-profile">
+  <img class="avatar-profile" src="/img/avatars/<%= locals.userLogged.avatar %>"  alt="avatar">    
+  <h2>Bienvenido <div class="user-text"><%= locals.userLogged.userAlias %></div></h2>
 
-<form action="/users/profileToEdit/<%=locals.userLogged.id%>?_method=PUT" method="get">
+<div class="button-container">
+
+<form class="button-form" action="/" method="get">
+
+    <button class="button">Página de inicio</button>
    
-        
-    <button class="logout" href="/users/profileToEdit">Editar información</button>    
 </form>
 
-<form action="/users/logout" method="get">
-
-<button class="logout">Cerrar sesión</button>
-
-</form>
-
-<form action="/" method="get">
-
-<button class="logout">HOME</button>
+<form class="button-form" action="/users/profileToEdit/<%=locals.userLogged.id%>?_method=PUT" method="get">
+   
+    <button class="button" href="/users/profileToEdit">Editar información</button>
 
 </form>
 
-<form action="/products/addproduct/" method="get">
+<form class="button-form" action="/products/addproduct/" method="GET">
 
-    <button class="logout">Agregar producto</button>
+    <button class="button">Agregar producto</button>
     
-    </form>
-    
+</form>
+
+<form class="button-form" action="/users/logout" method="get">
+
+    <button class="button">Cerrar sesión</button>
+
+</form>
+</div>
+</section>
 
     <!-- Footer -->
-    
+    <%- include('./partials/footer') %>
+
 </body>
 </html>

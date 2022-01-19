@@ -145,5 +145,14 @@
   "eMail": "e@g.com",
   "password": "$2a$10$jnBm6E32l3wHIez0tnBbH.b9G.FLP6rH0MlZR58EMcXhxrUEuU0s6",
   "avatar": "avatar-1642128985669.png"
+ },
+ {
+  "id": 21,
+  "name": "Giga",
+  "lastName": "Chad",
+  "userAlias": "gigachad",
+  "eMail": "gigachad@yahoo.com.ar",
+  "password": "$2a$10$8KF39kvTHVnFaea2EsFtte7UXPKxSv5jS0HDT2lW46E.15mMJtA3.",
+  "avatar": "avatar-1642626169288.jpg"
  }
 ]
