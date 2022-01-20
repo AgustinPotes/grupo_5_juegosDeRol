@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(session( {secret: 'secreto', resave: false, saveUninitialized: true,} ));
+app.use(cookies()); 
 app.use(userLoggedMiddleware);
-app.use(cookies());
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 

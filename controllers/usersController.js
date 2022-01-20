@@ -38,12 +38,13 @@ const usersController = {
        }
        let userCreated = User.create(userToCreate);
 
-       return res.redirect('/users/login')
+       return res.redirect('/users/login?registerSuccessful=true')
 
 
     },
     login: (req, res) => {
-        return res.render('login')
+        console.log(req.query)
+        return res.render('login', {registerSuccessful: req.query.registerSuccessful})
     },
     loginProcess: (req, res) => {
         let userToLogin = User.findByField('eMail', req.body.eMail);
@@ -76,7 +77,6 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        console.log(req.cookies.userEmail);
         return res.render('userProfile', {
             user: req.session.userLogged
         })
@@ -89,6 +89,7 @@ const usersController = {
     },
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy()
         return res.redirect('/')
     }
