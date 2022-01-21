@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     cursor: url('../img/iconoCursor2.png'), auto;
+    text-decoration: none;
 }
 
 body {
@@ -41,9 +42,8 @@ h2 {
 .avatar-profile {
     width: 50vw;
     height: 35vw;
-    /*font-size: 50%;
-    width="40" style= 'border-radius: 180%'*/
     padding: 5px;
+    border-radius: 180%;
 }
 
 .button-container {
@@ -92,12 +92,14 @@ h2 {
 
 @media(min-width: 768px) {
     .user-profile {
+        text-decoration: none;
         margin-top: 18%;
     }  
 }
 
 @media(min-width: 1024px) {
     .user-profile {
+        text-decoration: none;
         margin-top: 12%;
         padding: 5%;
     }
@@ -116,6 +118,7 @@ h2 {
 
 @media(min-width: 1440px) {
     .user-profile {
+        text-decoration: none;
         margin-top: 12%;
         padding: 5%;
     }
