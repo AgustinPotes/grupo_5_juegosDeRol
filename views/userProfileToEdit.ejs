@@ -14,11 +14,11 @@
     <form class="container" action="/users/register" method="POST" enctype="multipart/form-data">
         <h2>Datos a modificar</h2>
         <label>Nombre</label>
-        <input class="input" type="text" name="name" value="<%= locals.userLogged.name %>" >
+        <input class="input" type="text" name="name" value="<%= locals.userLogged.name %>" required>
         <label>Apellido</label>
-        <input class="input" type="text" name="lastName" value="<%= locals.userLogged.lastName %>" >
+        <input class="input" type="text" name="lastName" value="<%= locals.userLogged.lastName %>" required>
         <label>Usuario</label>
-        <input class="input" type="text" name="userAlias" value="<%= locals.userLogged.userAlias %>">
+        <input class="input" type="text" name="userAlias" value="<%= locals.userLogged.userAlias %>" required>
         
         <input class="button" id="submit" type="submit" value="Guardar cambios">
     </form>

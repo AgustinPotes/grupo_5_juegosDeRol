@@ -8,10 +8,18 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        status_name: DataTypes.STRING(50),
+        status_name: DataTypes.STRING(20),
     }, {
-        tableName: 'Product Status',
+        tableName: 'product_status',
         timestamps: false
     });
+
+    ProductStatus.associate = function(models) {
+        ProductStatus.hasMany(models.Product, {
+            as: "productos_stat",
+            foreignKey: "product_status_id_Fk"
+        });
+    }
+
     return ProductStatus;
 };

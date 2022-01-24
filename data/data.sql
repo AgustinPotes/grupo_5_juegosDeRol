@@ -1,13 +1,13 @@
-insert into product_categories (category_id, category_name) values (1, 'RolBoardGame');
-insert into product_categories (category_id, category_name) values (2, 'MiniaturesAndAccesories');
-insert into product_categories (category_id, category_name) values (3, 'TCG');
+insert into product_categories (category_id, category_name) values (1, 'rolBoardGame');
+insert into product_categories (category_id, category_name) values (2, 'accesories');
+insert into product_categories (category_id, category_name) values (3, 'cardGame');
 
 insert into product_categories (product_status_id, status_name) values (1, 'General');
 insert into product_categories (product_status_id, status_name) values (2, 'Novedad');
 insert into product_categories (product_status_id, status_name) values (3, 'Oferta');
 
-insert into user_types (user_type_id, user_type) values (1, 'consumidor');
-insert into user_types (user_type_id, user_type) values (2, 'administrador');
+insert into user_types (user_type_id, user_type) values (1, 'user');
+insert into user_types (user_type_id, user_type) values (2, 'admin');
 
 insert into users (user_id, first_name, last_name, user_alias, email, passwordL, avatar, user_type_id) values (1, 'Hayes', 'Flieger', 'hflieger0', 'hflieger0@desdev.cn', 'AKheSdZ1g', x, 1);
 insert into users (user_id, first_name, last_name, user_alias, email, passwordL, avatar, user_type_id) values (2, 'Laughton', 'Rivitt', 'lrivitt1', 'lrivitt1@redcross.org', 'PxIzwjZK8', x , 2);

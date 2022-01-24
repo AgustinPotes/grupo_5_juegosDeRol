@@ -8,9 +8,9 @@ first_name VARCHAR(50) NOT NULL,
 last_name VARCHAR(50) NOT NULL,
 user_alias VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
-passwordL VARCHAR(50) NOT NULL,
-avatar VARCHAR(50) NOT NULL,
-user_type_id INT UNSIGNED NOT NULL,
+pass VARCHAR(50) NOT NULL,
+avatar VARBINARY(1) NOT NULL,
+user_type_id_Fk INT UNSIGNED NOT NULL,
 PRIMARY KEY (user_id),
 FOREIGN KEY (user_type_id) REFERENCES user_types (user_type_id)
 );
@@ -23,14 +23,14 @@ PRIMARY KEY (user_type_id)
 
 CREATE TABLE IF NOT EXISTS product_categories ( 
 category_id INT UNSIGNED AUTO_INCREMENT,
-category_name VARCHAR(50) NOT NULL,
+category_name VARCHAR(20) NOT NULL,
 PRIMARY KEY (category_id)
 );
 
 CREATE TABLE IF NOT EXISTS product_status ( 
 product_status_id INT UNSIGNED AUTO_INCREMENT,
-status_name VARCHAR(50) NOT NULL,
-PRIMARY KEY (publisher_id)
+status_name VARCHAR(20) NOT NULL,
+PRIMARY KEY (product_status_id)
 );
 
 CREATE TABLE IF NOT EXISTS products ( 
@@ -38,9 +38,9 @@ product_id INT UNSIGNED AUTO_INCREMENT,
 title VARCHAR(50) NOT NULL,
 price BIGINT NOT NULL,
 imagen VARBINARY(1) NOT NULL,
-descripcion VARCHAR(50) NOT NULL,
-category_id INT UNSIGNED NOT NULL,
-product_status_id INT UNSIGNED NOT NULL,
+descripcion VARCHAR(200) NOT NULL,
+category_id_Fk INT UNSIGNED NOT NULL,
+product_status_id_Fk INT UNSIGNED NOT NULL,
 PRIMARY KEY (product_id),
 FOREIGN KEY (category_id) REFERENCES product_categories(category_id),
 FOREIGN KEY (product_status_id) REFERENCES product_status(product_status_id)

@@ -18,9 +18,10 @@ module.exports = (sequelize, DataTypes) => {
         user_alias: DataTypes.STRING(50),
         email: DataTypes.STRING(50),
         password: DataTypes.STRING(50),
-        user_type: DataTypes.INTEGER,
+        avatar: DataTypes.INTEGER,
+        user_type_id_Fk: DataTypes.INTEGER
     }, {
-        tableName: 'Users',
+        tableName: 'users',
         timestamps: false
     });
     return User;

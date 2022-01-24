@@ -8,19 +8,16 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        tittle: DataTypes.STRING(50),
+        title: DataTypes.STRING(50),
         price: DataTypes.DECIMAL,
-        category_id: DataTypes.INTEGER,
-        publisher_id: DataTypes.INTEGER,
-        img: DataTypes.INTEGER, 
-        age_restriction: DataTypes.STRING(50),
-        players: DataTypes.STRING(50),
-        playtime: DataTypes.STRING(50),
-        dimension: DataTypes.STRING(50),
-        material: DataTypes.STRING(50),
+        img: DataTypes.INTEGER,
+        descripcion: DataTypes.STRING(200),
+        category_id_Fk: DataTypes.INTEGER,
+        product_status_id_Fk: DataTypes.INTEGER
     }, {
-        tableName: 'Products',
+        tableName: 'products',
         timestamps: false
     });
+
     return Product;
 };

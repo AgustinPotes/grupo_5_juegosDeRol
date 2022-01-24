@@ -8,10 +8,18 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        category_name: DataTypes.STRING(50),
+        category_name: DataTypes.STRING(20),
     }, {
-        tableName: 'Product Categories',
+        tableName: 'product_categories',
         timestamps: false
     });
+
+    ProductCategory.associate = function(models) {
+        ProductCategory.hasMany(models.Product, {
+            as: "productos_cat",
+            foreignKey: "category_id_Fk"
+        });
+    }
+
     return ProductCategory;
 };

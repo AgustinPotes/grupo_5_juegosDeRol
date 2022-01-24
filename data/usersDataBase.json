@@ -163,5 +163,14 @@
   "eMail": "gigachad@gmail.com",
   "password": "$2a$10$3i5.dM3DYya/23wba4ZiK.WjlT88GbQiwK1/bRuURIAtOB.PHIIpi",
   "avatar": "avatar-1642717286036.png"
+ },
+ {
+  "id": 23,
+  "name": "asd",
+  "lastName": "asd",
+  "userAlias": "Shaggy",
+  "eMail": "shaggy@123.com",
+  "password": "$2a$10$sIpifLeREN.NmWgH.eXS4uRRwjaMqyxv1wwWRf/pB0VPnX45SFQiq",
+  "avatar": "avatar-1642731231194.JPG"
  }
 ]
