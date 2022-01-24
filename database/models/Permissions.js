@@ -1,16 +1,18 @@
 'use strict';
 
+
 module.exports = (sequelize, DataTypes) => {
-    const UserType = sequelize.define('UserType', {
-        user_type_id: {
+    const Permission = sequelize.define('Permission', {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        user_type: DataTypes.STRING(50),
+        permission_name: DataTypes.STRING(50)
     }, {
-        tableName: 'User Types',
+        tableName: 'Permissions',
         timestamps: false
     });
-    return UserType;
+
+    return Permission;
 };

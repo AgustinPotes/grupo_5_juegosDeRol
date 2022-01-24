@@ -2,48 +2,92 @@ CREATE DATABASE juegosderolDB;
 
 USE juegosderolDB;
 
-CREATE TABLE IF NOT EXISTS users ( 
-user_id INT UNSIGNED AUTO_INCREMENT,
+/* Tabla principal de Productos */
+
+CREATE TABLE IF NOT EXISTS Products ( 
+id INT UNSIGNED AUTO_INCREMENT,
+title VARCHAR(50) NOT NULL,
+price BIGINT NOT NULL,
+imagen VARBINARY(1) NOT NULL,
+descripcion VARCHAR(200) NOT NULL,
+PRIMARY KEY (id),
+);
+
+/* Tabla pivot de Products y Statuss */
+
+CREATE TABLE IF NOT EXISTS product_status ( 
+id INT UNSIGNED AUTO_INCREMENT,
+product_id INT UNSIGNED NOT NULL,
+status_id INT UNSIGNED NOT NULL,
+PRIMARY KEY (id)
+FOREIGN KEY (product_id) REFERENCES Products(id),
+FOREIGN KEY (status_id) REFERENCES Statuss(id)
+);
+
+/* Tabla de Status (lleva doble s porque es palabra reservada) */
+
+CREATE TABLE IF NOT EXISTS Statuss ( 
+id INT UNSIGNED AUTO_INCREMENT,
+status_name VARCHAR(50) NOT NULL,
+PRIMARY KEY (id),
+);
+
+
+
+
+/* Tabla pivot de Products y Categories */
+
+CREATE TABLE IF NOT EXISTS product_categories ( 
+id INT UNSIGNED AUTO_INCREMENT,
+product_id INT UNSIGNED NOT NULL,
+categories_id INT UNSIGNED NOT NULL,
+PRIMARY KEY (id)
+FOREIGN KEY (product_id) REFERENCES Products(id),
+FOREIGN KEY (categories_id) REFERENCES Categories(id)
+);
+
+/* Tabla de Categories */
+
+CREATE TABLE IF NOT EXISTS Categories ( 
+id INT UNSIGNED AUTO_INCREMENT,
+category_name VARCHAR(50) NOT NULL,
+PRIMARY KEY (id),
+);
+
+
+
+
+
+/* Tabla principal de Usuarios */
+
+CREATE TABLE IF NOT EXISTS Users ( 
+id INT UNSIGNED AUTO_INCREMENT,
 first_name VARCHAR(50) NOT NULL,
 last_name VARCHAR(50) NOT NULL,
 user_alias VARCHAR(50) NOT NULL,
 email VARCHAR(50) NOT NULL,
 pass VARCHAR(50) NOT NULL,
 avatar VARBINARY(1) NOT NULL,
-user_type_id_Fk INT UNSIGNED NOT NULL,
-PRIMARY KEY (user_id),
-FOREIGN KEY (user_type_id) REFERENCES user_types (user_type_id)
+PRIMARY KEY (id),
 );
 
-CREATE TABLE IF NOT EXISTS user_types ( 
-user_type_id INT UNSIGNED AUTO_INCREMENT,
-user_type VARCHAR(50) NOT NULL,
-PRIMARY KEY (user_type_id)
+/* Tabla pivot de Users y Permissions */
+
+CREATE TABLE IF NOT EXISTS user_permission ( 
+id INT UNSIGNED AUTO_INCREMENT,
+user_id INT UNSIGNED NOT NULL,
+permission_id INT UNSIGNED NOT NULL,
+PRIMARY KEY (id)
+FOREIGN KEY (user_id) REFERENCES Users(id),
+FOREIGN KEY (permission_id) REFERENCES Permissionss(id)
 );
 
-CREATE TABLE IF NOT EXISTS product_categories ( 
-category_id INT UNSIGNED AUTO_INCREMENT,
-category_name VARCHAR(20) NOT NULL,
-PRIMARY KEY (category_id)
-);
+/* Tabla de Permissionss (doble s por palabra reservada) */
 
-CREATE TABLE IF NOT EXISTS product_status ( 
-product_status_id INT UNSIGNED AUTO_INCREMENT,
-status_name VARCHAR(20) NOT NULL,
-PRIMARY KEY (product_status_id)
-);
-
-CREATE TABLE IF NOT EXISTS products ( 
-product_id INT UNSIGNED AUTO_INCREMENT,
-title VARCHAR(50) NOT NULL,
-price BIGINT NOT NULL,
-imagen VARBINARY(1) NOT NULL,
-descripcion VARCHAR(200) NOT NULL,
-category_id_Fk INT UNSIGNED NOT NULL,
-product_status_id_Fk INT UNSIGNED NOT NULL,
-PRIMARY KEY (product_id),
-FOREIGN KEY (category_id) REFERENCES product_categories(category_id),
-FOREIGN KEY (product_status_id) REFERENCES product_status(product_status_id)
+CREATE TABLE IF NOT EXISTS Permissionss ( 
+id INT UNSIGNED AUTO_INCREMENT,
+permission_name VARCHAR(50) NOT NULL,
+PRIMARY KEY (id),
 );
 
 

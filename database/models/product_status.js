@@ -3,12 +3,13 @@
 
 module.exports = (sequelize, DataTypes) => {
     const ProductStatus = sequelize.define('ProductStatus', {
-        product_status_id: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        status_name: DataTypes.STRING(20),
+        product_id: DataTypes.STRING(20),
+        status_id: DataTypes.STRING(20)
     }, {
         tableName: 'product_status',
         timestamps: false
@@ -16,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
 
     ProductStatus.associate = function(models) {
         ProductStatus.hasMany(models.Product, {
-            as: "productos_stat",
-            foreignKey: "product_status_id_Fk"
+            as: "productos",
+            foreignKey: "product_id"
         });
     }
 

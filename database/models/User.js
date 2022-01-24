@@ -1,14 +1,8 @@
 'use strict';
 
-//modelos 
-// peliculas.js MAL 
-// Pelicula.js BIEN
-// Tipos de datos:
-// String(X) = VARCHAR(X)
-
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
-        user_id: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -17,11 +11,10 @@ module.exports = (sequelize, DataTypes) => {
         last_name: DataTypes.STRING(50),
         user_alias: DataTypes.STRING(50),
         email: DataTypes.STRING(50),
-        password: DataTypes.STRING(50),
-        avatar: DataTypes.INTEGER,
-        user_type_id_Fk: DataTypes.INTEGER
+        pass: DataTypes.STRING(50),
+        avatar: DataTypes.INTEGER
     }, {
-        tableName: 'users',
+        tableName: 'Users',
         timestamps: false
     });
     return User;

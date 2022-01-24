@@ -3,14 +3,15 @@
 
 module.exports = (sequelize, DataTypes) => {
     const ProductCategory = sequelize.define('ProductCategory', {
-        category_id: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        category_name: DataTypes.STRING(20),
+        product_id: DataTypes.STRING(20),
+        categories_id: DataTypes.STRING(20)
     }, {
-        tableName: 'product_categories',
+        tableName: 'product_category',
         timestamps: false
     });
 

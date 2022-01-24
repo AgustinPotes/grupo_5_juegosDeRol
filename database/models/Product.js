@@ -3,21 +3,29 @@
 
 module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define('Product', {
-        product_id: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
         title: DataTypes.STRING(50),
         price: DataTypes.DECIMAL,
-        img: DataTypes.INTEGER,
-        descripcion: DataTypes.STRING(200),
-        category_id_Fk: DataTypes.INTEGER,
-        product_status_id_Fk: DataTypes.INTEGER
+        imagen: DataTypes.INTEGER,
+        descripcion: DataTypes.STRING(200)
     }, {
-        tableName: 'products',
+        tableName: 'Products',
         timestamps: false
     });
+
+    Product.associate = function(models) {
+        Product.belonsTo(models.Status, {
+            as: "products",
+            through: "product_status",
+            foreignKey: "product_id",
+            otherKey: "status_id",
+            timestamps: false
+        });
+    }
 
     return Product;
 };
