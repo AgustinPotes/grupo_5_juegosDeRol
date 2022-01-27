@@ -14,5 +14,16 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
+    Permission.associate = (models) => {
+
+        Permission.belongsToMany(models.User, {
+            as: "users",
+            through: "user_permission",
+            foreignKey: "permission_id",
+            otherKey: "user_id",
+            timestamps: false
+        });
+    }
+
     return Permission;
 };

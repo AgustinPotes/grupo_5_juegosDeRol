@@ -17,12 +17,20 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    Product.associate = function(models) {
-        Product.belonsTo(models.Status, {
-            as: "products",
+    Product.associate = (models) => {
+
+        Product.belongsTo(models.Status, {
+            as: "status",
             through: "product_status",
             foreignKey: "product_id",
             otherKey: "status_id",
+            timestamps: false
+        });
+        Product.belongsTo(models.Categories, {
+            as: "categories",
+            through: "product_categories",
+            foreignKey: "product_id",
+            otherKey: "categories_id",
             timestamps: false
         });
     }

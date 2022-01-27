@@ -17,5 +17,17 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'Users',
         timestamps: false
     });
+
+    User.associate = (models) => {
+
+        User.belongsTo(models.Permission, {
+            as: "permissions",
+            through: "user_permission",
+            foreignKey: "user_id",
+            otherKey: "permission_id",
+            timestamps: false
+        });
+    }
+
     return User;
 };

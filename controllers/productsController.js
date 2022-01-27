@@ -1,6 +1,8 @@
 const fs = require('fs');
+const { devNull } = require('os');
 const path = require('path');
-const db = require('../database/models')
+const { title } = require('process');
+const db = require('../database/models/index')
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -27,7 +29,7 @@ const productController = {
 	addProduct: (req, res) => {
 		res.render('addproduct');
 	},
-	newProduct: (req, res) => {
+	/*newProduct: (req, res) => {
 			let newProduct = {
 				"id": products.length + 1,
 				"title": req.body.title,
@@ -41,7 +43,18 @@ const productController = {
 			products.push(newProduct);
 			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 			res.redirect('/');
+	},*/
+
+	newProduct: (req, res) => {
+		db.Product.create({
+			title: req.body.title,
+			price: parseFloat(req.body.price),
+			//imagen: req.files[0].filename
+			descripcion: req.body.shortDescription
+		})
+		res.redirect('/products');
 	},
+
 	editProduct: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)

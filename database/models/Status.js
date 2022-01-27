@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    Status.associate = function(models) {
-        Status.hasMany(models.Product, {
-            as: "status",
+    Status.associate = (models) => {
+
+        Status.belongsToMany(models.Product, {
+            as: "products",
             through: "product_status",
             foreignKey: "status_id",
             otherKey: "product_id",

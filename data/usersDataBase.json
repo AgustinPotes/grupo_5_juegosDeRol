@@ -172,5 +172,14 @@
   "eMail": "shaggy@123.com",
   "password": "$2a$10$sIpifLeREN.NmWgH.eXS4uRRwjaMqyxv1wwWRf/pB0VPnX45SFQiq",
   "avatar": "avatar-1642731231194.JPG"
+ },
+ {
+  "id": 24,
+  "name": "elbo",
+  "lastName": "laslargas",
+  "userAlias": "elbo",
+  "eMail": "elbo@gmail.com",
+  "password": "$2a$10$6V6bo3FMSF7sZGiqgiDwj.AcCU8laRaEyKfPu5JI7XaBfe/BvJtzi",
+  "avatar": "avatar-1643325794104.jpg"
  }
 ]
