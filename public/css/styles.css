@@ -6,7 +6,8 @@
 }
 
 body {
-    background-color: rgb(248, 237, 220);
+    /*background-color: rgb(248, 237, 220);*/
+    background-color: white;
     font-family: sans-serif;
 }
 
@@ -21,6 +22,7 @@ body {
     width: 100%;
     z-index: 1;
     position: absolute;
+    display: none;
 }
 
 .carrusell {
@@ -29,7 +31,7 @@ body {
     z-index: 80;
     margin: auto;
     position: relative;
-    top: 8vw;
+    top: 2vw;
     left: 1vw;
 }
 
@@ -37,7 +39,7 @@ body {
 
 
 .novelties {
-    margin-top: 58%;
+    margin-top:-7.5%;
 }
 
 h3 {
@@ -45,7 +47,9 @@ h3 {
     text-align: center;
     font-weight: bold;
     padding: 20px;
-    background-color: rgba(161, 161, 161, 0.5);
+    background-color: rgba(149, 147, 255, 0.89);
+    color: white;
+    text-shadow: 0px 0px 10px rgba(2, 0, 112, 0.89);
 }
 
 .main-container {
@@ -71,17 +75,21 @@ h3 {
 }
 
 h4 {
-    padding: 10px;
+    padding: 15px;
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     justify-content:center;    
-    Align-items: center;                  
+    Align-items: center;       
+    color: white;
+    border-radius: 5px;
+    margin-right: auto;   
+    margin-left: auto;    
 }
 
 .display-product {
-    background-color: lightgrey;
+    background-color: rgb(167, 37, 37);
     padding: 5px;
     border: 8px;
     margin-bottom: 10px;
@@ -186,10 +194,17 @@ p {
         display: flex;
     }
     .novelties {
-        margin-top: 15.5%;
+        margin-top: 10.25%;
     }
     .carrusell {
         width: 80%;
+        display: block;
+    }
+    .banner {
+        margin-top: -5.5%;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
         display: block;
     }
 }
@@ -197,11 +212,11 @@ p {
 
 @media(min-width: 1024px) {
     .novelties {
-        margin-top: 16%;
+        margin-top: 10%;
     }
     .carrusell {
         width: 80vw;
-        top: 7vw;
+        top: 2.8vw;
         left: 10vw;
     }
 }
@@ -212,8 +227,11 @@ p {
     }
     .carrusell {
         width: 60vw;
-        top: 10.5vw;
+        top: 4.9vw;
         left: 18vw;
+    }
+    .novelties {
+        margin-top: 13.25%;
     }
 }
 

@@ -1,20 +1,26 @@
-const fs = require('fs');
-const { devNull } = require('os');
-const path = require('path');
-const { title } = require('process');
-const db = require('../database/models/index')
+const req = require("express/lib/request");
+const res = require("express/lib/response");
+const db = require('../database/models/index');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { devNull } = require('os');
+const { title } = require('process');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const productController = {
 	index: (req, res) => {
-		res.render('product', {products});
+		db.Product.findAll({
+			order: [["title", "ASC"]]
+		})
+		   .then(products => {
+		        res.render('product', {products});
+		   })
+		   .catch(err => {
+			res.send(err)
+		})
 	},
 	
-	detail: (req, res) => {
+	/*detail: (req, res) => {
 		let id = req.params.id
 		let productDetail = products.find(product => product.id == id)
 		res.render('detail', {
@@ -23,13 +29,32 @@ const productController = {
 		})
 	},
 
+	detail: (req, res) => {
+
+        let id = req.params.id;
+
+        let promesaProductos = db.Product.findAll()
+
+        let promesaStatus = db.Status.findByPk(id, {
+                                include: [{association: "products"}]
+                            })
+        
+        Promise.all([promesaProductos, promesaStatus ])
+            .then(([products, status]) => {
+                res.render('detail', { products, status })
+            })
+            .catch(err => {
+                res.send(err)
+            })
+    },
+
 	cart: (req, res) => {
 		res.render('cart');
-	},
+	},*/
 	addProduct: (req, res) => {
 		res.render('addproduct');
-	},
-	/*newProduct: (req, res) => {
+	},/*
+	newProduct: (req, res) => {
 			let newProduct = {
 				"id": products.length + 1,
 				"title": req.body.title,
@@ -43,8 +68,8 @@ const productController = {
 			products.push(newProduct);
 			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 			res.redirect('/');
-	},*/
-
+	},
+*/
 	newProduct: (req, res) => {
 		db.Product.create({
 			title: req.body.title,
@@ -53,8 +78,8 @@ const productController = {
 			descripcion: req.body.shortDescription
 		})
 		res.redirect('/products');
-	},
-
+	}
+/*
 	editProduct: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
@@ -90,7 +115,7 @@ const productController = {
 		let newProductList = JSON.stringify(deletedProduct, null, ' ');
 		fs.writeFileSync(productsFilePath, newProductList, 'utf-8');
 		res.redirect('/');
-	},
+	},*/
 	}
 
 module.exports = productController;
