@@ -73,7 +73,8 @@ h3 {
 form{
     margin: auto;
     margin-top: 17%;
-    width: 50%;
+    margin-bottom: 17%;
+    width: 60%;
     max-width: 500px;
     background-color: #f3f3f3;
     padding: 30px;
