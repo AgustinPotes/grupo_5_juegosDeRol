@@ -6,6 +6,7 @@
 
 .container {
     max-width: 1280px;
+    flex-wrap: nowrap;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -139,6 +140,18 @@ h1 {
     color: rgb(167, 37, 37);
 }
 
+.profileImage {
+    display: none;
+}
+
+.profileImageMobile {
+    max-width: 25vw;
+    max-height: 45vw;
+    border-radius: 99%;
+    margin: 0 auto;
+    background-color: rgba(44, 0, 0, 0.975);
+}
+
 /* MEDIA QUERIES */
 
 @media(min-width: 768px) {
@@ -151,10 +164,24 @@ h1 {
     .mobile-nav {
         display: none;
     }
+    .profileImage {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 99%;
+        margin-left: 32%;
+        cursor: pointer;
+    }
 }
 
 @media(min-width: 1024px) {
     .menu a {
         padding: 4px 8px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .profileImage {
+        margin-left:65%;
     }
 }

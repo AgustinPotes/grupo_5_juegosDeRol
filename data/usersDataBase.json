@@ -181,5 +181,23 @@
   "eMail": "elbo@gmail.com",
   "password": "$2a$10$6V6bo3FMSF7sZGiqgiDwj.AcCU8laRaEyKfPu5JI7XaBfe/BvJtzi",
   "avatar": "avatar-1643325794104.jpg"
+ },
+ {
+  "id": 25,
+  "name": "123",
+  "lastName": "123",
+  "userAlias": "123",
+  "eMail": "123@sss.com",
+  "password": "$2a$10$OQoRhvQXjS1NABeleg0no.F1WaUK2AtiNpo1fhxKs7OVYpNagyXC.",
+  "avatar": "avatar-1643499513448.jpg"
+ },
+ {
+  "id": 26,
+  "name": "elpu",
+  "lastName": "tito",
+  "userAlias": "123",
+  "eMail": "elputito@gmail.com",
+  "password": "$2a$10$0BKw2dSHZZXzjggjngTxPeAtb9Ipc7wfDBvnX9dsMiMK0D8oYAj02",
+  "avatar": "avatar-1643505375493.JPG"
  }
 ]

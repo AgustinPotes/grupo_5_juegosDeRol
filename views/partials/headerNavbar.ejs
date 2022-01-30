@@ -4,28 +4,39 @@
       <div class="container">
 
         <h1>LaGuaridaDelDragón</h1>
-
+        
         <div class="menu">
-          <a href="/users/login" class="is-active">Ingresar</a>
-          <a href="/users/register">Registrarse</a>
+          <%  if (!locals.isLogged) { %>
+          <a href="/users/login" class="hideWhenLogged">Ingresar</a>
+          <a href="/users/register" class="hideWhenLogged">Registrarse</a>
+          <% } %>
           <a href="/products">Catálogo</a>
           <a href="#">Buscar</a>
           <a href="/">Home</a>
         </div>
+        
+        <%  if (locals.isLogged) { %>
+          <a href="/users/login"><img class="profileImage" src="/img/avatars/<%= locals.userLogged.avatar %>" width="100%" height="100%"></a>
+        <% } %>
 
         <button class="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </button>
-
+  
       </div>
 
     </nav>
 
     <nav class="mobile-nav">
-      <a href="/users/login">Ingresar</a>
-      <a href="/users/register">Registrarse</a>
+      <%  if (locals.isLogged) { %>
+        <a href="/users/login"><img class="profileImageMobile" src="/img/avatars/<%= locals.userLogged.avatar %>" width="100%" height="100%"></a>
+      <% } %>
+      <%  if (!locals.isLogged) { %>
+      <a href="/users/login" id="myLinks">Ingresar</a>
+      <a href="/users/register" id="myLinks">Registrarse</a>
+      <% } %>
       <a href="/products">Catálogo</a>
       <a href="#">Buscar</a>
       <a href="/">Home</a>
