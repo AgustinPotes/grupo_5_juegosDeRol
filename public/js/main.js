@@ -8,4 +8,8 @@ hamburger.addEventListener('click', function () {
 
 const userLoggedNewBcg = document.querySelector('.desktop-nav');
 
-userLoggedNewBcg.style.backgroundColor = rgba(149, 147, 255);
+let toggleBcgColorIfLogged = function () {
+    if (locals.isLogged == true) {
+        userLoggedNewBcg.style.backgroundColor = rgba(149, 147, 255);
+    }
+};
