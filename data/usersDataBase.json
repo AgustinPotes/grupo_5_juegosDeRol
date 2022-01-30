@@ -217,5 +217,14 @@
   "eMail": "123@1",
   "password": "$2a$10$.SyKFL8htrp03j517KBv8.w1waCCoqbPbSqG29cLfIg9etSaOMlBe",
   "avatar": "avatar-1643507465569.jpg"
+ },
+ {
+  "id": 29,
+  "name": "pepito",
+  "lastName": "pepito",
+  "userAlias": "pepito",
+  "eMail": "pepito@123.com",
+  "password": "$2a$10$H4DuvD3qxGhVj8.nVSQCFOqdpn9FBy3gfr4M0OPF7OZqkuwqKB1v.",
+  "avatar": "avatar-1643558427301.JPG"
  }
 ]

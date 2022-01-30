@@ -30,12 +30,12 @@
     width: 200px;
 }
 
-.foot-page .group-1 .box h2{
+.foot-page .group-1 .box .h2-foot{
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
-.foot-page .group-1 .box p{
+.foot-page .group-1 .box .p-foot{
     color: #efefef;
     margin-bottom: 10px;
 }
@@ -53,6 +53,7 @@
 }
 .foot-page .group-1 .red-social a:hover{
     color: rgba(149, 147, 255, 0.89);
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 .foot-page .group-2{
     background-color: brown;

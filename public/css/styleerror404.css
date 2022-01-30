@@ -39,6 +39,7 @@ body {
     border-radius: 5px;
     border: none;
     width: 50vw;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .button:hover {

@@ -6,20 +6,15 @@
     cursor: url('../img/iconoCursor2.png'), auto;
 }
 body {
-    background: #DEDEDE;
+    background: rgb(248, 237, 220);
     min-height: 100vh;
     position: relative;
 }
 
-body {
-    background: #DEDEDE;
-    min-height: 100vh;
-}
-
-form{
+form {
     margin: auto;
-    margin-top: 17%;
-    
+    margin-top: 5%;
+    margin-bottom: 12%;
     max-width: 500px;
     background-color: #f3f3f3;
     padding: 30px;
@@ -80,11 +75,16 @@ form{
     justify-content: space-around;
 }
 
-h2 {
+.buttons div {
+    cursor: pointer;
+}
+
+.h2-add-prod {
     text-align: center;
     margin-bottom: 20px;
     color: rgba (0,0,0,0.5);
 }
+
 input{
     display: block;
     padding: 10px;
@@ -118,28 +118,34 @@ p {
     display: inline;
 }
 
-@media (max-width:768px){
-    form {
-        width: 75%;
-    }
-
-    
-}
 @media (max-width:480px){
     form {
         width: 95%;
+        margin-top: 25%;
+        margin-bottom: 8%;
     }
-
-
     section {
         margin-top: 40%;
     }
 }
+
 @media(min-width: 768px) {
     .novelties {
         margin-top: 110px;
     }
     .form1 {
         display: flex;
+    }
+    form {
+        width: 75%;
+        margin-top: 18%;
+        margin-bottom: 10%;
+    }
+}
+
+@media(min-width: 1024px) {
+    form {
+        margin-top: 12%;
+        margin-bottom: 8%;
     }
 }

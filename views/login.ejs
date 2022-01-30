@@ -18,7 +18,7 @@
         </script>
       <%} %>
   <form action="/users/login" method="POST">
-      <h2>Formulario de Login</h2>
+      <h2 class="h2-log">Formulario de Login</h2>
       <input class="inp" type="email" placeholder="&#9993; E-mail" name="eMail" >
       <% if (locals.errors && errors.eMail) { %>
         <%= errors.eMail.msg %>
@@ -29,8 +29,8 @@
       <%} %>
       <input class="inp" type="submit" id="submit" value="Ingresar">
       <label for="remember"id="remember-label"><input class="inp" type="checkbox" name="remember_user"> Recordar usuario y contraseña</label> 
-      <p>No tienes una cuenta?, <a class= "link" href="register"> Registrate</a></p>
-      <p>Olvidaste la contraseña?, <a class="link" href="recoverpassword.html"> Olvide mi contraseña</a></p>
+      <p class="p-log">No tienes una cuenta?, <a class= "link" href="register"> Registrate</a></p>
+      <p class="p-log">Olvidaste la contraseña?, <a class="link" href="recoverpassword.html"> Olvide mi contraseña</a></p>
   </form>
     <!-- Footer -->
     <%- include('./partials/footer') %>

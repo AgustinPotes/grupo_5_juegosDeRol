@@ -131,7 +131,7 @@ h1 {
     transition: 0.4s;
     padding: 2px 4px;
     border-radius: 99px;
-    cursor: pointer;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
     transition: 0.4s;
 }
 
@@ -169,7 +169,7 @@ h1 {
         height: 50px;
         border-radius: 99%;
         margin-left: 32%;
-        cursor: pointer;
+        cursor: url('../img/iconoCursorPointerZombie.png'), auto;
     }
 }
 

@@ -10,9 +10,10 @@ body {
     font-family: sans-serif;
 }
 
-.container {
+.container-form {
     background-color: whitesmoke;
     margin-top: 30%;
+    margin-bottom: 20%;
     max-width: 75vw;
     margin-left: auto;
     margin-right: auto;
@@ -25,7 +26,7 @@ body {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-h2 {
+.h2-prof-edit {
     padding-bottom: 20px;
     background-color: rgb(185, 60, 60);
     color: white;
@@ -45,7 +46,7 @@ label {
     text-align: left;
 }
 
-.input {
+.input-form {
     padding: 10px;
     width: 100%;
     margin: 30px 0;
@@ -53,7 +54,7 @@ label {
     border-radius: 5px;
 }
 
-.button {
+.button-for {
     font-size: 18px;
     font-weight: bold;
     background-color: rgb(214, 100, 100);
@@ -63,9 +64,10 @@ label {
     border: lightgrey;
     width: 50vw;
     margin: auto;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
-.button:hover {
+.button-for:hover {
     background-color: red;
     color: white;
     padding: 10px 12px;
@@ -87,10 +89,11 @@ label {
 }
 
 @media(min-width: 768px) {
-    .container {
-        margin-top: 12%;
+    .container-form {
+        margin-top: 18%;
+        margin-bottom: 11%;
     }  
-    .button {
+    .button-for {
         width: 25vw;
     }
 }
@@ -107,13 +110,13 @@ label {
     .label {
         padding: 20px;
     }
-    .button {
+    .button-for {
         width: 20vw;
     }
 }
 
 @media(min-width: 1440px) {
-    .container {
+    .container-form {
         align-items: center;
     }
     h2 {
@@ -122,7 +125,7 @@ label {
     label {
         width: 80%;
     }
-    .input {
+    .input-form {
         width: 80%;
     }
 }

@@ -80,7 +80,7 @@ form{
     padding: 30px;
     border: 1px solid rgba (0,0,0,0.2);
 }
-h2 {
+.h2-log {
     text-align: center;
     margin-bottom: 20px;
     color: rgba (0,0,0,0.5);
@@ -91,13 +91,14 @@ h2 {
     width: 100%;
     margin: 30px 0;
     font-size: 20px;
+    cursor: pointer;
 }
 input[type="submit"]{
     background-color: red ;
     border: 0;
     color: whitesmoke;
     opacity: 0.8;
-    cursor: pointer;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
     border-radius: 20px;
     margin-bottom: 0;
     
@@ -108,9 +109,15 @@ opacity: 1;
 input[type='submit'] :active {
     transform: scale(0.95);
 }
-p {
+
+.p-log {
     margin-top: 15px;
 }
+
+.link {
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
+}
+
 h4 {
     padding: 10px;
     font-weight: bold;
