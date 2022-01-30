@@ -13,6 +13,7 @@ body {
 .container {
     background-color: whitesmoke;
     margin-top: 30%;
+    margin-bottom: 30%;
     max-width: 75vw;
     margin-left: auto;
     margin-right: auto;
@@ -83,6 +84,11 @@ label {
 /* MEDIA QUERIES */
 
 @media(min-width: 376px) {
+    .user-profile {
+        margin-top: 12%;
+        margin-bottom: 10%;
+        padding: 5%;
+    }
 
 }
 
@@ -98,6 +104,7 @@ label {
 @media(min-width: 1024px) {
     .user-profile {
         margin-top: 12%;
+        margin-bottom: 10%;
         padding: 5%;
     }
     h2 {
@@ -124,5 +131,10 @@ label {
     }
     .input {
         width: 80%;
+    }
+    .user-profile {
+        margin-top: 12%;
+        margin-bottom: 10%;
+        padding: 5%;
     }
 }
