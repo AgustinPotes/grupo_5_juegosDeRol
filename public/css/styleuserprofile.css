@@ -27,7 +27,11 @@ body {
 .user-profile {
     background-color: whitesmoke;
     margin-top: 30%;
+<<<<<<< HEAD
     margin-bottom: 20%;
+=======
+    margin-bottom: 10%;
+>>>>>>> 5bb135d7b3d4618ce731395bcd82ab3c84571de8
     max-width: 75vw;
     margin-left: auto;
     margin-right: auto;

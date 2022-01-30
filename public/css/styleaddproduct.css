@@ -13,8 +13,13 @@ body {
 
 form {
     margin: auto;
+<<<<<<< HEAD
     margin-top: 5%;
     margin-bottom: 12%;
+=======
+    margin-top: 10%;
+    margin-bottom: 10%;
+>>>>>>> 5bb135d7b3d4618ce731395bcd82ab3c84571de8
     max-width: 500px;
     background-color: #f3f3f3;
     padding: 30px;
