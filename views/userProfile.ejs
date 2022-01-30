@@ -13,7 +13,9 @@
      <%- include('./partials/headerNavbar') %>
      
 <section class="user-profile">
-  <img class="avatar-profile" src="/img/avatars/<%= locals.userLogged.avatar %>"  alt="avatar">    
+ <div class="avatar-profile">
+  <img  src="/img/avatars/<%= locals.userLogged.avatar %>"  alt="avatar" width="100%" height="100%">    
+</div>
   <h2>Bienvenido <div class="user-text"><%= locals.userLogged.userAlias %></div></h2>
 
 <div class="button-container">
@@ -46,7 +48,7 @@
 
     <!-- Footer -->
     <%- include('./partials/footer') %>
-    
+
     <script src="/js/main.js"></script>
 </body>
 </html>

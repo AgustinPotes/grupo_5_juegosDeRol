@@ -199,5 +199,23 @@
   "eMail": "elputito@gmail.com",
   "password": "$2a$10$0BKw2dSHZZXzjggjngTxPeAtb9Ipc7wfDBvnX9dsMiMK0D8oYAj02",
   "avatar": "avatar-1643505375493.JPG"
+ },
+ {
+  "id": 27,
+  "name": "12312",
+  "lastName": "12312",
+  "userAlias": "12321",
+  "eMail": "123@a.com",
+  "password": "$2a$10$T1H6iP5zOZ17B3J/cdWrmey6WmZYOItIg0.X2jx4DU3YaGgH0DhLS",
+  "avatar": "avatar-1643507065173.jpg"
+ },
+ {
+  "id": 28,
+  "name": "123",
+  "lastName": "123",
+  "userAlias": "123",
+  "eMail": "123@1",
+  "password": "$2a$10$.SyKFL8htrp03j517KBv8.w1waCCoqbPbSqG29cLfIg9etSaOMlBe",
+  "avatar": "avatar-1643507465569.jpg"
  }
 ]

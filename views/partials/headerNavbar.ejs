@@ -12,6 +12,9 @@
           <% } %>
           <a href="/products">Catálogo</a>
           <a href="#">Buscar</a>
+          <%  if (locals.isLogged) { %>
+          <a href="#">Carrito</a>
+          <% } %>
           <a href="/">Home</a>
         </div>
         
@@ -31,7 +34,9 @@
 
     <nav class="mobile-nav">
       <%  if (locals.isLogged) { %>
-        <a href="/users/login"><img class="profileImageMobile" src="/img/avatars/<%= locals.userLogged.avatar %>" width="100%" height="100%"></a>
+      <div class="profileImageMobile">
+        <a href="/users/login"><img  src="/img/avatars/<%= locals.userLogged.avatar %>" width="100%" height="100%"></a>
+      </div>
       <% } %>
       <%  if (!locals.isLogged) { %>
       <a href="/users/login" id="myLinks">Ingresar</a>
@@ -39,6 +44,9 @@
       <% } %>
       <a href="/products">Catálogo</a>
       <a href="#">Buscar</a>
+      <%  if (locals.isLogged) { %>
+        <a href="#">Carrito</a>
+      <% } %>
       <a href="/">Home</a>
     </nav>
 

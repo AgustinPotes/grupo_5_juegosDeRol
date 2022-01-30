@@ -145,11 +145,10 @@ h1 {
 }
 
 .profileImageMobile {
-    max-width: 25vw;
-    max-height: 45vw;
-    border-radius: 99%;
-    margin: 0 auto;
+    max-width: 100vw;
+    max-height: 100vw;
     background-color: rgba(44, 0, 0, 0.975);
+    margin: auto;
 }
 
 /* MEDIA QUERIES */
