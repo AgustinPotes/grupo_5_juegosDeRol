@@ -11,7 +11,11 @@
           <a href="/users/register" class="hideWhenLogged">Registrarse</a>
           <% } %>
           <a href="#">Catálogo</a>
-          <a href="#">Buscar</a>
+          <a href="#" class="search-button">Buscar</a>
+          <form action="#" class="search-box">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit" class="go-icon"><i class="fas fa-search"></i></button>
+          </form>
           <%  if (locals.isLogged) { %>
           <a href="#">Carrito</a>
           <% } %>

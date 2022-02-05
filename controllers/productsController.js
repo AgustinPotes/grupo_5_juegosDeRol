@@ -20,6 +20,15 @@ const productController = {
 		})
 	},
 	
+	detail: (req, res) => {
+		db.Product.findByPk(req.params.id, {
+			include: [{association: "status"}, {association: "categories"}]
+		})
+		.then(products => {
+			res.render('detail', {products});
+	   })
+	},
+
 	/*detail: (req, res) => {
 		let id = req.params.id
 		let productDetail = products.find(product => product.id == id)

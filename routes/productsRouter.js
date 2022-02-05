@@ -12,7 +12,7 @@ router.get('/addProduct', authMiddleware, productController.addProduct);
 router.post('/addProduct', authMiddleware, upload.any(), productController.newProduct);
 //router.get('/editProduct/:id', authMiddleware, productController.editProduct); 
 //router.put('/editProduct/:id', authMiddleware, upload.any(), productController.update); 
-//router.get('/detail/:id', productController.detail);
+router.get('/detail/:id', productController.detail);
 //router.delete('/editProduct/:id', productController.delete);
 
 
