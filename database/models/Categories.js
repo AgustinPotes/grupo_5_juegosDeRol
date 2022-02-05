@@ -2,19 +2,25 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    const Categories = sequelize.define('Categories', {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        category_name: DataTypes.STRING(50)
-    }, {
-        tableName: 'Category',
-        timestamps: false
-    });
+    let alias = "Category";
+        let cols = {
+            id: {
+                type: DataTypes.INTEGER,
+                autoIncrement: true,
+                primaryKey: true
+            },
+            name: {
+                type: DataTypes.STRING(30)
+            },
+        };
+        let config = {
+            tableName: "Category",
+            timestamps: false
+        };
+    
+        const Category = sequelize.define(alias, cols, config);
 
-    Categories.associate = (models) => {
+    /*Categories.associate = (models) => {
 
         Categories.belongsToMany(models.Product, {
             as: "productss",
@@ -23,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
             otherKey: "product_id",
             timestamps: false
         });
-    }
+    }*/
 
-    return Categories;
+    return Category;
 };

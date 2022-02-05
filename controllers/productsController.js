@@ -2,9 +2,9 @@ const req = require("express/lib/request");
 const res = require("express/lib/response");
 const db = require('../database/models/index');
 
-const { devNull } = require('os');
+/*const { devNull } = require('os');
 const { title } = require('process');
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
 
 
 const productController = {
@@ -24,9 +24,12 @@ const productController = {
 		db.Product.findByPk(req.params.id, {
 			include: [{association: "status"}, {association: "categories"}]
 		})
-		.then(products => {
-			res.render('detail', {products});
+		.then(product => {
+			res.render('detail', {product});
 	   })
+	   .catch(err => {
+		res.send(err)
+	})
 	},
 
 	/*detail: (req, res) => {
@@ -62,29 +65,14 @@ const productController = {
 	},*/
 	addProduct: (req, res) => {
 		res.render('addproduct');
-	},/*
-	newProduct: (req, res) => {
-			let newProduct = {
-				"id": products.length + 1,
-				"title": req.body.title,
-				"publisher": req.body.publisher,
-				"shortDescription": req.body.shortDescription,
-				"category": req.body.category,
-				"price": parseFloat(req.body.price),
-				"img": req.files[0].filename
-			};
-
-			products.push(newProduct);
-			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-			res.redirect('/');
 	},
-*/
+	
 	newProduct: (req, res) => {
 		db.Product.create({
 			title: req.body.title,
 			price: parseFloat(req.body.price),
-			//imagen: req.files[0].filename
-			descripcion: req.body.shortDescription
+			image: req.files[0].filename,
+			descrip: req.body.shortDescription
 		})
 		res.redirect('/products');
 	}

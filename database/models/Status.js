@@ -2,28 +2,33 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-    const Status = sequelize.define('Status', {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
-        status_name: DataTypes.STRING(50)
-    }, {
-        tableName: 'Stat',
-        timestamps: false
-    });
+    
+        let alias = "Status";
+        let cols = {
+            id: {
+                type: DataTypes.INTEGER,
+                autoIncrement: true,
+                primaryKey: true
+            },
+            name: {
+                type: DataTypes.STRING(30)
+            },
+        };
+        let config = {
+            tableName: "Status",
+            timestamps: false
+        };
+    
+        const Status = sequelize.define(alias, cols, config);
 
-    Status.associate = (models) => {
+    /*Status.associate = (models) => {
 
         Status.belongsToMany(models.Product, {
             as: "products",
-            through: "product_status",
-            foreignKey: "status_id",
-            otherKey: "product_id",
+            foreignKey: "Status_id",
             timestamps: false
         });
-    }
+    }*/
 
     return Status;
 };

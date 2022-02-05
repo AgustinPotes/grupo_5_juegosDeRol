@@ -1,36 +1,46 @@
 'use strict';
 
 
-module.exports = (sequelize, DataTypes) => {
-    const Product = sequelize.define('Product', {
+module.exports = (sequelize, DataTypes) => { 
+    
+    let alias = "Product";
+    let cols = {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        title: DataTypes.STRING(50),
-        price: DataTypes.DECIMAL,
-        imagen: DataTypes.INTEGER,
-        descripcion: DataTypes.STRING(200)
-    }, {
-        tableName: 'Products',
+        title: {
+            type: DataTypes.STRING(30)
+        },
+        price: {
+            type: DataTypes.DECIMAL
+        },
+        image: { 
+            type: DataTypes.BLOB
+        },
+        descrip: {
+            type: DataTypes.STRING(200)
+        }
+    };
+    let config = {
+        tableName: "Product",
         timestamps: false
-    });
+    };
+
+    const Product = sequelize.define(alias, cols, config);
+    
 
     Product.associate = (models) => {
 
         Product.belongsTo(models.Status, {
             as: "status",
-            through: "product_status",
-            foreignKey: "product_id",
-            otherKey: "status_id",
+            foreignKey: "Status_id",
             timestamps: false
         });
-        Product.belongsTo(models.Categories, {
+        Product.belongsTo(models.Category, {
             as: "categories",
-            through: "product_categories",
-            foreignKey: "product_id",
-            otherKey: "categories_id",
+            foreignKey: "Category_id",
             timestamps: false
         });
     }

@@ -19,9 +19,7 @@ app.use(userLoggedMiddleware);
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 
-const port = 3000;
-app.listen(port, () => { console.log('Servidor corriendo en el puerto ' + port);
-});
+
 
 
 // ************ Route System require and use() ************
@@ -34,6 +32,16 @@ app.use ('/products', productsRouter);
 const usersRouter = require('./routes/usersRouter');
 app.use ('/users', usersRouter);
 
+// API's //
+const apiProductsRouter = require('./routes/api/productsRouter');
+app.use ('/api', apiProductsRouter);
+
+
+
 app.use ((req, res, next) => {
     res.status(404).render('error404.ejs');
+});
+
+const port = 3000;
+app.listen(port, () => { console.log('Servidor corriendo en el puerto ' + port);
 });

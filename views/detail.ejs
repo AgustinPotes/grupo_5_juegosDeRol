@@ -16,18 +16,18 @@
        <%- include('./partials/headerNavbar') %>
 
     <header>
-        <h3><%=productDetail.title%></h3>
+        <h3><%=product.title%></h3>
     </header>
 
     <section class="main-product">
     <div class="main-container">
         <article class="display-product">
-                <img src="/img/<%=productDetail.img%>" alt="">
+                <img src="/img/<%=product.image%>" alt="">
 
                 <div class="main-article">
                 <hr>    
-                <h4 class="product-name"><%=productDetail.title%></h4>
-                <p class="product-price">$<%=productDetail.price%></p>
+                <h4 class="product-name"><%=product.title%></h4>
+                <p class="product-price">$<%=product.price%></p>
                 <hr>
 
                 <div class="quantity-and-cart-block">
@@ -46,7 +46,7 @@
 
                 <div class="col-12">
 
-                <a href="/products/editproduct/<%productDetail.id%>"><button type="button" class="buy-now-button">Editar producto</button></a>
+                <a href="/products/editproduct/<%product.id%>"><button type="button" class="buy-now-button">Editar producto</button></a>
                 </div>
                 </div>
                 </div>
