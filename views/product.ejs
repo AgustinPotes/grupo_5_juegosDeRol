@@ -15,53 +15,35 @@
        <!-- Navbar -->
        <%- include('./partials/headerNavbar') %>
 
-    <header>
-        <h3>Listado de Productos</h3>
-    </header>
-    <section class="products">
-    <section class="main-product">
+    <section class="novelties">
+        
+        <h3 class="banner-prods">Catálogo de productos</h3>
+        
     <div class="main-container">
-        <% for (let i = 0; i < products.length; i++){%>  
-        <article class="display-product">
-            <a href="/products/detail/<%=products[i].id%>">
-                <img src="/img/<%=products[i].image%>" alt="">
-            </a>
-
-                <div class="main-article">
-                <hr>    
-                <h4 class="product-name"><%=products[i].title%></h4>
-                <p class="product-price">$<%=products[i].price%></p>
-                <hr>
-
-                <div class="quantity-and-cart-block">
-                <div class="product-quantity-class">
-                <label for="product-quantity">Elige la cantidad:</label>
-                <input list="product-quantity1" placeholder="0" id="product-quantity">
-                <datalist id="product-quantity1">
-                        <option value="0">
-                        <option value="1">
-                        <option value="2">
-                        <option value="3">
-                        <option value="4">
-                        <option value="5">
-                </datalist>
-                </form>
-                </div>
-                </div>
-                
-
-
-                </div>
-
-               
-        </article>
-        <%}%>
+        <% for (let i = 0; i < products.length; i++){%>
+        <a href="/products/detail/<%=products[i].id%>" class="link-ref"><article class="display-product">
+        <h4 class="title-prod"><%=products[i].title%></h4>
+        <div class="title-overlay title-overlay--blur">
+              <p class="p-overlay"><%=products[i].title%></p>
+            <div class="descrip-overlay">
+              <h5 class="p-overlay"><%=products[i].descrip%></p>
+            </div>
         </div>
-    </section>
+
+        <img src="/img/<%=products[i].image%>" alt="imagen de producto">
+        
+        <div class="display-description">
+        <i class="fas fa-hand-point-right"></i>
+        <p class="price">$<%=products[i].price%></p>
+        </div>
+        
+    </article></a>
+    <%}%>
+    </div>
+    </section> 
 
     <!-- Footer -->
     <%- include('./partials/footer') %>
-
 
 </body>
 </html>

@@ -6,14 +6,6 @@ hamburger.addEventListener('click', function () {
     mobile_menu.classList.toggle('is-active')
 });
 
-const userLoggedNewBcg = document.querySelector('.desktop-nav');
-
-let toggleBcgColorIfLogged = function () {
-    if (locals.isLogged == true) {
-        userLoggedNewBcg.style.backgroundColor = rgba(149, 147, 255);
-    }
-};
-
 const search = document.querySelector('.search-button');
 const searchBox = document.querySelector('.search-box')
 
@@ -26,4 +18,4 @@ search.addEventListener('click', function (){
         searchBox.style.display = 'none';
         search.innerHTML = 'Buscar'
     }
-})
+});

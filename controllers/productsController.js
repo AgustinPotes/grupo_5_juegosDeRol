@@ -64,7 +64,7 @@ const productController = {
 			title: req.body.title,
 			price: parseFloat(req.body.price),
 			image: req.files[0].filename,
-			descrip: req.body.shortDescription
+			descrip: req.body.descrip
 		}, {
 			where: {
 				id: req.params.id
