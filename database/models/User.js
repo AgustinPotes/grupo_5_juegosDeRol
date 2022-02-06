@@ -1,33 +1,47 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define('User', {
+
+module.exports = (sequelize, DataTypes) => { 
+    
+    let alias = "user";
+    let cols = {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        first_name: DataTypes.STRING(50),
-        last_name: DataTypes.STRING(50),
-        user_alias: DataTypes.STRING(50),
-        email: DataTypes.STRING(50),
-        pass: DataTypes.STRING(50),
-        avatar: DataTypes.INTEGER
-    }, {
-        tableName: 'Users',
+        first_name: {
+            type: DataTypes.STRING(45)
+        },
+        last_name: {
+            type: DataTypes.STRING(45)
+        },
+        user_alias: {
+            type: DataTypes.STRING(45)
+        },
+        email: {
+            type: DataTypes.STRING(45)
+        },
+        pass: {
+            type: DataTypes.STRING(45)
+        },
+        avatar: { 
+            type: DataTypes.BLOB
+        }
+    };
+    let config = {
+        tableName: "user",
         timestamps: false
-    });
+    };
 
-    User.associate = (models) => {
-
-        User.belongsTo(models.Permission, {
-            as: "permissions",
-            through: "user_permission",
-            foreignKey: "user_id",
-            otherKey: "permission_id",
-            timestamps: false
-        });
-    }
+    const User = sequelize.define(alias, cols, config);
+    /*User.associate = (models) => {
+    User.belongsTo(models.Permissions, {
+        as: 'permission',
+        foreignKey: 'Permission_id',
+        timestamps: false
+    })
+}*/
 
     return User;
 };
