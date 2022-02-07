@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias, cols, config);
     
 
-    Product.associate = (models) => {
+ /*   Product.associate = (models) => {
 
         Product.belongsTo(models.Status, {
             as: "status",
@@ -44,6 +44,6 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         });
     }
-
+*/
     return Product;
 };
