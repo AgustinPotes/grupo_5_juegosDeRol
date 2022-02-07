@@ -8,20 +8,5 @@ module.exports = [
     body('eMail').notEmpty().withMessage('Email es un Campo obligatorio').bail()
     .isEmail().withMessage("Debes escribir un formato de correo electronico valido"),
     body('password').notEmpty().withMessage('Contrasena es un Campo obligatorio'),
-    body('avatar').custom((value, { req }) => {
-        let file = req.file
-        let acceptExtensions = ['.jpg', '.png', '.gif']
-
-        if (!file) {
-            throw new Error('Tienes que subir una imagen')
-        } else {
-            let fileExtensions = path.extname(file.originalname)
-            if (!acceptExtensions.includes(fileExtensions)) { 
-                throw new Error('Extensiones de archivo permitidas son ${acceptedExtensions.join{', ')}')
-            }
-        }
-
-        return true
-    })
 ];
 

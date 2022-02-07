@@ -20,9 +20,9 @@ const usersController = {
                 email: { [Op.like]: req.body.eMail }
             }
         })
-        
+        console.log(resultValidation)
         if (!resultValidation.errors.length && !usuarioRepetido) {
-            
+            console.log(req.body)
             db.user.create({
                 first_name: req.body.name,
                 last_name: req.body.lastName,
@@ -34,6 +34,9 @@ const usersController = {
             }).then(function(userlogon) {
                 req.session.userLogged = userlogon;
                 res.redirect("/")
+            })
+            .catch(err => {
+                res.send(err)
             })
         } else {
             if (usuarioRepetido) {

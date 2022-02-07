@@ -10,6 +10,7 @@ const router = express.Router();
 const usersController = require('../controllers/usersController')
 const validaciones = require('../middlewares/validationsMiddleware');
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
+const validationsMiddleware = require('../middlewares/validationsMiddleware');
 
 //************ Login ************ 
 router.get('/login', guestMiddleware, usersController.login);
@@ -19,7 +20,7 @@ router.get('/profileToEdit/:id', authMiddleware, usersController.edit)
 router.get('/logout',  usersController.logout)
 //************ Register ************ 
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', uploadAvatar.any('avatar'), validaciones, usersController.processRegister);
+router.post('/register', uploadAvatar.any('avatar'), validationsMiddleware, usersController.processRegister);
 
 
 
