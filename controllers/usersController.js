@@ -28,7 +28,7 @@ const usersController = {
                 last_name: req.body.lastName,
                 user_alias: req.body.userAlias,
                 email: req.body.eMail,
-                password: bcryptjs.hashSync(req.body.password, 12),
+                pass: bcryptjs.hashSync(req.body.password, 12),
                 avatar: req.files[0].filename,
                
             }).then(function(userlogon) {
@@ -69,9 +69,9 @@ const usersController = {
             }
         })
         if (userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.pass);
             if (isOkThePassword) {
-                delete userToLogin.password;
+                delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
 
                 // res.send(userToLogin)
@@ -122,7 +122,7 @@ const usersController = {
                 last_name: req.body.lastName,
                 user_alias: req.body.userAlias,
                 email: req.body.eMail,
-                password: bcryptjs.hashSync(req.body.password, 12),
+                pass: bcryptjs.hashSync(req.body.password, 12),
                 avatar: req.files[0].filename,
 
                 }).then(userlogon => {
