@@ -74,12 +74,12 @@ const usersController = {
                 delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
 
-                // res.send(userToLogin)
+                //res.send(userToLogin)
                 if (req.body.remember_user) {
                     res.cookie('userEmail', req.body.eMail, { maxAge: 5 * 60 * 1000 });
                 }
 
-                return res.redirect('/users/profile');
+                return res.redirect('userProfile');
             } else {//si no coincide la contraseña se renderiza la vista de login con error
                 res.render('login', {
                     titulo: "Ingresá", old: req.body, errors: {
@@ -103,13 +103,13 @@ const usersController = {
 
     profile: (req, res) => {
         return res.render('userProfile', {
-            user: req.session.userLogged
+            userlogon: req.session.userLogged
         });
     },
 
     edit: (req, res) => {
         res.render('userProfileToEdit', {
-            user: req.session.userLogged
+            userlogon: req.session.userLogged
         })
     },
 
