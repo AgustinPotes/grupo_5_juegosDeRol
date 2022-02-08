@@ -194,44 +194,37 @@ p {
         display: flex;
     }
     .novelties {
-        margin-top: 10.25%;
+        margin-top: 46.2%;
     }
     .carrusell {
         width: 80%;
         display: block;
     }
     .banner {
-        margin-top: -5.5%;
+        margin-top: -5%;
         width: 100%;
         z-index: 1;
         position: absolute;
         display: block;
+        cursor: url('../img/iconoCursorPointerZombie.png'), auto;
     }
 }
 
-
 @media(min-width: 1024px) {
     .novelties {
-        margin-top: 10%;
+        margin-top: 47%;
     }
-    .carrusell {
-        width: 80vw;
-        top: 2.8vw;
-        left: 10vw;
+    .banner {
+        margin-top: -4%;
     }
 }
 
 @media(min-width: 1440px) {
-    .banner {
-        top: 0;
-    }
-    .carrusell {
-        width: 60vw;
-        top: 4.9vw;
-        left: 18vw;
-    }
     .novelties {
-        margin-top: 14%;
+        margin-top: 48.5%;
+    }
+    .banner {
+        margin-top: -2%;
     }
 }
 
