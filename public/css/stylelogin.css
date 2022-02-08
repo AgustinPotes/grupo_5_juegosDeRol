@@ -27,6 +27,7 @@ form {
     margin-bottom: 20px;
     color: rgba (0,0,0,0.5);
 }
+
 .inp{
     display: block;
     padding: 10px;
@@ -43,6 +44,7 @@ form {
     margin: 30px 0;
     font-size: 20px;
     cursor: url('../img/iconoCursorPointerZombie.png'), auto;
+    transition: all 0.18s;
 }
 
 .inp-button:hover {
@@ -62,6 +64,7 @@ input[type="submit"]{
 input[type='submit'] :hover {
 opacity: 1;
 }
+
 input[type='submit'] :active {
     transform: scale(0.95);
 }
