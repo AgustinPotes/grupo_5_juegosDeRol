@@ -13,12 +13,10 @@ async function userLoggedMiddleware(req, res, next) {
         }})
 
     if(userFromCookie){
-      console.log('from cookies:', userFromCookie)
         req.session.userLogged = userFromCookie;
     }
 
     if (req.session.userLogged) {
-      console.log('from session:', req.session.userLogged)
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
     } 
