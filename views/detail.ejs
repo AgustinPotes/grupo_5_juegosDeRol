@@ -7,7 +7,7 @@
     <title>La Guarida del Dragón</title>
     <script src="https://kit.fontawesome.com/ce21b579cc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=MedievalSharp&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link href="/css/styleproduct.css" rel="stylesheet">
+    <link href="/css/styledetail.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,25 +15,18 @@
        <!-- Navbar -->
        <%- include('./partials/headerNavbar') %>
 
-    <header>
-        <h3><%=product.title%></h3>
-    </header>
+    <section class="main-container-detail">
+            <img class="image-product-detail" src="/img/<%=product.image%>" alt="" width="100%" height="100%">
 
-    <section class="main-product">
-    <div class="main-container">
-        <article class="display-product">
-                <img src="/img/<%=product.image%>" alt="">
-
-                <div class="main-article">
-                <hr>    
-                <h4 class="product-name"><%=product.title%></h4>
-                <p class="product-price">$<%=product.price%></p>
-                <hr>
+        <div class="main-product-detail">  
+            <h4 class="product-name"><%=product.title%></h4>
+            <p class="price-detail">$<%=product.price%></p>
+            <p class="description-detail">$<%=product.descrip%></p>
 
                 <div class="quantity-and-cart-block">
                 <div class="product-quantity-class">
-                <label for="product-quantity">Elige la cantidad:</label>
-                <input list="product-quantity1" placeholder="0" id="product-quantity">
+                <label for="product-quantity">Cantidad:</label>
+                <input class="p-detail" list="product-quantity1" placeholder="0" id="product-quantity">
                 <datalist id="product-quantity1">
                         <option value="0">
                         <option value="1">
@@ -42,20 +35,17 @@
                         <option value="4">
                         <option value="5">
                 </datalist>
-                <input class="add-to-cart-buttom" type="submit" value="Agregar al carrito">
+                <input class="detail-button" type="submit" value="Agregar al carrito">
 
+                <%  if (locals.isLogged) { %>
                 <div class="col-12">
+                <a href="/products/editProduct/<%=product.id%>?_method=PUT" class="link-ref"><button type="button" class="detail-button">Editar producto</button></a>
+                </div>
+                <% } %>
+                </div>
+                </div>
+                </div>
 
-                <a href="/products/editProduct/<%=product.id%>?_method=PUT"><button type="button" class="buy-now-button">Editar producto</button></a>
-                </div>
-                </div>
-                </div>
-                </div>
-
-               
-        </article>
-        
-        </div>
     </section>
 
     <!-- Footer -->

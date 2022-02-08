@@ -11,7 +11,11 @@
 
      <!-- Navbar -->
      <%- include('./partials/headerNavbar') %>
-     
+     <% if (locals.registerSuccessful) { %>
+        <script>
+          alert('Registro exitoso')
+        </script>
+      <%} %>
 <section class="user-profile">
  <div class="avatar-profile">
   <img  src="/img/avatars/<%= locals.userLogged.avatar || 'default.jpg' %>"  alt="avatar" width="100%" height="100%">    

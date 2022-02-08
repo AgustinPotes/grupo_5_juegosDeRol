@@ -31,7 +31,7 @@ const usersController = {
                
             }).then(function(userlogon) {
                 req.session.userLogged = userlogon;
-                res.redirect("/")
+                res.redirect('/users/profile?registerSuccessful=true');
             })
             .catch(err => {
                 res.send(err)
