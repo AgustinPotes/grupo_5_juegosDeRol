@@ -70,7 +70,7 @@ h3 {
 .main img {
     width: 100vw;
 }
-form{
+.form-register{
     margin: auto;
     margin-top: 17%;
     margin-bottom: 17%;
@@ -85,6 +85,11 @@ form{
     margin-bottom: 20px;
     color: rgba (0,0,0,0.5);
 }
+
+.errors ul{
+    color: red;
+}
+
 .inp{
     display: block;
     padding: 10px;
