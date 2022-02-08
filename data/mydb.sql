@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Product` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(30) NOT NULL,
   `price` DECIMAL NOT NULL,
-  `image` BLOB NOT NULL,
+  `image` VARCHAR(80) NOT NULL,
   `descrip` VARCHAR(200) NOT NULL,
   `Status_id` INT NOT NULL,
   `Category_id` INT NOT NULL,
@@ -71,8 +71,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`User` (
   `last_name` VARCHAR(45) NOT NULL,
   `user_alias` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `pass` VARCHAR(45) NOT NULL,
-  `avatar` BLOB NULL,
+  `pass` VARCHAR(100) NOT NULL,
+  `avatar` VARCHAR(80) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
