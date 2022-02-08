@@ -17,13 +17,18 @@
           alert('Registro exitoso')
         </script>
       <%} %>
-  <form action="/users/login" method="POST">
+  <form action="/users/login" method="POST" class="form-login">
       <h2 class="h2-log">Formulario de Login</h2>
-      <input class="inp" type="email" placeholder="&#9993; E-mail" name="eMail" >
+
+      <div class="error">
+        <ul></ul>
+      </div>
+
+      <input class="inp" type="email" placeholder="&#9993; E-mail" name="eMail" id="email">
       <% if (locals.errors && errors.eMail) { %>
         <%= errors.eMail.msg %>
       <%} %>
-      <input class="inp" type="password" placeholder="&#128273; Contraseña" name='password' >
+      <input class="inp" type="password" placeholder="&#128273; Contraseña" name='password' id="password">
       <% if (locals.errors && errors.password) { %>
         <%= errors.password.msg %>
       <%} %>
@@ -36,5 +41,5 @@
     <%- include('./partials/footer') %>
 
  </body>
-  
+ <script src="/js/validatorLogin.js"></script>
 </html>
