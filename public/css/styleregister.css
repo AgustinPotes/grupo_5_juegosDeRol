@@ -10,7 +10,7 @@ body {
     font-family: sans-serif;
 }
 
-form {
+.form-register {
     margin: auto;
     margin-top: 25%;
     margin-bottom: 20%;
@@ -85,7 +85,7 @@ input[type='submit'] :active {
 /* MEDIA QUERIES */
 
 @media(min-width: 768px) {
-    form {
+    .form-register {
         margin-top: 18%;
         margin-bottom: 14%;
         max-width: 500px;
@@ -98,14 +98,14 @@ input[type='submit'] :active {
         text-align: center;
         color: red;
       } 
-      form {
+      .form-register {
         margin-top: 14%;
         margin-bottom: 10%;
     }
 }
 
 @media(min-width: 1440px) {
-    form {
+    .form-register {
         margin-top: 8%;
         margin-bottom: 5%;
         max-width: 500px;

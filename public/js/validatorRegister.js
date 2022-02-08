@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+/*window.addEventListener('load', function(){*/
     const formRegister = document.querySelector('form.form-register');
 
     /* REGISTER */
@@ -85,4 +85,4 @@ window.addEventListener('load', function(){
     }
 
     })
-})
+/*})*/

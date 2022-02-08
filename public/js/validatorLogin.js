@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+/*window.addEventListener('load', function(){*/
     const formLogin = document.querySelector('form.form-login');
 
     /* LOGIN */
@@ -27,4 +27,4 @@ window.addEventListener('load', function(){
 
     })
     
-})
+/*})*/
