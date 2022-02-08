@@ -20,16 +20,14 @@ const usersController = {
                 email: { [Op.like]: req.body.eMail }
             }
         })
-        console.log(resultValidation)
         if (!resultValidation.errors.length && !usuarioRepetido) {
-            console.log(req.body)
             db.user.create({
                 first_name: req.body.name,
                 last_name: req.body.lastName,
                 user_alias: req.body.userAlias,
                 email: req.body.eMail,
-                pass: bcryptjs.hashSync(req.body.password, 12),
-                avatar: req.files[0].filename,
+                pass: bcryptjs.hashSync(req.body.password, bcryptjs.genSaltSync()),
+                avatar: req.files.length && req.files[0].filename,
                
             }).then(function(userlogon) {
                 req.session.userLogged = userlogon;
@@ -79,7 +77,8 @@ const usersController = {
                     res.cookie('userEmail', req.body.eMail, { maxAge: 5 * 60 * 1000 });
                 }
 
-                return res.redirect('userProfile');
+                return res.redirect('/users/profile');
+                
             } else {//si no coincide la contraseña se renderiza la vista de login con error
                 res.render('login', {
                     titulo: "Ingresá", old: req.body, errors: {
@@ -102,6 +101,7 @@ const usersController = {
     },
 
     profile: (req, res) => {
+        console.log(res.locals.userLogged)
         return res.render('userProfile', {
             userlogon: req.session.userLogged
         });

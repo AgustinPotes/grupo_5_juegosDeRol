@@ -23,7 +23,7 @@ const productController = {
 	
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id, {
-			include: [{association: "status"}, {association: "categories"}]
+			/*include: [{association: "status"}, {association: "categories"}]*/
 		})
 		.then(product => {
 			res.render('detail', {product});
