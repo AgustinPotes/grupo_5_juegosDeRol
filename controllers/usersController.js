@@ -101,7 +101,6 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        console.log(res.locals.userLogged)
         return res.render('userProfile', {
             userlogon: req.session.userLogged
         });
