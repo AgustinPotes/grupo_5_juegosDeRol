@@ -12,11 +12,6 @@
 <body>
       <!-- Navbar -->
       <%- include('./partials/headerNavbar') %>
-      <% if (locals.registerSuccessful) { %>
-        <script>
-          alert('Registro exitoso')
-        </script>
-      <%} %>
   <form action="/users/login" method="POST" class="form-login">
       <h2 class="h2-log">Iniciar sesión</h2>
 
