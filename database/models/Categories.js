@@ -23,19 +23,10 @@ module.exports = (sequelize, DataTypes) => {
         Category.associate = (models) => {
 
             Category.hasMany(models.Product, {
-            // foreignKey: "Category_id",
         });
     }
 
-    /*Category.associate = models => {
 
-        Category.belongsToMany(models.Product, {
-        
-        through: models.Product,
-        foreignKey: "Category_id",
-        timestamps: false
-    }); 
-}*/
 
     return Category;
 };

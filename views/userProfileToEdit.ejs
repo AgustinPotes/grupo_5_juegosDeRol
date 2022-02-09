@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <%- include('./partials/headerNavbar') %>
     
-    <form class="container-form" action="/users/register/<%=locals.userLogged.id %>" method="POST" enctype="multipart/form-data">
+    <form class="container-form" action="/users/profileToEdit/<%=locals.userLogged.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <h2 class="h2-prof-edit">Datos a modificar</h2>
         <label>Nombre</label>
         <input class="input-form" type="text" name="name" value="<%= locals.userLogged.first_name %>" required>
@@ -19,6 +19,8 @@
         <input class="input-form" type="text" name="lastName" value="<%= locals.userLogged.last_name %>" required>
         <label>Usuario</label>
         <input class="input-form" type="text" name="userAlias" value="<%= locals.userLogged.user_alias %>" required>
+        <label>E-Mail</label>
+        <input class="input-form" type="email" name="eMail" value="<%= locals.userLogged.email %>" disabled selected required>
         
         <input class="button-for" id="submit" type="submit" value="Guardar cambios">
     </form>

@@ -10,7 +10,6 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
 
 const productController = {
 	index: async (req, res) => {
-		const pepe = await db.Product.findOne({where:{id:30}}) 
 		db.Product.findAll({
 			order: [["title", "ASC"]],
 		})

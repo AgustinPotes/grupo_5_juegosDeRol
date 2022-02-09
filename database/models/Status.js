@@ -24,19 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     Status.associate = (models) => {
 
         Status.hasMany(models.Product, {
-            // foreignKey: "Status_id",
+        
         });
     }
 
-   /* Status.associate = models => {
-
-        Status.belongsToMany(models.Product, {
-            
-            through: models.Product,
-            foreignKey: "Status_id",
-            timestamps: false
-        });
-    }*/
 
     return Status;
 };

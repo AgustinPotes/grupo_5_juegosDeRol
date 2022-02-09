@@ -121,12 +121,12 @@ const usersController = {
                 last_name: req.body.lastName,
                 user_alias: req.body.userAlias,
                 email: req.body.eMail,
-                pass: bcryptjs.hashSync(req.body.password, genSaltSync()),
-                avatar: req.files[0].filename,
+                // pass: bcryptjs.hashSync(req.body.password, genSaltSync()),
+                // avatar: req.files[0].filename,
 
                 }).then(userlogon => {
                     req.session.userLogged = userlogon;
-                    res.redirect('userProfile')
+                    res.redirect('/users/profile')
                 }).catch(function(e){
                     res.render('error')
                 });
