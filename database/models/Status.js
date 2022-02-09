@@ -23,15 +23,12 @@ module.exports = (sequelize, DataTypes) => {
 
     Status.associate = (models) => {
 
-        Status.belongsToMany(models.Product, {
-            as: "products",
-            through: models.Product,
-            foreignKey: "Status_id",
-            timestamps: false
+        Status.hasMany(models.Product, {
+            // foreignKey: "Status_id",
         });
     }
 
-    Status.associate = models => {
+   /* Status.associate = models => {
 
         Status.belongsToMany(models.Product, {
             
@@ -39,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "Status_id",
             timestamps: false
         });
-    }
+    }*/
 
     return Status;
 };

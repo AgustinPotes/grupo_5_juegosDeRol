@@ -9,10 +9,10 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
 
 
 const productController = {
-	index: (req, res) => {
+	index: async (req, res) => {
+		const pepe = await db.Product.findOne({where:{id:30}}) 
 		db.Product.findAll({
 			order: [["title", "ASC"]],
-			/*include: [{association: "status"}, {association: "categories"}]*/
 		})
 		   .then(products => {
 		        res.render('product', {products});
@@ -50,8 +50,8 @@ const productController = {
 			price: parseFloat(req.body.price),
 			image: req.files[0].filename,
 			descrip: req.body.shortDescription,
-			Status_id: req.body.status,
-			Category_id: req.body.category,
+			StatusId: req.body.status,
+			CategoryId: req.body.category
 		})
 		res.redirect('/products');
 	},
@@ -68,7 +68,9 @@ const productController = {
 			title: req.body.title,
 			price: parseFloat(req.body.price),
 			image: req.files[0].filename,
-			descrip: req.body.descrip
+			descrip: req.body.descrip,
+			StatusId: req.body.status,
+			CategoryId: req.body.category
 		}, {
 			where: {
 				id: req.params.id
