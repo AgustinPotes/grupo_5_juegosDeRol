@@ -47,7 +47,9 @@ const productController = {
 			title: req.body.title,
 			price: parseFloat(req.body.price),
 			image: req.files[0].filename,
-			descrip: req.body.shortDescription
+			descrip: req.body.shortDescription,
+			/*Status_id: req.body.status,
+			Category_id: req.body.category*/
 		})
 		res.redirect('/products');
 	},

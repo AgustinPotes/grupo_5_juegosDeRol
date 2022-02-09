@@ -13,42 +13,59 @@
 <body>
      <!-- Navbar -->
     <%- include('./partials/headerNavbar') %>
+    
 <section>
-    <form action="/products/addproduct" method="POST" enctype="multipart/form-data">
-        <div><h2 class="h2-add-prod">Formulario carga de producto</h2></div>
-        <div class="form1">
+    <form action="/products/addproduct" method="POST" enctype="multipart/form-data" class="form-addprod">
+
+        
+        <div class="form-add-product">
+            <div><h2 class="h2-add-prod">Cargar nuevo producto</h2></div>
             
             <div class="part1">
-                <input id="title" name="title" type="text" placeholder="Nombre del producto">
-                <input name="shortDescription" type="text" placeholder="Descripción" class="description">
-                <select id="category" name="category" placeholder="Categoria" class="selectCategorias">
-                    <option disabled selected>Categoria</option>
+                <input class="inp-add-prod" id="title" name="title" type="text" placeholder="Título" required>
+                <input class="inp-add-prod" name="shortDescription" type="text" placeholder="Descripción" required>
+
+                <select id="category" name="category" placeholder="Categoría" class="selectCategorias" required>
+                    <option disabled selected>Categoría</option>
                     <option value="rolBoardGame">Juegos de rol de mesa</option>
                     <option value="accesories">Miniaturas y accesorios</option>
                     <option value="cardGame">Juegos de cartas</option>
-                    
                 </select>
-                <input name="price" id="number" type="number" placeholder="Precio">
+
+                <select class="selectCategorias" required>
+                    <option id="status" name="status" value="1" disabled selected>Novedad</option>
+                </select>
+
+                <input class="inp-add-prod" name="price" id="number" type="number" placeholder="Precio" required>
 
             </div>
         
         
             <div class="part2">
-                <input type="text">
-                <input type="">
-                <input type="">
+                
                 <div class="divAddImages">
                     <p class="textAddImages">Cargar imágenes</p>
-                    <input name="image" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg">
+                    <input name="image" id="prod-image" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg" required>
+
+                    
                 </div>
+
+                <!-- <div class="images-to-add">
+                   <img class="images-to-add"  src="/window.URL.createObjectURL(this.files[0])">
+                   <input class="inp-add-image" type="">
+                   <input class="inp-add-image" type="">
+                </div>-->
+            </div>
+
+            <div >
+                <div><input class="add-prod-button" type="submit" name="submit" value="Agregar"></div>
+                <div><input class="reset-prod-button" type="reset" value="Borrar"></div>
             </div>
         </div>
-        <div class="buttons">
-            <div><input type="reset" value="Borrar"></div>
-            <div><input type="submit" name="submit" value="Agregar"></div>
-        </div>
+        
     </form>
 </section>
+
     <!-- Footer -->
     <%- include('./partials/footer') %>
 
