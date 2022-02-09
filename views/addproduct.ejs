@@ -45,16 +45,14 @@
                 
                 <div class="divAddImages">
                     <p class="textAddImages">Cargar imágenes</p>
-                    <input name="image" id="prod-image" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg" required>
+                    <input name="image" id="prod-image" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg .png" required>
 
                     
                 </div>
 
-                <!-- <div class="images-to-add">
-                   <img class="images-to-add"  src="/window.URL.createObjectURL(this.files[0])">
-                   <input class="inp-add-image" type="">
-                   <input class="inp-add-image" type="">
-                </div>-->
+                <div class="images-to-add">
+                   <div class="inp-add-image" type="" id="preview"> </div>
+                </div>
             </div>
 
             <div >
@@ -65,7 +63,7 @@
         
     </form>
 </section>
-
+<script src="/js/previewImg.js"></script>
     <!-- Footer -->
     <%- include('./partials/footer') %>
 
