@@ -11,7 +11,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
 const productController = {
 	index: (req, res) => {
 		db.Product.findAll({
-			order: [["title", "ASC"]]
+			order: [["title", "ASC"]],
+			/*include: [{association: "status"}, {association: "categories"}]*/
 		})
 		   .then(products => {
 		        res.render('product', {products});
@@ -48,8 +49,8 @@ const productController = {
 			price: parseFloat(req.body.price),
 			image: req.files[0].filename,
 			descrip: req.body.shortDescription,
-			/*Status_id: req.body.status,
-			Category_id: req.body.category*/
+			Status_id: req.body.status,
+			Category_id: req.body.category,
 		})
 		res.redirect('/products');
 	},

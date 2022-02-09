@@ -31,19 +31,25 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias, cols, config);
     
 
- /*   Product.associate = (models) => {
+    /*Product.associate = (models) => {
 
         Product.belongsTo(models.Status, {
             as: "status",
             foreignKey: "Status_id",
-            timestamps: false
         });
         Product.belongsTo(models.Category, {
             as: "categories",
             foreignKey: "Category_id",
-            timestamps: false
         });
-    }
-*/
+    }*/
+
+    /*Product.associate = models => {
+
+        Product.belongsTo(models.Status, {
+        });
+        Product.belongsTo(models.Category, {
+        });
+    }*/
+
     return Product;
 };

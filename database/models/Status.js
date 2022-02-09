@@ -25,6 +25,17 @@ module.exports = (sequelize, DataTypes) => {
 
         Status.belongsToMany(models.Product, {
             as: "products",
+            through: models.Product,
+            foreignKey: "Status_id",
+            timestamps: false
+        });
+    }*/
+
+    /*Status.associate = models => {
+
+        Status.belongsToMany(models.Product, {
+            
+            through: models.Product,
             foreignKey: "Status_id",
             timestamps: false
         });
