@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+/*window.addEventListener('load', function(){*/
     const formLogin = document.querySelector('form.form-login');
 
     /* LOGIN */
@@ -21,10 +21,10 @@ window.addEventListener('load', function(){
         event.preventDefault();
         let ulError = document.querySelector('div.error ul');
         for (let i = 0; i < errors.length; i++) {
-            ulError.innerHTML += '<li>' + errors[i] + '<li>'
+            ulError.innerHTML +='<li>'+ errors[i]+'</li>';
         }
     }
 
     })
     
-})
+/*})*/

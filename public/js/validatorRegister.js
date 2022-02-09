@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+/*window.addEventListener('load', function(){*/
     const formRegister = document.querySelector('form.form-register');
 
     /* REGISTER */
@@ -40,16 +40,49 @@ window.addEventListener('load', function(){
         errors.push('El campo Contrasena debe tener al menos un número')
     }
     
-    /*const inputAvatar = document.querySelector('#avatar');
-    if (inputAvatar.value) */
+        /*let fileInput = document.getElementById('file');*/
+    /* let inputAvatar = document.querySelector('#avatar')
+        /*let filePath = fileInput.value;*/
+    /*let extensions = /(.jpg|.jpeg|.png|.gif)$/i;
+        if(!extensions.exec(inputAvatar.value)){
+            errors.push('Por favor seleccion un archivo .jpeg/.jpg/.png/.gif');
+            inputAvatar.value = '';
+            return false;
+        }else{
+            //Image preview
+            if (inputAvatar.files && inputAvatar.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+                };
+                reader.readAsDataURL(inputAvatar.files[0]);
+            }
+        }*/
+
+   /* let inputAvatar = document.querySelector('#avatar');
+    let extensions = ['.jpg', '.jpeg', '.png', '.gif']
+    if (inputAvatar.value) {
+        let extension = (inputAvatar.value.substring(inputAvatar.value.lastIndexOf('.'))).toLoweCase();
+        let allowed = false;
+        for (let i = 0; i < extensions.length; i++) {
+            if (extensions[i] == extension) {
+                allowed = true
+                break
+            }
+            
+        }
+        if (!allowed) {
+            errors.push('La extension de archivo no es permitida. Solo se pueden subir archivos con extensiones: ' + extensions.join())
+        }
+    } */
 
     if(errors.length > 0){
         event.preventDefault();
         let ulErrors = document.querySelector('div.errors ul');
         for (let i = 0; i < errors.length; i++) {
-            ulErrors.innerHTML += '<li>' + errors[i] + '<li>'
+            ulErrors.innerHTML += '<li>' + errors[i] + '</li>'
         }
     }
 
     })
-})
+/*})*/
