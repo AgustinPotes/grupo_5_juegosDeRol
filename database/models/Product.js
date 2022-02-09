@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL
         },
         image: { 
-            type: DataTypes.BLOB
+            type: DataTypes.STRING(80)
         },
         descrip: {
             type: DataTypes.STRING(200)
@@ -42,6 +42,8 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "Category_id",
         });
     }*/
+
+
 
     /*Product.associate = models => {
 

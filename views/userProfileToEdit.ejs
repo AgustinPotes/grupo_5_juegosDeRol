@@ -11,14 +11,14 @@
     <!-- Navbar -->
     <%- include('./partials/headerNavbar') %>
     
-    <form class="container-form" action="/users/register" method="POST" enctype="multipart/form-data">
+    <form class="container-form" action="/users/register/<%=locals.userLogged.id %>" method="POST" enctype="multipart/form-data">
         <h2 class="h2-prof-edit">Datos a modificar</h2>
         <label>Nombre</label>
-        <input class="input-form" type="text" name="name" value="<%= locals.userLogged.name %>" required>
+        <input class="input-form" type="text" name="name" value="<%= locals.userLogged.first_name %>" required>
         <label>Apellido</label>
-        <input class="input-form" type="text" name="lastName" value="<%= locals.userLogged.lastName %>" required>
+        <input class="input-form" type="text" name="lastName" value="<%= locals.userLogged.last_name %>" required>
         <label>Usuario</label>
-        <input class="input-form" type="text" name="userAlias" value="<%= locals.userLogged.userAlias %>" required>
+        <input class="input-form" type="text" name="userAlias" value="<%= locals.userLogged.user_alias %>" required>
         
         <input class="button-for" id="submit" type="submit" value="Guardar cambios">
     </form>

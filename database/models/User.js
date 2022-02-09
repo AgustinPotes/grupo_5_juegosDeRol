@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(45)
         },
         avatar: { 
-            type: DataTypes.BLOB
+            type: DataTypes.STRING(80)
         }
     };
     let config = {
