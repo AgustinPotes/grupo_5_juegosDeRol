@@ -121,7 +121,7 @@ const usersController = {
                 last_name: req.body.lastName,
                 user_alias: req.body.userAlias,
                 email: req.body.eMail,
-                pass: bcryptjs.hashSync(req.body.password, 12),
+                pass: bcryptjs.hashSync(req.body.password, genSaltSync()),
                 avatar: req.files[0].filename,
 
                 }).then(userlogon => {
