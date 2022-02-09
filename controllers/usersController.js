@@ -27,7 +27,7 @@ const usersController = {
                 user_alias: req.body.userAlias,
                 email: req.body.eMail,
                 pass: bcryptjs.hashSync(req.body.password, bcryptjs.genSaltSync()),
-                avatar: req.files.length && req.files[0].filename,
+                avatar: req.files.length && req.files[0].filename || 'default-avatar.png',
                
             }).then(function(userlogon) {
                 req.session.userLogged = userlogon;

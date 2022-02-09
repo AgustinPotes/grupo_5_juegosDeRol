@@ -85,6 +85,14 @@ body {
     background-color: red;
 }
 
+.profile-avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 99%;
+    margin: auto;
+}
+
 /* MEDIA QUERIES */
 
 @media(min-width: 376px) {
@@ -114,6 +122,13 @@ body {
     }
     h2 {
         padding: 5%;
+    }
+    .profile-avatar {
+        display: block;
+        max-width: 70%;
+        max-height: 100%;
+        border-radius: 99%;
+        margin: auto;
     }
 }
 

@@ -93,10 +93,6 @@ input[type='submit'] :active {
 
 /* MEDIA QUERIES */
 
-@media(min-width: 376px) {
-
-}
-
 @media(min-width: 768px) {
     form {
         margin-top: 20%;
@@ -108,7 +104,6 @@ input[type='submit'] :active {
         bottom: 110px;
     }
 }
-
 
 @media(min-width: 1024px) {
     .errores {
