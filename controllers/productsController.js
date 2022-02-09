@@ -19,6 +19,7 @@ const productController = {
 		   })
 		   .catch(err => {
 			res.send(err)
+
 		})
 	},
 	

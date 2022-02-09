@@ -34,14 +34,9 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
-    const User = sequelize.define(alias, cols, config);
-    /*User.associate = (models) => {
-    User.belongsTo(models.Permissions, {
-        as: 'permission',
-        foreignKey: 'Permission_id',
-        timestamps: false
-    })
-}*/
+   const User = sequelize.define(alias, cols, config);
+    
+
 
     return User;
 };

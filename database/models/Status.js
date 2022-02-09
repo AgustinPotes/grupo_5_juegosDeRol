@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     
         const Status = sequelize.define(alias, cols, config);
 
-    /*Status.associate = (models) => {
+    Status.associate = (models) => {
 
         Status.belongsToMany(models.Product, {
             as: "products",
@@ -29,9 +29,9 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "Status_id",
             timestamps: false
         });
-    }*/
+    }
 
-    /*Status.associate = models => {
+    Status.associate = models => {
 
         Status.belongsToMany(models.Product, {
             
@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "Status_id",
             timestamps: false
         });
-    }*/
+    }
 
     return Status;
 };
