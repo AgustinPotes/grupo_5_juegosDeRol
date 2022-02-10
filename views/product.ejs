@@ -15,11 +15,11 @@
        <!-- Navbar -->
        <%- include('./partials/headerNavbar') %>
 
-    <section class="novelties">
+    <section class="novelties-prods">
         
         <h3 class="banner-prods">Catálogo de productos</h3>
         
-    <div class="main-container">
+    <div class="main-container-prods">
         <% for (let i = 0; i < products.length; i++){%>
         <a href="/products/detail/<%=products[i].id%>" class="link-ref"><article class="display-product">
         <h4 class="title-prod"><%=products[i].title%></h4>

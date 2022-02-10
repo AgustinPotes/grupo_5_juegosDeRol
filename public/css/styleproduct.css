@@ -11,7 +11,7 @@ body {
     font-family: sans-serif;
 }
 
-.novelties {
+.novelties-prods {
     margin-top: 16%;
     z-index: 99;
 }
@@ -26,13 +26,13 @@ body {
     text-shadow: 0px 0px 10px rgba(2, 0, 112, 0.89);
 }
 
-.main-container {
+.main-container-prods {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.novelties article {
+.novelties-prods article {
     text-align: center;
     width: 90%;
     margin: 10px auto;
@@ -232,19 +232,19 @@ h5 {
 /* MEDIA QUERIES */
 
 @media(min-width: 768px) {
-    .novelties {
+    .novelties-prods {
         margin-top: 9.5%;
     }
 }
 
 @media(min-width: 1024px) {
-    .novelties {
+    .novelties-prods {
         margin-top: 7.5%;
     }
 }
 
 @media(min-width: 1440px) {
-    .novelties {
+    .novelties-prods {
         margin-top: 4.25%;
     }
 }
