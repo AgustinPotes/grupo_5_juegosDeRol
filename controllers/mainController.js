@@ -4,7 +4,7 @@ const db = require('../database/models/index');
 const Product = require("../database/models/Product");
 
 const mainController = {
-        index: async (req, res) => {
+        index: (req, res) => {
             db.Product.findAll({
                 order: [["title", "ASC"]],
             })

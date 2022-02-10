@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         title: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.STRING(20)
         },
         price: {
             type: DataTypes.DECIMAL
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(80)
         },
         descrip: {
-            type: DataTypes.STRING(200)
+            type: DataTypes.STRING(400)
         }
     };
     let config = {
