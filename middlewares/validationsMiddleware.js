@@ -12,7 +12,8 @@ const validationsMiddlewareUser = [
         minLowercase: 1,
         minUppercase: 1,
         minNumbers: 1
-    }).withMessage('Debe contener al menos 1 letra minúscula, 1 mayúscula, 1 número y 1 carácter especial')
+    }).withMessage('Debe contener al menos 1 letra minúscula, 1 mayúscula, 1 número y 1 carácter especial'),
+    check('avatar').isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'),
 ];
 
 module.exports = validationsMiddlewareUser;
