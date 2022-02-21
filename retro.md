@@ -15,10 +15,10 @@ Dejar de hacer: De momento venimos trabajando con todas las herramientas que se 
 
 
 
-Retrospectiva quinto sprint:
+Retrospectiva sexto sprint:
 
-Comenzar a hacer: Debemos trabajar en el front end de nuestro sitio, ya que nos enfocamos en el funcionamiento y dejamos de lado lo visual.
+Comenzar a hacer: Trabajar en la vista y funcionalidad del carrito, la función de búsqueda en el sitio y la implementación de APIs.
 
-Hacer más: Trabajar mucho en el HTML y CSS.
+Hacer más: JS Front.
 
-Continuar haciendo: La division de tareas se nos dio bien en este Sprint, y tambien supimos en buen tiempo corregir los errores que veniamos arrastrando del CRUD del Sprint anterior.
+Continuar haciendo: Continuar perfeccionando detalles visuales (aunque somos conscientes de que hicimos un gran avance desde el quinto sprint).

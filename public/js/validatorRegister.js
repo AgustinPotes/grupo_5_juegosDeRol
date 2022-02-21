@@ -40,7 +40,11 @@
         errors.push('El campo Contrasena debe tener al menos un número')
     }
     
-        /*let fileInput = document.getElementById('file');*/
+
+
+
+
+        /*----------------let fileInput = document.getElementById('file');*/
     /* let inputAvatar = document.querySelector('#avatar')
         /*let filePath = fileInput.value;*/
     /*let extensions = /(.jpg|.jpeg|.png|.gif)$/i;
@@ -74,7 +78,13 @@
         if (!allowed) {
             errors.push('La extension de archivo no es permitida. Solo se pueden subir archivos con extensiones: ' + extensions.join())
         }
-    } */
+    } -------------------------*/
+
+
+
+
+
+
 
     if(errors.length > 0){
         event.preventDefault();

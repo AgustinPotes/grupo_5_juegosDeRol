@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Guarida del Dragón</title>
+    <title>Detalle de <%=product.title%></title>
     <script src="https://kit.fontawesome.com/ce21b579cc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=MedievalSharp&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="/css/styledetail.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                         <option value="5">
                 </datalist>
 
-                <a href="/products/cart?_method=PUT" class="link-ref"><input class="detail-button" type="submit" value="Agregar al carrito"></a>
+                <a href="/products/cart" class="link-ref"><input class="detail-button" type="submit" value="Agregar al carrito"></a>
 
                 <%  if (locals.isLogged) { %>
                 <div class="col-12">

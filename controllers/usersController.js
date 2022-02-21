@@ -13,13 +13,23 @@ const usersController = {
     },
 
     processRegister: async (req, res) => {
+        console.log(req.body)
+        console.log(req.files)
         const resultValidation = validationResult(req);
+        console.log(resultValidation.mapped());
 
         let usuarioRepetido = await db.user.findOne({
             where: {
                 email: { [Op.like]: req.body.eMail }
+            }    
+         })
+
+        /*let aliasRepetido = await db.user.findOne({
+            where: {
+                user_: { [Op.like]: req.body.userAlias }
             }
-        })
+        })*/
+
         if (!resultValidation.errors.length && !usuarioRepetido) {
             db.user.create({
                 first_name: req.body.name,
@@ -47,7 +57,8 @@ const usersController = {
                     oldData: req.body
             })} else {
                 
-                return res.render('login', {
+                
+                return res.render('register', {
                     errors: resultValidation.mapped(),
                     oldData: req.body
                 });
