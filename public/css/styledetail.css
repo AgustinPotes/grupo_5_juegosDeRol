@@ -71,6 +71,10 @@
     background-color: rgb(255, 64, 64);
 }
 
+.add-cart-button {
+    text-decoration: none;
+}
+
 .link-ref {
     text-decoration: none;
 }

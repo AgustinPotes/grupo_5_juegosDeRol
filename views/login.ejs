@@ -21,11 +21,11 @@
 
       <input class="inp" type="email" placeholder="&#9993; E-mail" name="eMail" id="email">
       <% if (locals.errors && errors.eMail) { %>
-        <%= errors.eMail.msg %>
+        <span style="color: red"><%= errors.eMail.msg %></span>
       <%} %>
       <input class="inp" type="password" placeholder="&#128273; Contraseña" name='password' id="password">
       <% if (locals.errors && errors.password) { %>
-        <%= errors.password.msg %>
+        <span style="color: red"><%= errors.password.msg %></span>
       <%} %>
       <input class="inp-button" type="submit" id="submit" value="Ingresar">
       <label for="remember"id="remember-label"><input class="checkbox" type="checkbox" name="remember_user"> <p class="p-log">Recordar usuario y contraseña</p></label> 
@@ -34,6 +34,6 @@
   </form>
     <!-- Footer -->
     <%- include('./partials/footer') %>
-    <script src="/js/validatorLogin.js"></script>
+    <!--<script src="/js/validatorLogin.js"></script>-->
  </body>
 </html>

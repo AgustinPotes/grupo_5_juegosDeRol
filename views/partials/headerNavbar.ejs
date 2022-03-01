@@ -17,7 +17,7 @@
             <button type="submit" class="go-icon"><i class="fas fa-search"></i></button>
           </form>
           <%  if (locals.isLogged) { %>
-          <a href="products/cart">Carrito</a>
+          <a href="products/cart">Carrito </a><span class="cart-counter" name="cart-item-counter"></span>
           <% } %>
           <a href="/">Home</a>
         </div>
@@ -39,20 +39,21 @@
     <nav class="mobile-nav">
       <%  if (locals.isLogged) { %>
       <div class="profileImageMobile">
-        <a href="/users/login"><img  src="/img/avatars/<%= locals.userLogged.avatar || 'default-avatar.png' %>"  width="100%" height="100%"></a>
+        <a href="/users/login" class="profile-image-mobile-picture"><img  src="/img/avatars/<%= locals.userLogged.avatar || 'default-avatar.png' %>"  width="100%" height="100%"></a>
       </div>
       <% } %>
       <%  if (!locals.isLogged) { %>
-      <a href="/users/login" id="myLinks">Ingresar</a>
-      <a href="/users/register" id="myLinks">Registrarse</a>
+      <a class="mobile-nav-buttons" href="/users/login" id="myLinks">Ingresar</a>
+      <a class="mobile-nav-buttons" href="/users/register" id="myLinks">Registrarse</a>
       <% } %>
-      <a href="/products">Catálogo</a>
-      <a href="#">Buscar</a>
+      <a class="mobile-nav-buttons" href="/products">Catálogo</a>
+      <a class="mobile-nav-buttons" href="#">Buscar</a>
       <%  if (locals.isLogged) { %>
-        <a href="products/cart">Carrito</a>
+        <a class="mobile-nav-buttons" href="products/cart">Carrito <span class="cart-counter-mobile">0</span></a>
       <% } %>
-      <a href="/">Home</a>
+      <a class="mobile-nav-buttons" href="/">Home</a>
     </nav>
 
     <script src="/js/main.js"></script>
+    <script src="/js/cart.js"></script>
     

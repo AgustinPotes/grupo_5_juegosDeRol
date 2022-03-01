@@ -176,7 +176,7 @@ p {
 
 a:link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .link-ref {
@@ -267,6 +267,9 @@ h5 {
         position: absolute;
         display: block;
         cursor: url('../img/iconoCursorPointerZombie.png'), auto;
+    }
+    a:link {
+        color: black;
     }
 }
 

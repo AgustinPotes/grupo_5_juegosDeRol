@@ -22,9 +22,15 @@
             <div><h2 class="h2-add-prod">Cargar nuevo producto</h2></div>
             
             <div class="part1">
-                <input class="inp-add-prod" id="title" name="title" type="text" placeholder="Título" size="30" required>
-                <input class="inp-add-prod" name="shortDescription" type="text" placeholder="Descripción" size="200" required>
-
+                <input class="inp-add-prod" id="title" name="title" type="text" placeholder="Título" value="<%= locals.oldData ? oldData.title : null %>">
+                <% if (typeof errors != 'undefined' && typeof errors.title != 'undefined') { %>
+                    <span style="color: red"><%= errors.title.msg %></span> 
+                  <% } %>
+                <input class="inp-add-prod" name="shortDescription" type="text" placeholder="Descripción" value="<%= locals.oldData ? oldData.shortDescription : null %>">
+                <% if (typeof errors != 'undefined' && typeof errors.shortDescription != 'undefined') { %>
+                    <span style="color: red"><%= errors.shortDescription.msg %></span> 
+                  <% } %>
+                  
                 <select id="category" name="category" placeholder="Categoría" class="selectCategorias" required>
                     <option disabled selected>Categoría</option>
                     <option value="1">Juegos de rol de mesa</option>
@@ -36,7 +42,10 @@
                     <option value="1" selected>Novedad</option>
                 </select>
 
-                <input class="inp-add-prod" name="price" id="number" type="number" placeholder="Precio" required>
+                <input class="inp-add-prod" name="price" id="number" type="number" placeholder="Precio" value="<%= locals.oldData ? oldData.price : null %>">
+                <% if (typeof errors != 'undefined' && typeof errors.price != 'undefined') { %>
+                    <span style="color: red"><%= errors.price.msg %></span> 
+                  <% } %>
 
             </div>
         
@@ -45,7 +54,7 @@
                 
                 <div class="divAddImages">
                     <p class="textAddImages">Cargar imágenes</p>
-                    <input name="image" id="prod-image" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg .png" required>
+                    <input name="image" id="prod-image" type="file" multiple="multiple" class="addImages" accept= ".jpg, .jpeg .png" >
 
                     
                 </div>
