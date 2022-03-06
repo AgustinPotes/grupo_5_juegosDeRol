@@ -3,9 +3,9 @@ window.addEventListener('load', function() {
 let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
 
 console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
-
+    
 let itemsInCart = document.getElementById('cart-item-counter').innerHTML += parseFloat(itemsInCarrito)
-
+    
 console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
 
 

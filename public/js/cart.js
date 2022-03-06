@@ -22,6 +22,44 @@ let arrayProds = JSON.parse(localStorage.arrayCarrito);
 
 console.log(arrayProds);
 
+/*let arrayReduced = arrayProds.reduce((arrayReduced, item) => {
+    for (const [itemName, itemCount] of Object.entries(item)) {
+        if (!arrayReduced[itemName]) {
+            arrayReduced[itemName] = 0;
+        }
+        arrayReduced[itemName] += itemCount;
+    }
+    return arrayReduced
+},{});
+
+console.log(arrayReduced)*/
+
+let arrayReduced = arrayProds.reduce((acc, item) => {
+    /*if (acc[item.title]) {
+        console.log('item ' + typeof(item.price) + ' ' + item.price)
+        console.log(item)
+        
+
+        price + item.price
+
+        //[item.quantity] = item.quantity + 1;
+        //console.log('q ' + item.quantity)
+    } else {*/
+        return {...acc, [item.title]:{...item}}   
+    //}
+},{});
+
+console.log(arrayReduced)
+
+
+
+//Suma total
+let totalAmount = arrayProds.reduce((acc, item) => {
+    return acc = acc + parseFloat(item.price)
+}, 0);
+console.log('suma total ' + typeof(totalAmount) + ' ' + totalAmount)
+
+
 
 //Ciclo for que trae los objetos de cada producto
 /*let forEachProds = arrayProds.forEach(function(arrayProd, i){
@@ -68,33 +106,28 @@ arrayProds.forEach(function(arrayProd, i){
 
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-if (typeof localStorage.arrayCarrito == "undefined" || typeof localStorage.arrayCarrito == "[]") {
-    let div = document.getElementById("main-container-detail");
-    div.innerHTML += "<h2>No hay productos agregados </h2>";
+if (typeof arrayProds == "undefined" || typeof arrayProds == "[]") {
+    let div = document.querySelector(".main-container-detail-cart");
+    div.innerHTML += `<h2 class="product-name-cart">No hay productos agregados </h2>`;
 } else {
+    
     for (let i = 0; i < arrayProds.length; i++) {
-        let producto = arrayProds[i];
-        let div = document.querySelector(".main-container-detail");
+        let producto = arrayProds[i]
+        
+
+        
+        let div = document.querySelector(".main-container-detail-cart");
         let contenido = ` <section class="main-container-detail">
 
         <div class="main-product-detail-cart">
             <img class="image-product-cart" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart">
             <h4 class="product-name-cart" name="product-name-cart" >${producto.title}</h4>
-            <p class="price-detail-cart" name="price-detail-cart" >${producto.price}</p>
+            <p class="price-detail-cart" name="price-detail-cart" >$${producto.price}</p>
     
                 <div class="quantity-and-cart-block">
-                <div class="product-quantity-class">
-                <label for="product-quantity">Cantidad:</label>
-                <input class="p-detail" list="product-quantity1" placeholder="0" id="product-quantity">
-                <datalist id="product-quantity1">
-                        <option value="0">
-                        <option value="1">
-                        <option value="2">
-                        <option value="3">
-                        <option value="4">
-                        <option value="5">
-                </datalist>
-               
+                <div class="product-quantity-cart">Cantidad:    ${arrayProds.length}</div><div class="reduce-button-cart" type="button">-</div><div class="add-button-cart" type="button">+</div> 
+
+                
                 </div>
     </section>`;
 
