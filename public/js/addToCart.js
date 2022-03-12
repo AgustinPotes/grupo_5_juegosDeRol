@@ -1,12 +1,12 @@
- window.addEventListener('load', function() {
+window.addEventListener('load', function() {
 
-     let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
 
-     console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
+console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
 
-     let itemsInCart = document.getElementById('cart-item-counter').innerHTML += parseFloat(itemsInCarrito)
+let itemsInCart = document.getElementById('cart-item-counter').innerHTML += parseFloat(itemsInCarrito)
 
-     console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
+console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
 
 
  //selecciona el link del botón para capturar el onclick
@@ -17,8 +17,6 @@
  let title = document.querySelector('.product-name').title;
  let price = document.querySelector('.price-detail').title;
  let image = document.querySelector('.image-product-detail').title;
-
-
 
 
 // crea un array de objetos con las propiedades del producto que acabamos de agregar
