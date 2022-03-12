@@ -2,6 +2,7 @@ const req = require("express/lib/request");
 const res = require("express/lib/response");
 const db = require('../database/models/index');
 const Product = require("../database/models/Product");
+const { Op } = require("sequelize")
 
 /*const { devNull } = require('os');
 const { title } = require('process');
@@ -94,7 +95,21 @@ const productController = {
         })
 
         res.redirect('/products')
-    }
+    },
+	search: (req, res) =>{
+		db.Product.findAll({
+			where:{
+				title: {[Op.like] : "%" + req.body.title + "%"}
+			}
+		})
+			.then(products => {
+				res.render('product', {products})
+			})
+			.catch(err => {
+                res.send(err)
+            })
+	}
+	
 }
-
+   
 module.exports = productController;
