@@ -42,7 +42,9 @@ h3 {
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
+    flex-direction: row 4;
+
 }
 
 .novelties article {

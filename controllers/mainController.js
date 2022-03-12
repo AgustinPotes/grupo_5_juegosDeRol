@@ -6,7 +6,7 @@ const Product = require("../database/models/Product");
 const mainController = {
         index: (req, res) => {
             db.Product.findAll({
-                order: [["title", "ASC"]],
+                order: [["id", "DESC"]],
             })
                .then(products => {
                     res.render('index', {products});
