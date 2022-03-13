@@ -13,10 +13,9 @@ const usersController = {
     },
 
     processRegister: async (req, res) => {
-        console.log(req.body)
-        console.log(req.files)
+      
         const resultValidation = validationResult(req);
-        console.log(resultValidation.mapped());
+       
 
         let usuarioRepetido = await db.user.findOne({
             where: {
@@ -24,11 +23,6 @@ const usersController = {
             }    
          })
 
-        /*let aliasRepetido = await db.user.findOne({
-            where: {
-                user_: { [Op.like]: req.body.userAlias }
-            }
-        })*/
 
         if (!resultValidation.errors.length && !usuarioRepetido) {
             db.user.create({
@@ -41,7 +35,7 @@ const usersController = {
                
             }).then(function(userlogon) {
                 req.session.userLogged = userlogon;
-                res.redirect('/users/profile?registerSuccessful=true');
+                res.redirect('/users/profile');
             })
             .catch(err => {
                 res.send(err)
@@ -82,8 +76,6 @@ const usersController = {
             if (isOkThePassword) {
                 delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
-
-                //res.send(userToLogin)
                 if (req.body.remember_user) {
                     res.cookie('userEmail', req.body.eMail, { maxAge: 5 * 60 * 1000 });
                 }
