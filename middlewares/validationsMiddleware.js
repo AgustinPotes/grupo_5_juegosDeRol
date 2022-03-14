@@ -1,19 +1,16 @@
-/*const { body } = require('express-validator');*/
 const { check } = require('express-validator');
 
 
-const validationsMiddlewareUser = [
-    check('name').notEmpty().isAlpha().withMessage("Solo letras permitidas").isLength(2).withMessage('Nombre es obligatorio y de al menos 2 carácteres'),
-    check('lastName').notEmpty().isAlpha().withMessage("Solo letras permitidas").isLength(2).withMessage('Apellido es obligatorio y de al menos 2 carácteres'),
-    check('userAlias').notEmpty().isAlpha().withMessage("Solo letras permitidas").isLength(2).withMessage('Usuario es obligatorio y de al menos 2 carácteres'),
-    check('eMail').notEmpty().isEmail().withMessage('Email es un campo obligatorio').isEmail().withMessage("Formato de correo electronico inválido").normalizeEmail(),
-    check('password').notEmpty().withMessage("Contraseña es un campo obligatorio").isStrongPassword({
-        minLength: 8,
-        minLowercase: 1,
-        minUppercase: 1,
-        minNumbers: 1
-    }).withMessage('Debe contener al menos 1 letra minúscula, 1 mayúscula, 1 número y 1 carácter especial'),
-    check('avatar').isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'),
+
+
+validationsMiddlewareUser = [
+    check('name').notEmpty().withMessage('Nombre es un Campo obligatorio').isLength({ min:2}).withMessage('Nombre debera tener al menos 2 caracteres'),
+    check('lastName').notEmpty().withMessage('Apellido es un Campo obligatorio').isLength({ min:2}).withMessage('Apellido debera tener al menos 2'),
+    check('userAlias').notEmpty().withMessage('Usuario es un Campo obligatorio'),
+    check('eMail').notEmpty().withMessage('Email es un Campo obligatorio').bail()
+    .isEmail().withMessage("Debes escribir un formato de correo electronico valido"),
+    check('password').notEmpty().withMessage('Contrasena es un Campo obligatorio').bail().isLength({ min: 8}).withMessage('La contrasena debera tener al menos 8 caracteres'),
+    //check('avatar').isIn([ "PNG", "JPEG", "GIF" , "JPG"]).withMessage('Los formatos soportados son solo JPG, JPEG, PNG y GIF'),,
 ];
 
 module.exports = validationsMiddlewareUser;
