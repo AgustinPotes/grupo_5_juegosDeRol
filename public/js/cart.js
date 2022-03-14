@@ -11,7 +11,7 @@
      let title = item.title;
      let price = parseFloat(item.price);
      let image = item.image;
-     let quantity = 1;
+     let quantity = item.quantity;
      let length = acc[item.title] ? quantity = arrayProds.filter((title) => title.title == [item.title]).length : quantity
 
      console.log(length)
@@ -45,7 +45,7 @@
  //Para la exposición en la vista
  const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
- if (typeof arrayProds == "undefined" || typeof arrayProds == "[]") {
+ if (typeof arrayProds == undefined || typeof arrayProds == []) {
      let div = document.querySelector(".main-container-detail-cart");
      div.innerHTML += `<h2 class="product-name-cart">No hay productos agregados </h2>`;
  } else {
@@ -55,7 +55,7 @@
 
         
          let div = document.querySelector(".main-container-detail-cart");
-         let contenido = ` <section class="main-container-detail">
+         let contenido = `<section class="main-container-detail">
 
          <div class="main-product-detail-cart">
              <img class="image-product-cart" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart">
@@ -63,17 +63,60 @@
              <p class="price-detail-cart" name="price-detail-cart" >$${producto.price}</p>
     
                  <div class="quantity-and-cart-block">
-                 <div class="product-quantity-cart">Cantidad:    ${producto.quantity}</div><div class="reduce-button-cart" type="button">-</div><div class="add-button-cart" type="button">+</div> 
+                 <div class="product-quantity-cart">Cantidad:    ${producto.quantity}</div><div class="reduce-button-cart" type="button" id="reduce-button-cart">-</div><div class="add-button-cart" type="button" id="add-button-cart">+</div> 
 
                 
                  </div>
+        
      </section>`;
 
        div.innerHTML += contenido;
      }
    }
 
+   
+if (typeof arrayProds != undefined || typeof arrayProds != []) {
+    let div = document.querySelector(".total-amount");
+    let totalAmount2 = totalAmount;
+    let contenido = `<div>Total: ${totalAmount2}</div>
+    <div class="clear-button-cart" type="button">Vaciar carrito</div>
+    <div class="checkout-button-cart" type="button">Checkout</div>`;
+
+    div.innerHTML += contenido;
+}
 
 
+//Botones para añadir o quitar ítems del localStorage
+let removeItemCart = document.getElementById('reduce-button-cart')
+let addItemCart = document.getElementById('add-button-cart')
+
+removeItemCart.addEventListener('click', () => {
+   console.log('item removed!')
+})
+addItemCart.addEventListener('click', () => {
+    console.log('item added!')
+ })
+
+
+ //Botón para borrar localStoarge
+let clearCart = document.querySelector('.clear-button-cart')
+
+clearCart.addEventListener('click', () => {
+    console.log('cart cleared!')
+
+    localStorage.clear();
+    alert('Vaciaste el carrito');
+    location.reload();
+ })
+
+
+ //Botón checkout cart
+ let checkoutCart = document.querySelector('.checkout-button-cart')
+
+ checkoutCart.addEventListener('click', () => {
+    console.log('checkout completed!')
+    alert('¡Gracias por tu compra!');
+    location.reload();
+ })
 
  })
