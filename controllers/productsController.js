@@ -39,6 +39,10 @@ const productController = {
 	cart: (req, res) => {
 		res.render('cart');
 	},
+
+	favs: (req, res) => {
+		res.render('favs');
+	},
 	
 	addProduct: (req, res) => {
 		res.render('addproduct');

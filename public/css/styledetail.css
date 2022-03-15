@@ -34,10 +34,20 @@
     font-size: 20px;
 }
 
+.price-fav-container {
+    display: flex;
+}
+
 .price-detail {
     margin-bottom: 12px;
     font-weight: 900;
     font-size: 20px;
+}
+
+.favStarIcon {
+    width: 28px;
+    height: 28px;
+    margin-left: 15px;
 }
 
 .description-detail {

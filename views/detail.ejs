@@ -20,9 +20,12 @@
 
         <div class="main-product-detail">  
             <h4 name="title" class="product-name" title="<%=product.title%>"><%=product.title%></h4>
+            <div class="price-fav-container">
             <p name="price" class="price-detail" title="<%=product.price%>">$<%=product.price%></p>
+            <div class="add-to-fav-button" type="button"><img src="/img/favStarIcon2.png" alt="" class="favStarIcon"></div>
+        </div>
             <p class="description-detail"><%=product.descrip%></p>
-
+            
                 <div class="quantity-and-cart-block">
                 <div class="product-quantity-class">
                 <!--<label for="product-quantity">Cantidad:</label>

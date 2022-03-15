@@ -5,7 +5,7 @@
     cursor: url('../img/iconoCursor2.png'), auto;
 }
 
-.main-container-cart-articles {
+.main-container-fav-articles {
     max-width: 98vw;
     display: flex;
     flex-direction: column;
@@ -15,17 +15,17 @@
     border-top-style: outset;
 }
 
-.main-product-detail-cart {
+.main-product-detail-fav {
     margin-top: 80px;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.image-product-cart {
+.image-product-fav {
     width: 30vw;
 }
 
-.product-name-cart {
+.product-name-fav {
     margin-bottom: 12px;
     margin-top: 5px;
     /*height: 20%;*/
@@ -36,11 +36,11 @@
     width: 80vw;
 }
 
-.details-cart-container {
+.details-fav-container {
     width: 18vw;
 }
 
-.price-detail-cart {
+.price-detail-fav {
     margin-top: 15px;
     margin-bottom: 2.5px;
     margin-left: 9px;
@@ -49,45 +49,22 @@
     width: 15vw;
 }
 
-.quantity-and-cart-block {
+.quantity-and-fav-block {
     margin-bottom: 8px;
 }
 
-.product-quantity-cart {
+.product-quantity-fav {
     border-radius: 5px;
     font-size: 12px;
     padding: 5%;
+    margin-left: 6px;
 }
 
-.button-container-cart {
+.button-container-fav {
     display: flex;
 }
 
-.reduce-button-cart {
-    height: 25px;
-    width: 25px;
-    background-color: rgb(179, 179, 179);
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-    color: white;
-    font-weight: 550;
-    margin-left: 5px;
-}
-
-.add-button-cart {
-    height: 25px;
-    width: 25px;
-    background-color: #1259c3;
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-    color: white;
-    font-weight: 550;
-    margin-left: 8px;
-}
-
-.clear-button-cart {
+.clear-button-fav {
     text-align: center;
     margin-bottom: 8px;
     display: block;
@@ -106,43 +83,16 @@
     cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
-.clear-button-cart:hover {
+.clear-button-fav:hover {
     background-color: rgb(255, 93, 64);
 }
 
-.checkout-button-cart {
-    text-align: center;
-    margin-bottom: 12px;
-    display: block;
-    padding: 8px 10px;
-    background-color: #6ca2f3;
-    max-width: 300px;
-    height: 50px;
-    margin: 20px 0;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 18px;
-    color: #fff;
-    border-radius: 8px;
-    border: none;
-    font-weight: 600;
-    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
-}
-
-.checkout-button-cart:hover {
-    background-color: #0066ff;
-}
-
-.cart-total {
+.fav-total {
     display: flex;
     padding: 5%;
     font-weight: 600;
     border-top-style: outset;
     font-size: 18px;
-}
-
-.total-cart-p {
-    width: 85vw;
 }
 
 .remove-fav-button {
@@ -154,7 +104,7 @@
     text-align: center;
     color: white;
     font-weight: 550;
-    margin-left: 12.5px;
+    margin-left: 20px;
 }
 
 /* MEDIA QUERIES */
@@ -164,18 +114,18 @@
         margin-top: 15%;
         margin-bottom: 10%;
     }
-    .product-name-cart {
+    .product-name-fav {
         font-size: 15px;
         width: 40vw;
     }
-    .image-product-cart {
+    .image-product-fav {
         max-width: 200px;
     }
-    .main-product-detail-cart {
+    .main-product-detail-fav {
         margin-top: 80px;
         justify-content: space-between;
     }
-    .details-cart-container {
+    .details-fav-container {
         width: 12vw;
     }
 }
@@ -186,16 +136,22 @@
         margin-top: 10%;
         margin-bottom: 7%;
     }
-    .main-product-detail-cart {
+    .main-product-detail-fav {
         margin-top: 25px;
         justify-content: space-between;
     }
-    .product-quantity-cart {
+    .product-quantity-fav {
         margin-left: -2.5px;
     }
-    .main-container-cart-articles {
+    .main-container-dav-articles {
         margin-top: 2.5%;
         margin-bottom: 2%;
+    }
+    .remove-fav-button {
+        margin-left: 15px;
+    }
+    .price-detail-fav {
+        margin-left: 2.5px;
     }
     
 }
@@ -209,17 +165,20 @@
     .main-product-detail {
         width: 28vw;
     }
-    .main-container-cart-articles {
+    .main-container-fav-articles {
         margin-top: 1.5%;
         margin-bottom: 1%;
     }
-    .product-quantity-cart {
+    .product-quantity-fav {
         margin-left: -10px;
         font-size: 14px;
     }
-    .price-detail-cart {
-        margin-left: 5px;
+    .price-detail-fav {
+        margin-left: -2.5px;
         font-size: 18px;
         width: 15vw;
+    }
+    .remove-fav-button {
+        margin-left: 12.5px;
     }
 }
