@@ -55,17 +55,22 @@
 
         
          let div = document.querySelector(".main-container-detail-cart");
-         let contenido = `<section class="main-container-detail">
+         let contenido = `<section class="main-container-cart-articles">
 
          <div class="main-product-detail-cart">
              <img class="image-product-cart" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart">
              <h4 class="product-name-cart" name="product-name-cart" >${producto.title}</h4>
+             <div class="details-cart-container">
              <p class="price-detail-cart" name="price-detail-cart" >$${producto.price}</p>
     
                  <div class="quantity-and-cart-block">
-                 <div class="product-quantity-cart">Cantidad:    ${producto.quantity}</div><div class="reduce-button-cart" type="button" id="reduce-button-cart">-</div><div class="add-button-cart" type="button" id="add-button-cart">+</div> 
-
+                 <div class="product-quantity-cart">Cantidad:    ${producto.quantity}</div>
+                 <div class="button-container-cart">
+                 <div class="reduce-button-cart" type="button" id="reduce-button-cart-${producto.title}">-</div><div class="add-button-cart" type="button" id="add-button-cart-${producto.title}">+</div> 
+                 </div>
+                 
                 
+                 </div>
                  </div>
         
      </section>`;
@@ -78,7 +83,9 @@
 if (typeof arrayProds != undefined || typeof arrayProds != []) {
     let div = document.querySelector(".total-amount");
     let totalAmount2 = totalAmount;
-    let contenido = `<div>Total: ${totalAmount2}</div>
+    let contenido = `<div class="cart-total">
+    <div class="total-cart-p">Total:</div> <div>$${totalAmount2}</div>
+    </div>
     <div class="clear-button-cart" type="button">Vaciar carrito</div>
     <div class="checkout-button-cart" type="button">Checkout</div>`;
 
@@ -87,15 +94,40 @@ if (typeof arrayProds != undefined || typeof arrayProds != []) {
 
 
 //Botones para añadir o quitar ítems del localStorage
-let removeItemCart = document.getElementById('reduce-button-cart')
-let addItemCart = document.getElementById('add-button-cart')
+let removeItemCart = document.querySelector('.reduce-button-cart')
+let addItemCart = document.querySelector('.add-button-cart')
 
-removeItemCart.addEventListener('click', () => {
+let removeItemCartId = document.querySelector('.reduce-button-cart').id
+let addItemCartId = document.querySelector('.add-button-cart').id
+
+console.log('removeItemCartId ' + removeItemCartId)
+console.log('addItemCartId ' + addItemCartId)
+
+/*removeItemCart.addEventListener('click', () => {
    console.log('item removed!')
-})
+})*/
+
+console.log('crazy concat ' + typeof(String(arrayFor[0].title)) + ' ' + 'add-button-cart-'+String(arrayFor[0].title))
+
+
 addItemCart.addEventListener('click', () => {
     console.log('item added!')
+
+    /*if ('add-button-cart-'+String(arrayFor[0].title) == addItemCartId && addItemCart.id == addItemCartId) {
+        
+        let newItemAdded = arrayProds.filter()
+
+        console.log(newItemAdded)
+
+        
+    }*/
+
+
+
+
+
  })
+
 
 
  //Botón para borrar localStoarge

@@ -10,17 +10,17 @@ window.addEventListener('load', function() {
 }
 };*/
 
-let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
- (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length
- 
- //let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
- 
- console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
-     
- let itemsInCart = document.getElementById('cart-item-counter').innerHTML += itemsInCarrito
-     
- console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
 
+let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+(itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length
+
+//let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+
+console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
+    
+let itemsInCart = document.getElementById('cart-item-counter').innerHTML += itemsInCarrito
+    
+console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
 
  //selecciona el link del botón para capturar el onclick
  let addToCart = document.querySelector('.add-cart-button');
@@ -57,6 +57,6 @@ let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
  console.log('contenido del local 2: ' + localStorage.getItem('arrayCarrito'))
 
  
- 
+
 
  })
