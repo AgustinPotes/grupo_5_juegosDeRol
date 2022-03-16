@@ -66,7 +66,7 @@
                  <div class="quantity-and-cart-block">
                  <div class="product-quantity-cart">Cantidad:    ${producto.quantity}</div>
                  <div class="button-container-cart">
-                 <div class="reduce-button-cart" type="button" id="reduce-button-cart-${producto.title}">-</div><div class="add-button-cart" type="button" id="add-button-cart-${producto.title}">+</div> 
+                 <div class="reduce-button-cart" type="button" id="reduce-button-cart" product-title="${producto.title}">-</div><div class="add-button-cart" type="button" id="add-button-cart" product-title="${producto.title}">+</div> 
                  </div>
                  
                 
@@ -79,7 +79,7 @@
      }
    }
 
-   
+//Suma total
 if (typeof arrayProds != undefined || typeof arrayProds != []) {
     let div = document.querySelector(".total-amount");
     let totalAmount2 = totalAmount;
@@ -95,7 +95,7 @@ if (typeof arrayProds != undefined || typeof arrayProds != []) {
 
 //Botones para añadir o quitar ítems del localStorage
 let removeItemCart = document.querySelector('.reduce-button-cart')
-let addItemCart = document.querySelector('.add-button-cart')
+let addButtons = document.querySelectorAll('.add-button-cart')
 
 let removeItemCartId = document.querySelector('.reduce-button-cart').id
 let addItemCartId = document.querySelector('.add-button-cart').id
@@ -109,28 +109,30 @@ console.log('addItemCartId ' + addItemCartId)
 
 console.log('crazy concat ' + typeof(String(arrayFor[0].title)) + ' ' + 'add-button-cart-'+String(arrayFor[0].title))
 
+addButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        console.log('item added!')
+    
+        console.log(e.target.getAttribute('product-title'))
 
-addItemCart.addEventListener('click', () => {
-    console.log('item added!')
-
-    /*if ('add-button-cart-'+String(arrayFor[0].title) == addItemCartId && addItemCart.id == addItemCartId) {
-        
-        let newItemAdded = arrayProds.filter()
-
-        console.log(newItemAdded)
-
-        
-    }*/
+        let productTitle = e.target.getAttribute('product-title');
 
 
+        let productToAdd = arrayProds.find((product) => product.title === productTitle)
+
+        console.log(productToAdd)
+
+        productsOnCart = JSON.parse(localStorage.getItem('arrayCarrito'))
+        productsOnCart.push(productToAdd)
+        localStorage.setItem('arrayCarrito', JSON.stringify(productsOnCart));
+        location.reload();
+     })
+}) 
 
 
 
- })
 
-
-
- //Botón para borrar localStoarge
+ //Botón para borrar localStorage
 let clearCart = document.querySelector('.clear-button-cart')
 
 clearCart.addEventListener('click', () => {
