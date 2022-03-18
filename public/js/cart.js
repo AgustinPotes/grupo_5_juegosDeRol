@@ -26,7 +26,7 @@
  //Transforma el objeto de objetos en un array de arrays
  let arrayEntries = Object.entries(arrayReduced);
 
- console.log(arrayEntries[0][1])
+ console.log(arrayEntries)
 
 
 // Convierte el array de arrays en un nuevo array simplificado que puede ser iterado
@@ -94,20 +94,43 @@ if (typeof arrayProds != undefined || typeof arrayProds != []) {
 
 
 //Botones para añadir o quitar ítems del localStorage
-let removeItemCart = document.querySelector('.reduce-button-cart')
+let removeButtons = document.querySelectorAll('.reduce-button-cart')
 let addButtons = document.querySelectorAll('.add-button-cart')
 
-let removeItemCartId = document.querySelector('.reduce-button-cart').id
-let addItemCartId = document.querySelector('.add-button-cart').id
+removeButtons.forEach((buttons) => {
+    buttons.addEventListener('click', (e) => {
+        console.log('item removed!')
+    
+        console.log(e.target.getAttribute('product-title'))
 
-console.log('removeItemCartId ' + removeItemCartId)
-console.log('addItemCartId ' + addItemCartId)
+        productsOnCart = JSON.parse(localStorage.getItem('arrayCarrito'))
 
-/*removeItemCart.addEventListener('click', () => {
-   console.log('item removed!')
-})*/
+        let productTitle = e.target.getAttribute('product-title');
 
-console.log('crazy concat ' + typeof(String(arrayFor[0].title)) + ' ' + 'add-button-cart-'+String(arrayFor[0].title))
+        //let productToRemove = arrayProds.find((product) => product.title === productTitle)
+
+        let findIndex = productsOnCart.map(object => object.title).indexOf(productTitle)
+
+        console.log(findIndex-1)
+
+        let itemRemoved = productsOnCart.splice(findIndex, 1)
+
+        //let itemRemoved = productsOnCart.map(function())
+
+        console.log(itemRemoved)
+
+        //let itemToRemove = arrayProds.forEach((item) => {
+        //console.log(item.title)
+        //})
+        //console.log(productsOnCart.indexOf(productTitle))
+
+
+        /*productsOnCart = JSON.parse(localStorage.getItem('arrayCarrito'))
+        //productsOnCart.splice(0[, 1[productToRemove]])*/
+        localStorage.setItem('arrayCarrito', JSON.stringify(itemRemoved));
+        //location.reload();
+     })
+})
 
 addButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -127,9 +150,7 @@ addButtons.forEach((button) => {
         localStorage.setItem('arrayCarrito', JSON.stringify(productsOnCart));
         location.reload();
      })
-}) 
-
-
+})
 
 
  //Botón para borrar localStorage
