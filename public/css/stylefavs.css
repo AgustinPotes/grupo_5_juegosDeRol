@@ -107,6 +107,10 @@
     margin-left: 20px;
 }
 
+.render-if-its-empty {
+    font-size: 60px;
+}
+
 /* MEDIA QUERIES */
 
 @media(min-width: 768px) {

@@ -20,7 +20,7 @@ let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
  let itemsInCart = document.getElementById('cart-item-counter').innerHTML += itemsInCarrito
      
  console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
-
+ 
 
  //selecciona el link del botón para capturar el onclick
  let addToCart = document.querySelector('.add-cart-button');
@@ -55,7 +55,6 @@ let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
  console.log('productsOnCart ' + productsOnCart)
 
  console.log('contenido del local 2: ' + localStorage.getItem('arrayCarrito'))
-
 
  
  })

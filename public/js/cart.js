@@ -45,9 +45,16 @@
  //Para la exposición en la vista
  const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
- if (typeof arrayProds == undefined || typeof arrayProds == []) {
+ if (arrayProds.length === 0) {
      let div = document.querySelector(".main-container-detail-cart");
-     div.innerHTML += `<h2 class="product-name-cart">No hay productos agregados </h2>`;
+     div.innerHTML += `<section class="main-container-cart-articles">
+     <h2 class="render-if-cart-its-empty">No hay productos en el carrito</h2>
+
+     <form action="/products" method="get">
+     <button class="checkout-button-cart">Dar un vistazo</button>
+     </form>
+     
+    </section>`
  } else {
     
      for (let i = 0; i < arrayFor.length; i++) {
@@ -80,7 +87,7 @@
    }
 
 //Suma total
-if (typeof arrayProds != undefined || typeof arrayProds != []) {
+if (arrayProds.length != 0) {
     let div = document.querySelector(".total-amount");
     let totalAmount2 = totalAmount;
     let contenido = `<div class="cart-total">
@@ -107,30 +114,21 @@ removeButtons.forEach((buttons) => {
 
         let productTitle = e.target.getAttribute('product-title');
 
-        //let productToRemove = arrayProds.find((product) => product.title === productTitle)
-
         let findIndex = productsOnCart.map(object => object.title).indexOf(productTitle)
 
-        console.log(findIndex-1)
+        console.log(findIndex)
 
         let itemRemoved = productsOnCart.splice(findIndex, 1)
 
-        //let itemRemoved = productsOnCart.map(function())
-
         console.log(itemRemoved)
 
-        //let itemToRemove = arrayProds.forEach((item) => {
-        //console.log(item.title)
-        //})
-        //console.log(productsOnCart.indexOf(productTitle))
+        console.log(productsOnCart)
 
-
-        /*productsOnCart = JSON.parse(localStorage.getItem('arrayCarrito'))
-        //productsOnCart.splice(0[, 1[productToRemove]])*/
-        localStorage.setItem('arrayCarrito', JSON.stringify(itemRemoved));
-        //location.reload();
+        localStorage.setItem('arrayCarrito', JSON.stringify(productsOnCart));
+        location.reload();
      })
 })
+
 
 addButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -139,7 +137,6 @@ addButtons.forEach((button) => {
         console.log(e.target.getAttribute('product-title'))
 
         let productTitle = e.target.getAttribute('product-title');
-
 
         let productToAdd = arrayProds.find((product) => product.title === productTitle)
 
@@ -153,25 +150,25 @@ addButtons.forEach((button) => {
 })
 
 
- //Botón para borrar localStorage
+//Botón para borrar localStorage
 let clearCart = document.querySelector('.clear-button-cart')
 
 clearCart.addEventListener('click', () => {
     console.log('cart cleared!')
 
-    localStorage.clear();
+    localStorage.setItem('arrayCarrito', JSON.stringify([]));
     alert('Vaciaste el carrito');
     location.reload();
  })
 
 
- //Botón checkout cart
- let checkoutCart = document.querySelector('.checkout-button-cart')
+//Botón checkout cart
+let checkoutCart = document.querySelector('.checkout-button-cart')
 
- checkoutCart.addEventListener('click', () => {
+checkoutCart.addEventListener('click', () => {
     console.log('checkout completed!')
     alert('¡Gracias por tu compra!');
     location.reload();
- })
+})
 
- })
+})

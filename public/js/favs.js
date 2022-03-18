@@ -26,12 +26,12 @@ console.log(arrayReduced);
 
  console.log(arrayFor)
    
-//Para la exposición en la vista
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-   
-if (typeof arrayFavs == undefined || typeof arrayFavs == []) {
-    let div = document.querySelector(".main-container-detail-cart");
-    div.innerHTML += `<h2 class="product-name-cart">No hay productos agregados </h2>`;
+//Para la exposición en la vista   
+if (arrayFavs.length === 0) {
+    let div = document.querySelector(".main-container-detail-favs");
+    div.innerHTML += `<section class="main-container-fav-articles">
+    <h2 class="render-if-its-empty">No hay favoritos</h2>
+    </section>`;
 } else {
        
     for (let i = 0; i < arrayFor.length; i++) {
@@ -50,7 +50,7 @@ if (typeof arrayFavs == undefined || typeof arrayFavs == []) {
                  <div class="quantity-and-fav-block">
                  <div class="product-quantity-fav">Eliminar</div>
                  <div class="button-container-fav">
-                 <div class="remove-fav-button" type="button" id="remove-fav-${producto.title}">-</div> 
+                 <div class="remove-fav-button" type="button" product-title="${producto.title}">-</div>
                  </div>
                  
                 
@@ -64,25 +64,52 @@ if (typeof arrayFavs == undefined || typeof arrayFavs == []) {
       }
    
       
-   if (typeof arrayFavs != undefined || typeof arrayFavs != []) {
+   /*if (arrayFavs.length != 0) {
        let div = document.querySelector(".total-amount");
        let contenido = `<div class="fav-total">
        
        <div class="clear-button-fav" type="button">Limpiar favoritos</div></div>`;
    
        div.innerHTML += contenido;
-   }
+   }*/
+
+let removeButton = document.querySelectorAll('.remove-fav-button')
+
+removeButton.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        console.log('item removed!')
+    
+        console.log(e.target.getAttribute('product-title'))
+
+        productsOnFavs = JSON.parse(localStorage.getItem('arrayFav'))
+
+        let productTitle = e.target.getAttribute('product-title');
+
+        let findIndex = productsOnFavs.map(object => object.title).indexOf(productTitle)
+
+        console.log(findIndex)
+
+        let itemRemoved = productsOnFavs.splice(findIndex, 1)
+
+        console.log(itemRemoved)
+
+        console.log(productsOnFavs)
+
+        localStorage.setItem('arrayFav', JSON.stringify(productsOnFavs));
+        location.reload();
+     })
+})
    
    
 //Botón para borrar localStoarge
-let clearCart = document.querySelector('.clear-button-fav')
+/*let clearCart = document.querySelector('.clear-button-fav')
    
 clearCart.addEventListener('click', () => {
     console.log('favs cleared!')
    
-    localStorage.clear('arrayFav');
-    alert('Reiniciaste tu lista de favoritos');
+    localStorage.setItem('arrayFavs', JSON.stringify([]));
+    alert('Eliminaste lista de favoritos');
     location.reload();
-})
+})*/
    
-    })
+})
