@@ -42,7 +42,7 @@ if (arrayFavs.length === 0) {
         let contenido = `<section class="main-container-fav-articles">
 
          <div class="main-product-detail-fav">
-             <img class="image-product-fav" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart">
+         <a href="/products/detail/${producto.id}"><img class="image-product-fav" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart"></a>
              <h4 class="product-name-fav" name="product-name-cart" >${producto.title}</h4>
              <div class="details-fav-container">
              <p class="price-detail-fav" name="price-detail-fav" >$${producto.price}</p>

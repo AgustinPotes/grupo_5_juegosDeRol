@@ -37,6 +37,13 @@ function animateAsync(element, keyframes, options) {
       slide.className = `slide ${activeCls}`;
       btn.className = activeCls;
       image.src = img;
+    
+      /*image.addEventListener('click', () => {
+      if (image.src = '/img/BB-wallpaper-slider.jpg') {
+        res.redirect('/products/detail/35')
+      
+    }})*/
+
       
       btn.style.transitionDuration = `${duration}ms`;
       btn.addEventListener('click', () => slideTo(idx));
@@ -98,10 +105,8 @@ function animateAsync(element, keyframes, options) {
   }
   
   document.body.appendChild(createImageSlider([
-    'https://images8.alphacoders.com/111/1114049.jpg',
-    'https://i.pinimg.com/originals/48/42/9f/48429f10ab5d153eaefdd696bd62549d.jpg',
-    'https://images.wallpaperscraft.com/image/sea_ocean_waves_113778_3840x2160.jpg',
-    'https://c4.wallpaperflare.com/wallpaper/294/551/634/outside-orbit-wallpaper-preview.jpg',
-    'https://c4.wallpaperflare.com/wallpaper/899/936/977/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg'
+    '/img/BB-wallpaper-slider.jpg',
+    '/img/TWD-wallpaper-slider.jpg',
+    '/img/Cthulhu-wallpaper-slider.jpg',
   ]))
   

@@ -30,6 +30,9 @@ let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
  let title = document.querySelector('.product-name').title;
  let price = document.querySelector('.price-detail').title;
  let image = document.querySelector('.image-product-detail').title;
+ let id = document.querySelector('.id-detail-product').title;
+
+console.log('id ' + ' ' + typeof(id) + ' ' + id)
 
 
 // crea un array de objetos con las propiedades del producto que acabamos de agregar
@@ -41,6 +44,7 @@ let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
              title: title,
              price: price,
              image: image,
+             id: id,
              quantity: 1
          }
 

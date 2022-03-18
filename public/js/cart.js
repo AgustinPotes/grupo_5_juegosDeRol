@@ -11,12 +11,13 @@
      let title = item.title;
      let price = parseFloat(item.price);
      let image = item.image;
+     let id = item.id;
      let quantity = item.quantity;
      let length = acc[item.title] ? quantity = arrayProds.filter((title) => title.title == [item.title]).length : quantity
 
      console.log(length)
 
-     return {...acc, [item.title]:{title, price: price * length, image, quantity: length}}
+     return {...acc, [item.title]:{title, price: price * length, image, quantity: length, id}}
         
  },[]);
 
@@ -53,7 +54,7 @@
      <form action="/products" method="get">
      <button class="checkout-button-cart">Dar un vistazo</button>
      </form>
-     
+
     </section>`
  } else {
     
@@ -65,7 +66,7 @@
          let contenido = `<section class="main-container-cart-articles">
 
          <div class="main-product-detail-cart">
-             <img class="image-product-cart" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart">
+             <a href="/products/detail/${producto.id}"><img class="image-product-cart" src="${producto.image}" alt="" width="100%" height="100%" name="image-product-cart" id="image-product-cart"></a>
              <h4 class="product-name-cart" name="product-name-cart" >${producto.title}</h4>
              <div class="details-cart-container">
              <p class="price-detail-cart" name="price-detail-cart" >$${producto.price}</p>

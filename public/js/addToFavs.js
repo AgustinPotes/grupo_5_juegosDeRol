@@ -8,7 +8,9 @@ window.addEventListener('load', function() {
      let title = document.querySelector('.product-name').title;
      let price = document.querySelector('.price-detail').title;
      let image = document.querySelector('.image-product-detail').title;
-    
+     let id = document.querySelector('.id-detail-product').title;
+
+     console.log('id ' + ' ' + typeof(id) + ' ' + id)
     
     // crea un array de objetos con las propiedades del producto que acabamos de agregar
      let productsOnFav = [];
@@ -19,7 +21,7 @@ window.addEventListener('load', function() {
                  title: title,
                  price: price,
                  image: image,
-                 onFavs: true
+                 id: id
              }
     
              console.log('contenido del local : ' + localStorage.getItem('arrayFav'))

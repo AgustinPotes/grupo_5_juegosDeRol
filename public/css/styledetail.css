@@ -94,6 +94,10 @@
     font-size: 15px;
 }
 
+.id-detail-product {
+    display: none;
+}
+
 /* MEDIA QUERIES */
 
 @media(min-width: 768px) {
