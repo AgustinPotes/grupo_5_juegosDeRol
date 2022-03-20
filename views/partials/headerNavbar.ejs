@@ -13,7 +13,7 @@
           <a href="/products">Catálogo</a>
           <a href="#" class="search-button">Buscar</a>
           <form action="/products/search" class="search-box" method="POST">
-            <input type="text" placeholder="Buscar..." name="title">
+            <input type="text" placeholder="Buscar..." name="title" class="placeholder-search">
             <button type="submit" class="go-icon"><i class="fas fa-search"></i></button>
           </form>
           <%  if (locals.isLogged) { %>

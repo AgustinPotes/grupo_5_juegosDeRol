@@ -8,8 +8,8 @@ const validationsMiddlewareProducts = require('../middlewares/validationsMiddlew
 
 
 router.get('/', productController.index);
-router.get('/cart', productController.cart);
-router.get('/favs', productController.favs);
+router.get('/cart', authMiddleware, productController.cart);
+router.get('/favs', authMiddleware, productController.favs);
 router.get('/addProduct', authMiddleware, productController.addProduct);
 router.post('/addProduct', authMiddleware, validationsMiddlewareProducts, upload.any(), productController.newProduct);
 router.get('/editProduct/:id', authMiddleware, productController.editProduct); 

@@ -30,7 +30,13 @@ console.log(arrayReduced);
 if (arrayFavs.length === 0) {
     let div = document.querySelector(".main-container-detail-favs");
     div.innerHTML += `<section class="main-container-fav-articles">
+
     <h2 class="render-if-its-empty">No hay favoritos</h2>
+
+    <form action="/products" method="get">
+     <button class="checkout-button-cart">Dar un vistazo</button>
+     </form>
+
     </section>`;
 } else {
        

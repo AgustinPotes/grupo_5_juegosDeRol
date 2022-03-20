@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/ce21b579cc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=MedievalSharp&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="/css/styleeditproduct.css" rel="stylesheet">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -72,9 +73,28 @@
 			<form action="/products/editProduct/<%=product.id%>?_method=DELETE" method="POST" enctype="multipart/form-data" class="form-addprod">
 				<button id="eraseProduct" type="submit" name="avaible" class="reset-prod-button">Borrar producto</button>
 				<script type="text/javascript">
-					document.getElementById("eraseProduct").onclick= function() {
-						alert("¿Está seguro de que quiere borrar el producto?");
+					document.getElementById("eraseProduct").onclick= function(e) {
+						//alert("¿Está seguro de que quiere borrar el producto?");
+						
+						/*e.preventDefault()
+						Swal.fire({
+                          title: '¿Estás seguro de que querés borrar el producto?',
+                          text: "¡No lo podrás deshacer!",
+                          icon: 'warning',
+                          showCancelButton: true,
+                          allowOutsideClick: false,
+                          confirmButtonColor: '#3085d6',
+                          cancelButtonColor: '#d33',
+                          confirmButtonText: 'Sí, guardar los cambios'
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                          
+                        } 
+						
+                        })*/
+						
 						return product.avaible = false;
+						//return true
 					}
 				</script>
 	        </form>
@@ -86,7 +106,7 @@
 
 </section>
 	<script src="/js/previewImg.js"></script>
-
+	<script src="sweetalert2.all.min.js"></script>
     <!-- Footer -->
     <%- include('./partials/footer') %>
 

@@ -19,9 +19,7 @@ Color de la tipografía: rgb(142, 0, 0)
 
 Integrantes del proyecto:
 Braconi, Bruno: 25 años, de Mendoza. Apasionado por los e-sports, la música y el desarrollo web.
-D'Angelo, Lucio: 26 años, de Buenos Aires. Geek y gamer.
 Potes, Agustín: 28 años, de Mendoza. Aficionado al cine, música y creación de contenido.
-Valeriano, Darío: 19 años, de Buenos Aires. Me gusta la música y soy estudiante de ingeniería en informática.
 
 Referencias para nuestro proyecto:
 Esta página está aún en desarrollo al momento de citarla, pero nos pareció interesante su funcionalidad y la forma de presentar tanto la información como el banner animado.

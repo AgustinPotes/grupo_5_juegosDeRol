@@ -108,7 +108,35 @@
 }
 
 .render-if-its-empty {
-    font-size: 60px;
+    align-self: center;
+    padding-top: 30%;
+    padding-bottom: 20%;
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 20px;
+}
+
+.checkout-button-cart {
+    text-align: center;
+    margin-bottom: 12px;
+    display: block;
+    padding: 8px 10px;
+    background-color: #6ca2f3;
+    max-width: 300px;
+    height: 50px;
+    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
+}
+
+.checkout-button-cart:hover {
+    background-color: #0066ff;
 }
 
 /* MEDIA QUERIES */

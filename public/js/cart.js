@@ -1,4 +1,4 @@
- window.addEventListener('load', function() {
+window.addEventListener('load', function() {
 
  //Trae los ítems del localStorage y los dispone para ser utilizados
  let arrayProds = JSON.parse(localStorage.arrayCarrito);
@@ -157,9 +157,23 @@ let clearCart = document.querySelector('.clear-button-cart')
 clearCart.addEventListener('click', () => {
     console.log('cart cleared!')
 
-    localStorage.setItem('arrayCarrito', JSON.stringify([]));
-    alert('Vaciaste el carrito');
-    location.reload();
+    
+    //alert('Vaciaste el carrito');
+    Swal.fire({
+        title: '¿Seguro que deseas vaciar el carrito?',
+        text: "¡No lo podrás deshacer!",
+        icon: 'Atención',
+        showCancelButton: true,
+        allowOutsideClick: false,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, quiero borrarlos'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.setItem('arrayCarrito', JSON.stringify([]));
+          location.reload();
+        } 
+      })
  })
 
 
@@ -168,8 +182,14 @@ let checkoutCart = document.querySelector('.checkout-button-cart')
 
 checkoutCart.addEventListener('click', () => {
     console.log('checkout completed!')
-    alert('¡Gracias por tu compra!');
-    location.reload();
+    //alert('¡Gracias por tu compra!');
+    Swal.fire({
+        title: '¡Gracias por tu compra!',
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Listo'
+      })
+    //location.reload();
 })
 
 })
