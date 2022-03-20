@@ -111,11 +111,6 @@ h1 {
     transition: 0.4s;
 }
 
-.mobile-nav-buttons:hover {
-    background-color: white;
-    color: rgb(167, 37, 37);
-}
-
 .menu {
     display: none;
     flex: 1 1 0%;
@@ -179,6 +174,7 @@ h1 {
     color: #fff;
     background-color: rgb(167, 37, 37);
     font-weight: 600;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 
@@ -195,12 +191,18 @@ h1 {
     width: 20px;
 }
 
+/*.go-icon :hover{
+    background-color: white;
+    color: rgb(167, 37, 37);
+}*/
+
 .fa-search {
     width: 70%;
     height: 100%;
     padding: 2px 20px;
     border-radius: 99px;
     background-color:rgb(167, 37, 37);
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .cart-counter {

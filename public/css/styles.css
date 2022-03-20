@@ -129,13 +129,14 @@ h4 {
     transform: translate(5px, 0%);
 }
 
-.price {
+.price-index {
     background-color: white;
     font-size: 18px;
     font-weight: bold;
     margin: 0 12px 0;
     width: 30%;
     padding: 10px;
+    color: black;
 }
 
 p {

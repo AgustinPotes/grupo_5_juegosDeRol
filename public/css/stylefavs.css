@@ -23,6 +23,7 @@
 
 .image-product-fav {
     width: 30vw;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .product-name-fav {
@@ -105,6 +106,7 @@
     color: white;
     font-weight: 550;
     margin-left: 20px;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .render-if-its-empty {

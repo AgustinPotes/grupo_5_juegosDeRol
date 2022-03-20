@@ -29,7 +29,7 @@ window.addEventListener('load', function() {
              console.log('productsOnFav adentro ' + productsOnFav)
              productsOnFav.push(newItem)
              localStorage.setItem('arrayFav', JSON.stringify(productsOnFav));
-             location.reload();
+             
          })
     
      console.log('productsOnFav ' + productsOnFav)

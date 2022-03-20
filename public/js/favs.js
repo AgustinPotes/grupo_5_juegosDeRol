@@ -87,21 +87,21 @@ removeButton.forEach((button) => {
     
         console.log(e.target.getAttribute('product-title'))
 
-        productsOnFavs = JSON.parse(localStorage.getItem('arrayFav'))
+        //productsOnFavs = JSON.parse(localStorage.getItem('arrayFav'))
 
         let productTitle = e.target.getAttribute('product-title');
 
-        let findIndex = productsOnFavs.map(object => object.title).indexOf(productTitle)
+        let findIndex = arrayFor.map(object => object.title).indexOf(productTitle)
 
         console.log(findIndex)
 
-        let itemRemoved = productsOnFavs.splice(findIndex, 1)
+        let itemRemoved = arrayFor.splice(findIndex, 1)
 
         console.log(itemRemoved)
 
-        console.log(productsOnFavs)
+        //console.log(productsOnFavs)
 
-        localStorage.setItem('arrayFav', JSON.stringify(productsOnFavs));
+        localStorage.setItem('arrayFav', JSON.stringify(arrayFor));
         location.reload();
      })
 })

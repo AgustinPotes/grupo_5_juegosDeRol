@@ -23,6 +23,7 @@
 
 .image-product-cart {
     width: 30vw;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .product-name-cart {
@@ -73,6 +74,7 @@
     color: white;
     font-weight: 550;
     margin-left: 5px;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .add-button-cart {
@@ -85,6 +87,7 @@
     color: white;
     font-weight: 550;
     margin-left: 8px;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .clear-button-cart {
@@ -155,6 +158,7 @@
     color: white;
     font-weight: 550;
     margin-left: 12.5px;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
 }
 
 .render-if-cart-its-empty {
