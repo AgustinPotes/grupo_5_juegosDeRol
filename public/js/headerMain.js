@@ -22,6 +22,7 @@ function animateAsync(element, keyframes, options) {
     slider.innerHTML = 
       '<div class="slides-wrapper"></div>' +
       '<div class="slide-indicators"></div>' +
+      '<a class="links-carousel" href="/"></a>' +
       '<button type="button" class="prev-button"></button>' +
       '<button type="button" class="next-button"></button>';
     const [wrapper, indicators, prevBtn, nextBtn] = slider.children;
@@ -37,12 +38,9 @@ function animateAsync(element, keyframes, options) {
       slide.className = `slide ${activeCls}`;
       btn.className = activeCls;
       image.src = img;
+      image.class = "soyunaclase"
     
-      /*image.addEventListener('click', () => {
-      if (image.src = '/img/BB-wallpaper-slider.jpg') {
-        res.redirect('/products/detail/35')
       
-    }})*/
 
       
       btn.style.transitionDuration = `${duration}ms`;
@@ -52,6 +50,14 @@ function animateAsync(element, keyframes, options) {
       wrapper.appendChild(slide);
       indicators.appendChild(btn);
     });
+
+    /*let linkCarousel = document.querySelector('.links-carousel')
+
+    linkCarousel.addEventListener('click', () => {
+      if (image.src = '/img/BB-wallpaper-slider.jpg') {
+        res.redirect('/products/detail/35')
+      
+    }})*/
       
     function autoSlide() {
       timer = setTimeout(
@@ -108,5 +114,6 @@ function animateAsync(element, keyframes, options) {
     '/img/BB-wallpaper-slider.jpg',
     '/img/TWD-wallpaper-slider.jpg',
     '/img/Cthulhu-wallpaper-slider.jpg',
+    '/img/SW-wallpaper-slider.jpg',
   ]))
   

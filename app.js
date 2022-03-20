@@ -52,6 +52,6 @@ app.use ((req, res, next) => {
     res.status(404).render('error404.ejs');
 });
 
-const port = 3001;
+let port = process.env.PORT || 3001;
 app.listen(port, () => { console.log('Servidor corriendo en el puerto ' + port);
 });
