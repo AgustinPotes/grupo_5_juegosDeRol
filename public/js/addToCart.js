@@ -10,7 +10,16 @@ window.addEventListener('load', function() {
 }
 };*/
 
-
+let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+ (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length
+ 
+ //let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+ 
+ console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
+     
+ let itemsInCart = document.getElementById('cart-item-counter').innerHTML += itemsInCarrito
+     
+ console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
  
 
  //selecciona el link del botón para capturar el onclick
@@ -51,14 +60,5 @@ console.log('id ' + ' ' + typeof(id) + ' ' + id)
 
  console.log('contenido del local 2: ' + localStorage.getItem('arrayCarrito'))
 
- let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
- (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length
  
- //let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
- 
- console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
-     
- let itemsInCart = document.getElementById('cart-item-counter').innerHTML += itemsInCarrito
-     
- console.log('itemsInCart ' + typeof(itemsInCart) + ' ' + itemsInCart)
  })
