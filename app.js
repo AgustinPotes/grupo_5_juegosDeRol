@@ -4,6 +4,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const session = require('express-session');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require('cookie-parser')
+const cors = require('cors')
 // ************ express() ************
 const app = express();
 app.use(express.json()); 
@@ -16,6 +17,14 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 app.use(session( {secret: 'secreto', resave: false, saveUninitialized: true,} ));
 app.use(cookies()); 
 app.use(userLoggedMiddleware);
+app.use(cors());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 
@@ -34,7 +43,7 @@ app.use ('/users', usersRouter);
 
 // API's //
 const apiProductsRouter = require('./routes/api/productsRouter');
-app.use ('/api', apiProductsRouter);
+app.use ('/api/products', apiProductsRouter);
 
 const apiUsersRouter = require('./routes/api/usersRouter')
 app.use ('/api', apiUsersRouter);
