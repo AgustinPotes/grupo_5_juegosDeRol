@@ -16,3 +16,24 @@ document.getElementById("prod-image").onchange = function(e) {
       preview.append(image);
     };
   }
+
+  /*let deleteProduct = document.querySelector('.reset-prod-button');
+
+  deleteProduct.addEventListener('click', function(e) {
+    e.preventDefault()
+    Swal.fire({
+                  title: '¿Estás seguro de que querés borrar el producto?',
+                  text: "¡No lo podrás deshacer!",
+                  icon: 'warning',
+                  showCancelButton: true,
+                  allowOutsideClick: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Sí, guardar los cambios'
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    executeDeleteProduct
+                } 
+                
+                })
+  })*/

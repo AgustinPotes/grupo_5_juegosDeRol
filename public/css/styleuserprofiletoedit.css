@@ -82,6 +82,23 @@ label {
     background-color: red;
 }
 
+.divAvatar {
+    align-content: flex-start;
+}
+
+.edit-profile-warning {
+    padding: 5px;
+    color: red;
+    margin-bottom: 20px;
+    font-weight: 550;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.addImagesProfileToEdit {
+    margin-top: 15px;
+}
+
 /* MEDIA QUERIES */
 
 @media(min-width: 376px) {

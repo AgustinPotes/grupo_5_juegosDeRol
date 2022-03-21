@@ -39,7 +39,7 @@
     <nav class="mobile-nav">
       <%  if (locals.isLogged) { %>
       <div class="profileImageMobile">
-        <a href="/users/login" class="profile-image-mobile-picture"><img  src="/img/avatars/<%= locals.userLogged.avatar || 'default-avatar.png' %>"  width="100%" height="100%"></a>
+        <a href="/users/login" class="profile-image-mobile-picture"><img class="profileImageMobileInNav" src="/img/avatars/<%= locals.userLogged.avatar || 'default-avatar.png' %>"  width="100%" height="100%"></a>
       </div>
       <% } %>
       <%  if (!locals.isLogged) { %>

@@ -8,9 +8,24 @@ window.addEventListener('load', function() {
 } else {
     storage
 }
-};*/
+};
 
-let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+let arrayStarted = JSON.parse(localStorage.getItem('arrayCarrito'));
+
+if (arrayStarted.length === 0) {
+    localStorage.setItem('arrayCarrito', JSON.stringify([]));
+}*/
+
+/*let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
+ (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length*/
+
+if (JSON.parse(localStorage.getItem('arrayCarrito')) == undefined) {
+     localStorage.setItem('arrayCarrito', JSON.stringify([]));
+    } else {
+     JSON.parse(localStorage.getItem('arrayCarrito'))
+    }
+    
+ let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
  (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length
  
  //let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
