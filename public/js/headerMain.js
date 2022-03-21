@@ -118,6 +118,6 @@ function animateAsync(element, keyframes, options) {
   sliderHomeParent.href = '/products/detail/35'
   sliderHomeParent2.href = '/products/detail/36'
   sliderHomeParent3.href = '/products/detail/38'
-  sliderHomeParent4.href = '/products'
+  sliderHomeParent4.href = '/products/detail/43'
 
 

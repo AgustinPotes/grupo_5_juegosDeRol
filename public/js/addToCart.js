@@ -1,24 +1,6 @@
 window.addEventListener('load', function() {
 
-//captura el span donde se contabilizan los productos en el carrito y lo muestra como número en la nav
-/*let itemsInCarrito = () => {
-    let storage = JSON.parse(localStorage.arrayCarrito).length;
-    if (storage == 'undefined' || '[]' || NaN) {
-    0
-} else {
-    storage
-}
-};
-
-let arrayStarted = JSON.parse(localStorage.getItem('arrayCarrito'));
-
-if (arrayStarted.length === 0) {
-    localStorage.setItem('arrayCarrito', JSON.stringify([]));
-}*/
-
-/*let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
- (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length*/
-
+//expone el número de ítems en el carrito en la navbar y crea el arrayCarrito
 if (JSON.parse(localStorage.getItem('arrayCarrito')) == undefined) {
      localStorage.setItem('arrayCarrito', JSON.stringify([]));
     } else {
@@ -27,9 +9,7 @@ if (JSON.parse(localStorage.getItem('arrayCarrito')) == undefined) {
     
  let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
  (itemsInCarrito) =>  itemsInCarrito == undefined || [] || NaN ? itemsInCarrito = 0 : itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length
- 
- //let itemsInCarrito = JSON.parse(localStorage.arrayCarrito).length;
- 
+  
  console.log('itemsInCarrito ' + typeof(itemsInCarrito) + ' ' + itemsInCarrito)
      
  let itemsInCart = document.getElementById('cart-item-counter').innerHTML += itemsInCarrito
@@ -50,7 +30,7 @@ if (JSON.parse(localStorage.getItem('arrayCarrito')) == undefined) {
 console.log('id ' + ' ' + typeof(id) + ' ' + id)
 
 
-// crea un array de objetos con las propiedades del producto que acabamos de agregar
+//crea un array de objetos con las propiedades del producto que acabamos de agregar
  let productsOnCart = [];
 
  addToCart.addEventListener('click', () => {

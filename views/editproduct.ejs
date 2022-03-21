@@ -16,7 +16,7 @@
     <%- include('./partials/headerNavbar') %>
 
     <section>
-			
+		
 		<div class="form-addprod">
 			<form action="/products/editProduct/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="form-edit-product">
@@ -65,7 +65,7 @@
 					<div class="col-12">
 						<button type="submit" name="submit" class="add-prod-button">Guardar cambios</button>
 					</div>
-					<div class="prueba_delete_button" value="<%=product.avaible%>">	
+					<div class="prueba_delete_button" title="<%=product.id%>">	
 					</div>
 				
 			
@@ -73,9 +73,11 @@
 			<form action="/products/editProduct/<%=product.id%>?_method=DELETE" method="POST" enctype="multipart/form-data" class="form-addprod">
 				<button id="eraseProduct" type="submit" name="avaible" class="reset-prod-button">Borrar producto</button></form>
 				<script>
-					let deleteProduct = document.querySelector('.prueba_delete_button').title;
+					//let deleteProduct = document.querySelector('.prueba_delete_button').title;
+					//console.log('deleteProduct ' + deleteProduct)
+					
 					document.getElementById("eraseProduct").onclick= function(e) {
-						//alert("¿Está seguro de que quiere borrar el producto?");
+						/*//alert("¿Está seguro de que quiere borrar el producto?");
 						
 						e.preventDefault()
 						Swal.fire({
@@ -89,14 +91,15 @@
                           confirmButtonText: 'Sí, guardar los cambios'
                         }).then((result) => {
                           if (result.isConfirmed) {
-							return product.avaible = false;
+							e.currentTarget
                         } 
 						
                         })
-						
-						//return product.avaible = false;
+						*/
+						return product.avaible = false;
 						//return true
 					}
+					
 					
 				</script>
 	        
