@@ -19,3 +19,17 @@ search.addEventListener('click', function (){
         search.innerHTML = 'Buscar'
     }
 });
+
+const searchMobile = document.querySelector('.mobile-nav-buttons-search');
+const searchBoxMobile = document.querySelector('.search-box-mobile');
+
+searchMobile.addEventListener('click', function () {
+    searchMobile.classList.toggle('active-search')
+    if (searchMobile.classList.contains('active-search')) {
+        searchBoxMobile.style.display = 'block';
+        searchMobile.innerHTML = '<i class="fas fa-times"></i>';
+    } else {
+        searchBoxMobile.style.display = 'none';
+        searchMobile.innerHTML = 'Buscar'
+    }
+});

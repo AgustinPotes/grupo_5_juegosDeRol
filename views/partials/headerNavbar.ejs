@@ -47,7 +47,11 @@
       <a class="mobile-nav-buttons" href="/users/register" id="myLinks">Registrarse</a>
       <% } %>
       <a class="mobile-nav-buttons" href="/products">Catálogo</a>
-      <a class="mobile-nav-buttons" href="#">Buscar</a>
+      <a class="mobile-nav-buttons-search" href="#">Buscar</a>
+      <form action="/products/search" class="search-box-mobile" method="POST">
+        <input type="text" placeholder="Buscar..." name="title" class="placeholder-search-mobile">
+        <button type="submit" class="go-icon"><i class="fas fa-search"></i></button>
+      </form>
       <%  if (locals.isLogged) { %>
         <a class="mobile-nav-buttons" href="/products/cart">Carrito</a>
         <a class="mobile-nav-buttons" href="/products/favs">Favoritos</a>
