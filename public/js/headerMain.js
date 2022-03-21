@@ -7,7 +7,6 @@ function animateAsync(element, keyframes, options) {
     })
   }
   
-  
   function createImageSlider(
     images, 
     {
@@ -22,26 +21,24 @@ function animateAsync(element, keyframes, options) {
     slider.innerHTML = 
       '<div class="slides-wrapper"></div>' +
       '<div class="slide-indicators"></div>' +
-      '<a class="links-carousel" href="/"></a>' +
       '<button type="button" class="prev-button"></button>' +
       '<button type="button" class="next-button"></button>';
     const [wrapper, indicators, prevBtn, nextBtn] = slider.children;
     const fill = 'forwards';
     let animating = false;
     let timer = null;
-      
-    images.forEach((img, idx) => {
-      const slide = document.createElement('div');
+
+    
+    images.forEach((img, idx) => {    
+      const slide = document.createElement('a');
       const btn = document.createElement('button');
       const image = document.createElement('img');
       const activeCls = idx === currentSlideIndex ? 'active' : '';
       slide.className = `slide ${activeCls}`;
+      //slide.href = `/products/detail/${38, 39}`;
       btn.className = activeCls;
       image.src = img;
-      image.class = "soyunaclase"
-    
-      
-
+      image.className = `image-slider-home-${1 + idx}`;
       
       btn.style.transitionDuration = `${duration}ms`;
       btn.addEventListener('click', () => slideTo(idx));
@@ -51,13 +48,6 @@ function animateAsync(element, keyframes, options) {
       indicators.appendChild(btn);
     });
 
-    /*let linkCarousel = document.querySelector('.links-carousel')
-
-    linkCarousel.addEventListener('click', () => {
-      if (image.src = '/img/BB-wallpaper-slider.jpg') {
-        res.redirect('/products/detail/35')
-      
-    }})*/
       
     function autoSlide() {
       timer = setTimeout(
@@ -109,11 +99,25 @@ function animateAsync(element, keyframes, options) {
     
     return slider;
   }
-  
+
   document.body.appendChild(createImageSlider([
     '/img/BB-wallpaper-slider.jpg',
     '/img/TWD-wallpaper-slider.jpg',
     '/img/Cthulhu-wallpaper-slider.jpg',
     '/img/SW-wallpaper-slider.jpg',
   ]))
-  
+
+
+  const sliderHomeParent = document.querySelector('.image-slider-home-1').parentElement;
+  const sliderHomeParent2 = document.querySelector('.image-slider-home-2').parentElement;
+  const sliderHomeParent3 = document.querySelector('.image-slider-home-3').parentElement;
+  const sliderHomeParent4 = document.querySelector('.image-slider-home-4').parentElement;
+
+  console.log(sliderHomeParent)
+
+  sliderHomeParent.href = '/products/detail/35'
+  sliderHomeParent2.href = '/products/detail/36'
+  sliderHomeParent3.href = '/products/detail/38'
+  sliderHomeParent4.href = '/products'
+
+
