@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: url('../img/iconoCursor2.png'), auto;
+}
+
+.its-showtime-container {
+    width: 100vw;
+}
+
+.its-showtime-image {
+    width: 100vw;
+    height: 52vw;
+}

@@ -16,6 +16,9 @@ const mainController = {
     
             })
         },
+        showtime: (req, res) => {
+            res.render('itsShowtime');
+        },
 }
 
 module.exports = mainController;

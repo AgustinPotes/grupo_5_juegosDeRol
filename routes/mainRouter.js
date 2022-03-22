@@ -9,6 +9,7 @@ const mainController = require('../controllers/mainController')
 
 
 router.get('/', mainController.index);
+router.get('/its-showtime', mainController.showtime)
 
 
 module.exports = router;
