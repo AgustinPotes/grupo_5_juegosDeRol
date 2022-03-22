@@ -92,6 +92,7 @@
     display: none;
     cursor: pointer;
     outline: none;
+    cursor: url('../img/iconoCursorPointerZombie.png'), auto;
   }
   
   .next-button {

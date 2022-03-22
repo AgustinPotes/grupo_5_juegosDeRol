@@ -5,11 +5,25 @@
     cursor: url('../img/iconoCursor2.png'), auto;
 }
 
+.main-container-showtime {
+    display: flex;
+    position: relative;
+    
+}
+
 .its-showtime-container {
     width: 100vw;
+    
 }
 
 .its-showtime-image {
     width: 100vw;
     height: 52vw;
+}
+
+.audio-player {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    cursor: url('../img/iconoCursor2.png'), auto;
 }
